@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Stark_ITLog>
+    <filename>DCK1820254226</filename>
+    <date>20250509101028</date>
+    <serial_number>UT251902410034226</serial_number>
+    <starttime>20250509101028</starttime>
+    <endtime>20250509101028</endtime>
+    <result>PASSED</result>
+    <tasks>
+        <task name="Test Charging">
+            <timestamp>2025-05-09 10:10:28,919</timestamp>
+            <subtask name="Starting test step: Test Charging">
+                <timestamp>2025-05-09 10:10:28,919</timestamp>
+            </subtask>
+        </task>
+        <task name="Test Horn">
+            <timestamp>2025-05-09 10:10:28,935</timestamp>
+            <subtask name="Starting test step: Test Horn">
+                <timestamp>2025-05-09 10:10:28,935</timestamp>
+            </subtask>
+        </task>
+        <task name="Test Heat Grips">
+            <timestamp>2025-05-09 10:10:28,937</timestamp>
+            <subtask name="Starting test step: Test Heat Grips">
+                <timestamp>2025-05-09 10:10:28,937</timestamp>
+            </subtask>
+        </task>
+        <task name="Test Front Lights">
+            <timestamp>2025-05-09 10:10:28,944</timestamp>
+            <subtask name="Starting test step: Test Front Lights">
+                <timestamp>2025-05-09 10:10:28,944</timestamp>
+            </subtask>
+        </task>
+        <task name="Test Throttle">
+            <timestamp>2025-05-09 10:10:28,951</timestamp>
+            <subtask name="Starting test step: Test Throttle">
+                <timestamp>2025-05-09 10:10:28,951</timestamp>
+            </subtask>
+        </task>
+        <task name="Test Mapswitch">
+            <timestamp>2025-05-09 10:10:28,959</timestamp>
+            <subtask name="Starting test step: Test Mapswitch">
+                <timestamp>2025-05-09 10:10:28,959</timestamp>
+            </subtask>
+        </task>
+        <task name="Test Brakes">
+            <timestamp>2025-05-09 10:10:28,965</timestamp>
+            <subtask name="Starting test step: Test Brakes">
+                <timestamp>2025-05-09 10:10:28,965</timestamp>
+            </subtask>
+        </task>
+        <task name="Test Killswitch">
+            <timestamp>2025-05-09 10:10:28,971</timestamp>
+            <subtask name="Starting test step: Test Killswitch">
+                <timestamp>2025-05-09 10:10:28,971</timestamp>
+            </subtask>
+        </task>
+    </tasks>
+    <errors/>
+</Stark_ITLog>

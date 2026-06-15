@@ -1,0 +1,107 @@
+{
+    "filename": "PC_0446114578",
+    "date": "2026-01-31T11:36:14",
+    "serialNumber": "UT260524046114578",
+    "testResult": "PASSED",
+    "errors": {
+        "Insulation": "VDCp 100.33, VDCm 100.24"
+    },
+    "values": {},
+    "tasks": [
+        {
+            "name": "Pre-Test",
+            "timestamp": "2026-01-31T11:32:57",
+            "info": [
+                "SW version used: 2.5",
+                "Inverter GEN: 0x00000000",
+                "Inverter Logic FW: 0x00000000",
+                "Inverter Gate FW: 0x00000000"
+            ]
+        },
+        {
+            "name": "Logic Firmware",
+            "timestamp": "2026-01-31T11:33:03",
+            "info": [
+                "Starting test step: Logic Firmware",
+                "Logic current FW version: 0x00000000",
+                "Logic server FW version: 0x000100D3",
+                "Logic Firmware updated to 0x000100D3"
+            ]
+        },
+        {
+            "name": "Gate Firmware",
+            "timestamp": "2026-01-31T11:33:57",
+            "info": [
+                "Starting test step: Gate Firmware",
+                "Gate Firmware updated gate/out.hex"
+            ]
+        },
+        {
+            "name": "Sensors check",
+            "timestamp": "2026-01-31T11:34:28",
+            "info": [
+                "Starting test step: Sensors check"
+            ]
+        },
+        {
+            "name": "Charger Port",
+            "timestamp": "2026-01-31T11:34:36",
+            "info": [
+                "Starting test step: Charger Port",
+                "HVIL disconnected value = 2912.2",
+                "HVIL connected value = 0.0",
+                "Charger relay and HVIL OK"
+            ]
+        },
+        {
+            "name": "DC Link Short",
+            "timestamp": "2026-01-31T11:34:50",
+            "info": [
+                "Starting test step: DC Link Short"
+            ]
+        },
+        {
+            "name": "Insulation",
+            "timestamp": "2026-01-31T11:34:51",
+            "info": [
+                "Starting test step: Insulation",
+                "VDCp 100.33, VDCm 100.24",
+                "Insulation PASS, difference of value = 3.20% < 50%"
+            ]
+        },
+        {
+            "name": "Position Sensor Calibration",
+            "timestamp": "2026-01-31T11:34:54",
+            "info": [
+                "Starting test step: Position Sensor Calibration",
+                "Calibration done, offset 71, Rotated by 0, Offset by 0"
+            ]
+        },
+        {
+            "name": "Spin Motor",
+            "timestamp": "2026-01-31T11:35:42",
+            "info": [
+                "Starting test step: Spin Motor",
+                "Starting Spin Test",
+                "RPM 1238.73 rpm at 60 V, Spin current 1.2428473334859236",
+                "Spin Test Passed"
+            ]
+        },
+        {
+            "name": "Vicor",
+            "timestamp": "2026-01-31T11:35:56",
+            "info": [
+                "Starting test step: Vicor",
+                "VICOR Voltage = 12.54 V"
+            ]
+        },
+        {
+            "name": "Bulk Discharger",
+            "timestamp": "2026-01-31T11:36:04",
+            "info": [
+                "Starting test step: Bulk Discharger",
+                "Bulk discharge PASS, end time = 1.0072510242462158s"
+            ]
+        }
+    ]
+}

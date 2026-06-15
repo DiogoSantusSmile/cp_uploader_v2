@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Controlo de Produção.exe
+Comment=Programa de carregamento de logs
+Exec=Caminho para o ficheiro "Controlo de Produção" na pasta do programa (colocar entre aspas)
+Icon=Caminho para o ficheiro "logo-uartronica.png" na pasta do programa
+Path=Caminho para a pasta do programa
+Terminal=false
+Type=Application

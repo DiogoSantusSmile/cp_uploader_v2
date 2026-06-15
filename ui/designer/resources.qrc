@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="images">
+    <file>images/pause-button.png</file>
+    <file>images/play-button.png</file>
+    <file>images/green-circle.png</file>
+    <file>images/red-circle.png</file>
+    <file>images/right-from-arrow.png</file>
+    <file>images/logo-uartronica-final-mini.png</file>
+    <file>images/Uartronica-Logo-Dark.png</file>
+    <file>images/rotate-right.png</file>
+    <file>images/edit-pencil.png</file>
+  </qresource>
+</RCC>

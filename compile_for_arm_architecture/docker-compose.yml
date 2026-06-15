@@ -1,0 +1,10 @@
+services:
+  builder:
+    platform: linux/arm64
+    build:
+      context: ..
+      dockerfile: compile_for_arm_architecture/Dockerfile
+
+    volumes:
+      - ../dist:/app/dist
+    command: pyinstaller main.spec --distpath dist && sed -i 's/\r$//' Controlo de Produção.exe.desktop

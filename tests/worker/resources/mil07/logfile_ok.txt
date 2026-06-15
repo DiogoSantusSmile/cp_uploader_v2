@@ -1,0 +1,56 @@
+<LOG_file>
+  <filename>LOG</filename>
+  <supplier>Uartronica</supplier>
+  <date>20251118091745</date>
+  <station_ID>MIL07</station_ID>
+  <serial_number>23037000300002442740</serial_number>
+  <starttime>20251118091745</starttime>
+  <endtime></endtime>
+  <result>PASSED</result>
+  <tasks>
+    <task name="Pretesting">
+      <timestamp>20251118091745</timestamp>
+    </task>
+    <task name="Testing">
+      <timestamp>20251118091745</timestamp>
+      <subtask name="TotalProduceCount">
+        <value>00021015</value>
+        <timestamp>20251118091745</timestamp>
+      </subtask>
+      <subtask name="MillDiameter">
+        <value>1.50</value>
+        <timestamp>20251118091745</timestamp>
+      </subtask>
+      <subtask name="MillingCutterCumulativeCuttingDistance">
+        <value>15.070</value>
+        <timestamp>20251118091745</timestamp>
+      </subtask>
+      <subtask name="EffectiveBlade">
+        <value>2.90</value>
+        <timestamp>20251118091745</timestamp>
+      </subtask>
+      <subtask name="DeepeningDistance">
+        <value>2.6</value>
+        <timestamp>20251118091745</timestamp>
+      </subtask>
+      <subtask name="BoardThickness">
+        <value>1.60</value>
+        <timestamp>20251118091745</timestamp>
+      </subtask>
+      <subtask name="LiftingKnifeHeight">
+        <value>20</value>
+        <timestamp>20251118091745</timestamp>
+      </subtask>
+      <subtask name="WorkingHeight">
+        <value>65.00</value>
+        <timestamp>20251118091745</timestamp>
+      </subtask>
+    </task>
+  </tasks>
+  <errors>
+    <error_no name="0">
+      <timestamp>20251118091745</timestamp>
+      <message></message>
+    </error_no>
+  </errors>
+</LOG_file>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--  Created by CsRepair -->
+<!--  Version 1.2.7.4 19110813301 -->
+<result_file>
+	<filename>24369000332_20250130053254_LEWB-THT</filename>
+	<supplier>Marantz</supplier>
+	<date>20250505081000</date>
+	<station_ID>LEWB_THT</station_ID>
+	<operator_ID></operator_ID>
+	<program>241201_T</program>
+	<side_variant>A</side_variant>
+	<pcbs_in_panel>2</pcbs_in_panel>
+	<serial>241201000600197510181</serial>
+	<serial_pcb_1>24369000332</serial_pcb_1>
+	<serial_pcb_2>24369000853</serial_pcb_2>
+	<status_pcb_1>OK</status_pcb_1>
+	<status_pcb_2>OK</status_pcb_2>
+	<status>GOOD</status>
+	<starttime>20250130053512</starttime>
+	<lot_no>2400002657</lot_no>
+	<info>
+		<window_no>98</window_no>
+		<packs_no>42</packs_no>
+		<error_total>16</error_total>
+		<error_conf>0</error_conf>
+		<inspection_time>37</inspection_time>
+		<panel_image>LEWB-THT_241201-T_A.jpg</panel_image>
+		<panel_image_location>C:\CenData</panel_image_location>
+		<ng_image_location></ng_image_location>
+		<repaired>1</repaired>
+	</info>
+	<errors>
+		<error_no name="1">
+			<designator>RM30[1]</designator>
+			<pin>RM30[1]</pin>
+			<stamp_name>BSTUFF00272</stamp_name>
+			<package_name>RM30[1]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>1</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>24363</pos_x>
+			<pos_y>16687</pos_y>
+			<window>1</window>
+			<ng_message>shift X -0.33 Y -0.44</ng_message>
+			<comment>BSTUFF00272:shift X -0.33 Y -0.44(-0.33 -0.44){BSTUFF00272}[1 24369000332] &apos;9017_12973_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="2">
+			<designator>C143[1]</designator>
+			<pin>C143[1]</pin>
+			<stamp_name>BSTUFF01130</stamp_name>
+			<package_name>C143[1]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>1</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>7130</pos_x>
+			<pos_y>23414</pos_y>
+			<window>5</window>
+			<ng_message>Histogram NG 100%</ng_message>
+			<comment>BSTUFF01130:Histogram NG 100%(* *){BSTUFF01130}[1 24369000332] &apos;26241_6158_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="3">
+			<designator>C144[1]</designator>
+			<pin>C144[1]</pin>
+			<stamp_name>BSTUFF01130</stamp_name>
+			<package_name>C144[1]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>1</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>6879</pos_x>
+			<pos_y>22372</pos_y>
+			<window>7</window>
+			<ng_message>Histogram NG 89%</ng_message>
+			<comment>BSTUFF01130:Histogram NG 89%(* *){BSTUFF01130}[1 24369000332] &apos;26492_7200_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="4">
+			<designator>C61[1]</designator>
+			<pin>C61[1]</pin>
+			<stamp_name>BSTUFF00186</stamp_name>
+			<package_name>C61[1]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>1</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>21375</pos_x>
+			<pos_y>19748</pos_y>
+			<window>8</window>
+			<ng_message>Histogram NG 67%</ng_message>
+			<comment>BSTUFF00186:Histogram NG 67%(0.18 -0.18){BSTUFF00186}[1 24369000332] &apos;12033_9443_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="5">
+			<designator>C60[1]</designator>
+			<pin>C60[1]</pin>
+			<stamp_name>BSTUFF01156</stamp_name>
+			<package_name>C60[1]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>1</former_errortype>
+			<pcb_no>1</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>9675</pos_x>
+			<pos_y>23153</pos_y>
+			<window>9</window>
+			<ng_message>shift Y 0.59/Body problem</ng_message>
+			<comment>BSTUFF01156:shift Y 0.59/Body problem(-0.26 0.59){BSTUFF01156}[1 24369000332] &apos;23694_6421_0 &apos; &apos;23796_6794_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="6">
+			<designator>C24[1]</designator>
+			<pin>C24[1]</pin>
+			<stamp_name>BSTUFF01156</stamp_name>
+			<package_name>C24[1]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>1</former_errortype>
+			<pcb_no>1</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>11464</pos_x>
+			<pos_y>24043</pos_y>
+			<window>10</window>
+			<ng_message>shift X 0.56/Body problem</ng_message>
+			<comment>BSTUFF01156:shift X 0.56/Body problem(0.56 -0.07){BSTUFF01156}[1 24369000332] &apos;21905_5531_0 &apos; &apos;22006_5903_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="7">
+			<designator>X2[1]</designator>
+			<pin>X2[1]</pin>
+			<stamp_name>BSTUFF01011</stamp_name>
+			<package_name>X2[1]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>1</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>22820</pos_x>
+			<pos_y>23744</pos_y>
+			<window>12</window>
+			<ng_message>Histogram NG 57%</ng_message>
+			<comment>BSTUFF01011:Histogram NG 57%(-0.14 -0.03){BSTUFF01011}[1 24369000332] &apos;10551_5828_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="8">
+			<designator>U19[1]</designator>
+			<pin>U19[1]</pin>
+			<stamp_name>BSTUFF00161</stamp_name>
+			<package_name>U19[1]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>1</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>10080</pos_x>
+			<pos_y>20488</pos_y>
+			<window>16</window>
+			<ng_message>Histogram NG 25%</ng_message>
+			<comment>BSTUFF00161:Histogram NG 25%(0.26 0.41){BSTUFF00161}[1 24369000332] &apos;23291_9073_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="9">
+			<designator>U4[1]</designator>
+			<pin>U4[1]</pin>
+			<stamp_name>BSTUFF00938 </stamp_name>
+			<package_name>U4[1]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>1</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>8086</pos_x>
+			<pos_y>22220</pos_y>
+			<window>17</window>
+			<ng_message>shift X 0.44</ng_message>
+			<comment>BSTUFF00938:shift X 0.44(0.44 0.07){BSTUFF00938 }[1 24369000332] &apos;25285_7354_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="10">
+			<designator>RM30[2]</designator>
+			<pin>RM30[2]</pin>
+			<stamp_name>BSTUFF00272</stamp_name>
+			<package_name>RM30[2]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>2</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>24387</pos_x>
+			<pos_y>7494</pos_y>
+			<window>22</window>
+			<ng_message>shift Y -0.56</ng_message>
+			<comment>BSTUFF00272:shift Y -0.56(-0.03 -0.56){BSTUFF00272}[2 24369000853] &apos;8995_22165_0 &apos; &apos;8984_22078_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="11">
+			<designator>X9[2]</designator>
+			<pin>X9[2]</pin>
+			<stamp_name>BSTUFF00166</stamp_name>
+			<package_name>X9[2]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>2</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>8386</pos_x>
+			<pos_y>8013</pos_y>
+			<window>25</window>
+			<ng_message>Mismatch</ng_message>
+			<comment>BSTUFF00166:Mismatch(0.22 0.18){BSTUFF00166}[2 24369000853] &apos;24985_21559_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="12">
+			<designator>X1[2]</designator>
+			<pin>X1[2]</pin>
+			<stamp_name>BSTUFF00168</stamp_name>
+			<package_name>X1[2]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>2</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>10430</pos_x>
+			<pos_y>7880</pos_y>
+			<window>32</window>
+			<ng_message>shift X -0.33</ng_message>
+			<comment>BSTUFF00945:shift X -0.33(-0.33 0.18){BSTUFF00168}[2 24369000853] &apos;22939_21692_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="13">
+			<designator>X6[2]</designator>
+			<pin>X6[2]</pin>
+			<stamp_name>BSTUFF01240</stamp_name>
+			<package_name>X6[2]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>2</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>15251</pos_x>
+			<pos_y>8290</pos_y>
+			<window>35</window>
+			<ng_message>Histogram NG 67%</ng_message>
+			<comment>BSTUFF01240:Histogram NG 67%(-0.03 0.26){BSTUFF01240}[2 24369000853] &apos;18119_21282_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="14">
+			<designator>C60[2]</designator>
+			<pin>C60[2]</pin>
+			<stamp_name>BSTUFF01156</stamp_name>
+			<package_name>C60[2]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>1</former_errortype>
+			<pcb_no>2</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>9823</pos_x>
+			<pos_y>14022</pos_y>
+			<window>40</window>
+			<ng_message>shift X -0.67 Y 0.59/Body problem</ng_message>
+			<comment>BSTUFF01156:shift X -0.67 Y 0.59/Body problem(-0.67 0.59){BSTUFF01156}[2 24369000853] &apos;23548_15550_0 &apos; &apos;23648_15924_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="15">
+			<designator>C24[2]</designator>
+			<pin>C24[2]</pin>
+			<stamp_name>BSTUFF01156</stamp_name>
+			<package_name>C24[2]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>1</former_errortype>
+			<pcb_no>2</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>11567</pos_x>
+			<pos_y>14918</pos_y>
+			<window>41</window>
+			<ng_message>Mismatch/Body problem</ng_message>
+			<comment>BSTUFF01156:Mismatch/Body problem(-0.37 0.07){BSTUFF01156}[2 24369000853] &apos;21804_14655_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+		<error_no name="16">
+			<designator>U4[2]</designator>
+			<pin>U4[2]</pin>
+			<stamp_name>BSTUFF00938 </stamp_name>
+			<package_name>U4[2]</package_name>
+			<errortype>-</errortype>
+			<error_contents></error_contents>
+			<former_errortype>0</former_errortype>
+			<pcb_no>2</pcb_no>
+			<feeder_no></feeder_no>
+			<pos_x>8199</pos_x>
+			<pos_y>13121</pos_y>
+			<window>42</window>
+			<ng_message>shift Y -0.29</ng_message>
+			<comment>BSTUFF00938:shift Y -0.29(-0.22 -0.29){BSTUFF00938 }[2 24369000853] &apos;25174_16449_0 &apos;</comment>
+			<ng_image></ng_image>
+		</error_no>
+	</errors>
+</result_file>

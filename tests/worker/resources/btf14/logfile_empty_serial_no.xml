@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<AirQualityFile>
+
+  <filename>U0050IS__13052026_153235_S1_P.xml</filename>
+
+  <supplier>Controlar</supplier>
+
+  <date>13052026_153235</date>
+
+  <station_ID>c4efbb6a40d2</station_ID>
+
+  <serialnumber></serialnumber>
+
+  <endtime>15:32:54</endtime>
+
+  <executiontime>19.0955108</executiontime>
+
+  <result>PASSED</result>
+
+  <TPLACA>SMDAIQBOXDCVM_103</TPLACA>
+
+  <FWVersion>AIRQBOXMAIN_V1.0.2_V1.0.7.s19</FWVersion>
+
+  <tasks>
+    <task name="Power Measure 3V3 - Measure">
+      <TestNumber>1</TestNumber>
+      <Result>Passed</Result>
+      <Meas>3.257398490328</Meas>
+      <LoLim>3.2</LoLim>
+      <HiLim>3.4</HiLim>
+      <Unit>V</Unit>
+      <TimeStamp>00:00:04.480</TimeStamp>
+      <ExecTime>00:00:04.480</ExecTime>
+      <DateTime>15:32:40</DateTime>
+    </task>
+    <task name="Flash Result">
+      <TestNumber>2</TestNumber>
+      <Result>Passed</Result>
+      <Meas>P</Meas>
+      <LoLim>P</LoLim>
+      <HiLim>P</HiLim>
+      <Unit>P/F</Unit>
+      <TimeStamp>00:00:16.521</TimeStamp>
+      <ExecTime>00:00:12.040</ExecTime>
+      <DateTime>15:32:52</DateTime>
+    </task>
+    <task name="CAN Communication - Response">
+      <TestNumber>3</TestNumber>
+      <Result>Passed</Result>
+      <Meas>05</Meas>
+      <LoLim>05</LoLim>
+      <HiLim>-</HiLim>
+      <Unit>Str</Unit>
+      <TimeStamp>00:00:17.732</TimeStamp>
+      <ExecTime>00:00:01.211</ExecTime>
+      <DateTime>15:32:53</DateTime>
+    </task>
+    <task name="CAN Communication - Get Nodes">
+      <TestNumber>4</TestNumber>
+      <Result>Passed</Result>
+      <Meas>31</Meas>
+      <LoLim>31</LoLim>
+      <HiLim>31</HiLim>
+      <Unit>Numeric</Unit>
+      <TimeStamp>00:00:17.735</TimeStamp>
+      <ExecTime>00:00:00.003</ExecTime>
+      <DateTime>15:32:53</DateTime>
+    </task>
+    <task name="Ionizer 1 - ON - Measure">
+      <TestNumber>5</TestNumber>
+      <Result>Passed</Result>
+      <Meas>12.11933039874</Meas>
+      <LoLim>11</LoLim>
+      <HiLim>13</HiLim>
+      <Unit>V</Unit>
+      <TimeStamp>00:00:17.871</TimeStamp>
+      <ExecTime>00:00:00.135</ExecTime>
+      <DateTime>15:32:53</DateTime>
+    </task>
+    <task name="Power LED ON - RED">
+      <TestNumber>6</TestNumber>
+      <Result>Passed</Result>
+      <Meas>42990</Meas>
+      <LoLim>32000</LoLim>
+      <HiLim>60000</HiLim>
+      <Unit>Numeric</Unit>
+      <TimeStamp>00:00:18.303</TimeStamp>
+      <ExecTime>00:00:00.432</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+    <task name="Power LED ON - GREEN">
+      <TestNumber>7</TestNumber>
+      <Result>Passed</Result>
+      <Meas>18668</Meas>
+      <LoLim>10000</LoLim>
+      <HiLim>27000</HiLim>
+      <Unit>Numeric</Unit>
+      <TimeStamp>00:00:18.307</TimeStamp>
+      <ExecTime>00:00:00.003</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+    <task name="Power LED ON - BLUE">
+      <TestNumber>8</TestNumber>
+      <Result>Passed</Result>
+      <Meas>6200</Meas>
+      <LoLim>1000</LoLim>
+      <HiLim>10000</HiLim>
+      <Unit>Numeric</Unit>
+      <TimeStamp>00:00:18.312</TimeStamp>
+      <ExecTime>00:00:00.004</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+    <task name="Ionizer 1 LED - ON - RED">
+      <TestNumber>9</TestNumber>
+      <Result>Passed</Result>
+      <Meas>15288</Meas>
+      <LoLim>10000</LoLim>
+      <HiLim>25000</HiLim>
+      <Unit>Numeric</Unit>
+      <TimeStamp>00:00:18.316</TimeStamp>
+      <ExecTime>00:00:00.003</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+    <task name="Ionizer 1 LED - ON - GREEN">
+      <TestNumber>10</TestNumber>
+      <Result>Passed</Result>
+      <Meas>24904</Meas>
+      <LoLim>15000</LoLim>
+      <HiLim>40000</HiLim>
+      <Unit>Numeric</Unit>
+      <TimeStamp>00:00:18.320</TimeStamp>
+      <ExecTime>00:00:00.004</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+    <task name="Ionizer 1 LED - ON - BLUE">
+      <TestNumber>11</TestNumber>
+      <Result>Passed</Result>
+      <Meas>65534</Meas>
+      <LoLim>50000</LoLim>
+      <HiLim>65535</HiLim>
+      <Unit>Numeric</Unit>
+      <TimeStamp>00:00:18.324</TimeStamp>
+      <ExecTime>00:00:00.004</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+    <task name="Ionizer 1 - OFF - Measure">
+      <TestNumber>12</TestNumber>
+      <Result>Passed</Result>
+      <Meas>-0.00318249175325</Meas>
+      <LoLim>-0.5</LoLim>
+      <HiLim>0.5</HiLim>
+      <Unit>V</Unit>
+      <TimeStamp>00:00:18.574</TimeStamp>
+      <ExecTime>00:00:00.249</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+    <task name="Ionizer 2 - ON - Measure">
+      <TestNumber>13</TestNumber>
+      <Result>Passed</Result>
+      <Meas>12.12449111091</Meas>
+      <LoLim>11</LoLim>
+      <HiLim>13</HiLim>
+      <Unit>V</Unit>
+      <TimeStamp>00:00:18.615</TimeStamp>
+      <ExecTime>00:00:00.040</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+    <task name="Ionizer 2 - OFF - Measure">
+      <TestNumber>14</TestNumber>
+      <Result>Passed</Result>
+      <Meas>-0.008343203924596</Meas>
+      <LoLim>-0.5</LoLim>
+      <HiLim>0.5</HiLim>
+      <Unit>V</Unit>
+      <TimeStamp>00:00:18.755</TimeStamp>
+      <ExecTime>00:00:00.140</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+    <task name="CAN Communication - Response">
+      <TestNumber>15</TestNumber>
+      <Result>Passed</Result>
+      <Meas>02 40 08 00 01</Meas>
+      <LoLim>02 40 08 00 01</LoLim>
+      <HiLim>-</HiLim>
+      <Unit>Str</Unit>
+      <TimeStamp>00:00:18.789</TimeStamp>
+      <ExecTime>00:00:00.034</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+    <task name="Firmware Version">
+      <TestNumber>16</TestNumber>
+      <Result>Passed</Result>
+      <Meas>0107</Meas>
+      <LoLim>0107</LoLim>
+      <HiLim>-</HiLim>
+      <Unit>Str</Unit>
+      <TimeStamp>00:00:18.794</TimeStamp>
+      <ExecTime>00:00:00.004</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+    <task name="All Tests Done">
+      <TestNumber>17</TestNumber>
+      <Result>Passed</Result>
+      <Meas>P</Meas>
+      <LoLim>P</LoLim>
+      <HiLim>P</HiLim>
+      <Unit>P/F</Unit>
+      <TimeStamp>00:00:18.798</TimeStamp>
+      <ExecTime>00:00:00.004</ExecTime>
+      <DateTime>15:32:54</DateTime>
+    </task>
+  </tasks>
+
+</AirQualityFile>

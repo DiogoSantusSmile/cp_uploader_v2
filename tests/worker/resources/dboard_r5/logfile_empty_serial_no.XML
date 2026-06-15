@@ -1,0 +1,16 @@
+<Test_XML>
+    <filename>DBOARD_R5-174-0495-D-250828000730F</filename>
+    <supplier>UARTRONICA</supplier>
+    <date>28-10-2025 16:20:46</date>
+    <station_ID>DBOARD R5 FT30 Tester</station_ID>
+    <serial_number></serial_number>
+    <starttime>28-10-2025 16:20:39</starttime>
+    <endtime>28-10-2025 16:20:46</endtime>
+    <result>PASS</result>
+    <tasks>
+        <task name="FT30">
+            <result>PASS</result>
+            <response>0c05a508800000c498</response>
+        </task>
+    </tasks>
+</Test_XML>

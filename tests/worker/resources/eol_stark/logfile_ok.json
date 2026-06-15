@@ -1,0 +1,84 @@
+{
+    "filename": "VCU2420256789",
+    "date": "2025-06-16T08:19:17",
+    "serialNumber": "123456789",
+    "testResult": "PASSED",
+    "errors": {},
+    "values": {},
+    "tasks": [
+        {
+            "name": "Check Battery",
+            "timestamp": "2025-06-16T08:17:07",
+            "info": [
+                "Starting test step: Check Battery",
+                "Connected to SVTOP network: SVTOP-DCDA0C1F37F1 using fixed password.",
+                "Check Battery passed: V_CELL=3.753 V, V_BOOST=8.131 V."
+            ]
+        },
+        {
+            "name": "Check Fan",
+            "timestamp": "2025-06-16T08:17:39",
+            "info": [
+                "Starting test step: Check Fan",
+                "Connected to SVTOP network: SVTOP-DCDA0C1F37F1 using fixed password.",
+                "Post-activation AN21 transformed value: 0.15"
+            ]
+        },
+        {
+            "name": "Check Pump",
+            "timestamp": "2025-06-16T08:18:12",
+            "info": [
+                "Starting test step: Check Pump",
+                "Post-activation AN22 transformed value: 0.13"
+            ]
+        },
+        {
+            "name": "Check Rear Lights",
+            "timestamp": "2025-06-16T08:18:26",
+            "info": [
+                "Starting test step: Check Rear Lights",
+                "Post-activation AN16 transformed value: 0.13"
+            ]
+        },
+        {
+            "name": "Check CCID",
+            "timestamp": "2025-06-16T08:18:40",
+            "info": [
+                "Starting test step: Check CCID",
+                "CCID value: 89882390000635968798"
+            ]
+        },
+        {
+            "name": "Check SSD",
+            "timestamp": "2025-06-16T08:18:44",
+            "info": [
+                "Starting test step: Check SSD",
+                "Check SSD passed: SDMMC size: 29512 MB."
+            ]
+        },
+        {
+            "name": "Check BMS",
+            "timestamp": "2025-06-16T08:18:46",
+            "info": [
+                "Starting test step: Check BMS",
+                "Comunicación correcta con el BMS"
+            ]
+        },
+        {
+            "name": "Check Docking",
+            "timestamp": "2025-06-16T08:18:47",
+            "info": [
+                "Starting test step: Check Docking",
+                "Docking activado correctamente"
+            ]
+        },
+        {
+            "name": "Check Start Button",
+            "timestamp": "2025-06-16T08:19:04",
+            "info": [
+                "Starting test step: Check Start Button",
+                "Start switch activado con éxito."
+            ]
+        }
+    ]
+}

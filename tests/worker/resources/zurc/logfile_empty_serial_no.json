@@ -1,0 +1,17 @@
+{
+    "serial_number": "",
+    "lote": "251113",
+    "hash": "6292d0a7",
+    "fecha": "2025-05-13 11:53:39",
+    "tipo": "AFQm 100A: 611061400-XX",
+    "result": 6,
+    "valores": {
+        "test_1": "True",
+        "test_2": 5.04,
+        "test_3": 23.89,
+        "test_4": 5.04,
+        "test_5": 23.89,
+        "test_6": 5.03,
+        "test_7": -255
+    }
+}

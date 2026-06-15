@@ -1,0 +1,591 @@
+2026-06-12 11:45:19,258 - db - INFO - Database does not exist, creating a new one...
+2026-06-12 11:45:20,604 - root - INFO - App process is starting...
+2026-06-12 11:45:35,069 - root - INFO - App process terminated by user.
+2026-06-12 11:47:44,952 - root - INFO - App process is starting...
+2026-06-12 11:49:33,319 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\main_window.py", line 204, in closeEvent
+    def closeEvent(self, event):
+KeyboardInterrupt
+2026-06-12 12:06:26,622 - root - INFO - App process is starting...
+2026-06-12 12:06:32,776 - root - INFO - App process terminated by user.
+2026-06-12 14:55:26,429 - root - INFO - App process is starting...
+2026-06-12 14:55:31,718 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 14:55:31,718 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 14:55:32,194 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 118
+2026-06-12 14:55:32,195 - network - INFO - Server responded with a 200 status code.
+2026-06-12 14:55:32,196 - root - INFO - User 'jmatos' logged in.
+2026-06-12 14:55:32,202 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2005%3A55%3A32&evaluated_by=53&workstation_name=
+2026-06-12 14:55:32,204 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 14:55:32,507 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2005%3A55%3A32&evaluated_by=53&workstation_name= HTTP/1.1" 200 52
+2026-06-12 14:55:32,507 - network - INFO - Server responded with a 200 status code.
+2026-06-12 14:55:49,246 - root - INFO - App process terminated by user.
+2026-06-12 14:58:47,878 - root - INFO - App process is starting...
+2026-06-12 14:59:01,565 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 14:59:01,567 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 14:59:01,853 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 14:59:01,854 - network - INFO - Server responded with a 200 status code.
+2026-06-12 14:59:01,855 - root - INFO - User 'd.santos' logged in.
+2026-06-12 14:59:01,860 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2005%3A59%3A01&evaluated_by=312&workstation_name=
+2026-06-12 14:59:01,861 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 14:59:02,232 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2005%3A59%3A01&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 14:59:02,234 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:00:26,505 - root - INFO - App process terminated by user.
+2026-06-12 15:02:44,532 - root - INFO - App process is starting...
+2026-06-12 15:02:55,450 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:02:55,453 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:02:55,746 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:02:55,747 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:02:55,747 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:02:55,752 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A02%3A55&evaluated_by=312&workstation_name=
+2026-06-12 15:02:55,753 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:02:56,048 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A02%3A55&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:02:56,051 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:03:18,434 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:03:18,437 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:03:18,719 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 401 41
+2026-06-12 15:03:18,720 - network - INFO - Server responded with a 401 status code.
+2026-06-12 15:03:18,720 - network - INFO - Server responded with a 401 status code.: {'detail': 'Usuário ou senha inválido.'}
+2026-06-12 15:03:18,720 - root - INFO - User 'd.santos' login failed.
+2026-06-12 15:03:30,091 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:03:30,092 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:03:30,374 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:03:30,374 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:03:30,375 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:03:30,380 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A03%3A30&evaluated_by=312&workstation_name=
+2026-06-12 15:03:30,381 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:03:30,699 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A03%3A30&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:03:30,700 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:04:35,796 - root - INFO - App process is starting...
+2026-06-12 15:05:03,735 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:05:03,737 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:05:04,041 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:05:04,042 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:05:04,043 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:05:04,047 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A05%3A04&evaluated_by=312&workstation_name=
+2026-06-12 15:05:04,048 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:05:04,321 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A05%3A04&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:05:04,321 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:11:29,607 - root - INFO - App process terminated by user.
+2026-06-12 15:12:12,694 - root - INFO - App process is starting...
+2026-06-12 15:12:21,851 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:12:21,852 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:12:22,184 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:12:22,185 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:12:22,185 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:12:22,190 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A12%3A22&evaluated_by=312&workstation_name=
+2026-06-12 15:12:22,191 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:12:22,502 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A12%3A22&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:12:22,503 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:12:37,664 - root - INFO - App process terminated by user.
+2026-06-12 15:13:20,001 - root - INFO - App process is starting...
+2026-06-12 15:13:29,850 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:13:29,858 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:13:30,402 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:13:30,403 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:13:30,403 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:13:30,410 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A13%3A30&evaluated_by=312&workstation_name=
+2026-06-12 15:13:30,411 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:13:30,837 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A13%3A30&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:13:30,837 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:13:58,717 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/workstations/?is_active=true&allow_api=true
+2026-06-12 15:13:58,718 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:13:58,998 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-06-12 15:13:58,999 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:14:15,079 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\forms\form.py", line 23, in __submit
+    self.on_submit()
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\settings_dialog.py", line 96, in __save_handler
+    self.on_save(new_settings)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\main.py", line 386, in __save_settings_handler
+    self.__settings.update({
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\settings.py", line 107, in update
+    self.allowed_workstations = settings['CORE']['ALLOWED_WORKSTATIONS']
+KeyError: 'ALLOWED_WORKSTATIONS'
+2026-06-12 15:17:40,402 - root - INFO - App process is starting...
+2026-06-12 15:17:50,695 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:17:50,696 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:17:50,982 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:17:50,982 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:17:50,984 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:17:50,989 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A17%3A50&evaluated_by=312&workstation_name=
+2026-06-12 15:17:50,989 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:17:51,278 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A17%3A50&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:17:51,279 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:19:49,560 - root - INFO - App process terminated by user.
+2026-06-12 15:19:55,703 - root - INFO - App process is starting...
+2026-06-12 15:20:04,829 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:20:04,832 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:20:05,171 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:20:05,171 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:20:05,172 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:20:05,177 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A20%3A05&evaluated_by=312&workstation_name=
+2026-06-12 15:20:05,178 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:20:05,599 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A20%3A05&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:20:05,599 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:22:04,099 - root - INFO - App process terminated by user.
+2026-06-12 15:22:14,954 - root - INFO - App process is starting...
+2026-06-12 15:22:26,561 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:22:26,562 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:22:26,972 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:22:26,974 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:22:26,974 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:22:26,979 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A22%3A26&evaluated_by=312&workstation_name=
+2026-06-12 15:22:26,980 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:22:27,370 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A22%3A26&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:22:27,370 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:22:55,834 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/workstations/?is_active=true&allow_api=true
+2026-06-12 15:22:55,835 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:22:56,256 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-06-12 15:22:56,256 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:23:06,912 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\forms\form.py", line 23, in __submit
+    self.on_submit()
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\settings_dialog.py", line 96, in __save_handler
+    self.on_save(new_settings)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\main.py", line 386, in __save_settings_handler
+    self.__settings.update({
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\settings.py", line 112, in update
+    self.allowed_workstations = settings['CORE']['ALLOWED_WORKSTATIONS']
+KeyError: 'ALLOWED_WORKSTATIONS'
+2026-06-12 15:25:17,974 - root - INFO - App process is starting...
+2026-06-12 15:25:27,608 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:25:27,609 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:25:27,963 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:25:27,964 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:25:27,965 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:25:27,970 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A25%3A27&evaluated_by=312&workstation_name=
+2026-06-12 15:25:27,971 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:25:28,315 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A25%3A27&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:25:28,315 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:25:33,870 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/workstations/?is_active=true&allow_api=true
+2026-06-12 15:25:33,871 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:25:34,219 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-06-12 15:25:34,219 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:25:44,478 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\forms\form.py", line 23, in __submit
+    self.on_submit()
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\settings_dialog.py", line 96, in __save_handler
+    self.on_save(new_settings)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\main.py", line 386, in __save_settings_handler
+    self.__settings.update({
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\settings.py", line 112, in update
+    self.allowed_workstations = settings['CORE']['ALLOWED_WORKSTATIONS']
+KeyError: 'ALLOWED_WORKSTATIONS'
+2026-06-12 15:28:09,880 - root - INFO - App process is starting...
+2026-06-12 15:28:21,040 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:28:21,042 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:28:21,351 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:28:21,351 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:28:21,352 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:28:21,358 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A28%3A21&evaluated_by=312&workstation_name=
+2026-06-12 15:28:21,360 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:28:21,800 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A28%3A21&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:28:21,800 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:33:41,386 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\main_window.py", line 204, in closeEvent
+    def closeEvent(self, event):
+KeyboardInterrupt
+2026-06-12 15:37:37,753 - root - INFO - App process is starting...
+2026-06-12 15:37:46,388 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:37:46,392 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:37:46,893 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:37:46,894 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:37:46,895 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:37:46,900 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A37%3A46&evaluated_by=312&workstation_name=
+2026-06-12 15:37:46,902 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:37:47,270 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A37%3A46&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:37:47,270 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:40:59,357 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\main_window.py", line 204, in closeEvent
+    def closeEvent(self, event):
+KeyboardInterrupt
+2026-06-12 15:41:10,712 - worker - INFO - DEBUG: settings path: C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\settings.py
+2026-06-12 15:41:10,712 - root - INFO - App process is starting...
+2026-06-12 15:41:22,304 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:41:22,309 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:41:22,603 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:41:22,603 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:41:22,604 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:41:22,609 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A41%3A22&evaluated_by=312&workstation_name=
+2026-06-12 15:41:22,611 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:41:22,895 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A41%3A22&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:41:22,896 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:46:21,006 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\main_window.py", line 204, in closeEvent
+    def closeEvent(self, event):
+KeyboardInterrupt
+2026-06-12 15:46:28,436 - worker - INFO - DEBUG: settings path: C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\settings.py
+2026-06-12 15:46:28,438 - root - INFO - App process is starting...
+2026-06-12 15:46:37,325 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 15:46:37,334 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:46:37,612 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 15:46:37,613 - network - INFO - Server responded with a 200 status code.
+2026-06-12 15:46:37,613 - root - INFO - User 'd.santos' logged in.
+2026-06-12 15:46:37,621 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A46%3A37&evaluated_by=312&workstation_name=
+2026-06-12 15:46:37,622 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 15:46:37,915 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2006%3A46%3A37&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 15:46:37,915 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:09:11,679 - root - INFO - App process terminated by user.
+2026-06-12 16:09:16,400 - worker - INFO - DEBUG: settings path: C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\settings.py
+2026-06-12 16:09:16,400 - root - INFO - App process is starting...
+2026-06-12 16:09:26,645 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 16:09:26,648 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:09:26,947 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 16:09:26,947 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:09:26,948 - root - INFO - User 'd.santos' logged in.
+2026-06-12 16:09:26,953 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A09%3A26&evaluated_by=312&workstation_name=
+2026-06-12 16:09:26,954 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:09:27,231 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A09%3A26&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 16:09:27,231 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:11:37,381 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\main_window.py", line 204, in closeEvent
+    def closeEvent(self, event):
+KeyboardInterrupt
+2026-06-12 16:11:46,095 - worker - INFO - DEBUG: settings path: C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\settings.py
+2026-06-12 16:11:46,099 - root - INFO - App process is starting...
+2026-06-12 16:11:58,262 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 16:11:58,264 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:11:58,568 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 16:11:58,569 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:11:58,570 - root - INFO - User 'd.santos' logged in.
+2026-06-12 16:11:58,575 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A11%3A58&evaluated_by=312&workstation_name=
+2026-06-12 16:11:58,575 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:11:58,855 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A11%3A58&evaluated_by=312&workstation_name= HTTP/1.1" 200 52
+2026-06-12 16:11:58,855 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:14:19,465 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/workstations/?is_active=true&allow_api=true
+2026-06-12 16:14:19,465 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:14:19,754 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-06-12 16:14:19,754 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:14:39,454 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/workstations/?is_active=true&allow_api=true
+2026-06-12 16:14:39,454 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:14:39,730 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-06-12 16:14:39,731 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:15:06,411 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\settings_dialog.py", line 69, in closeEvent
+    def closeEvent(self, event):
+KeyboardInterrupt
+2026-06-12 16:15:13,031 - worker - INFO - DEBUG: settings path: C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\settings.py
+2026-06-12 16:15:13,031 - root - INFO - App process is starting...
+2026-06-12 16:15:29,573 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 16:15:29,574 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:15:29,858 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 16:15:29,858 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:15:29,859 - root - INFO - User 'd.santos' logged in.
+2026-06-12 16:15:46,085 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A15%3A46&evaluated_by=312&workstation_name=AOI_THT
+2026-06-12 16:15:46,085 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:15:46,397 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A15%3A46&evaluated_by=312&workstation_name=AOI_THT HTTP/1.1" 200 52
+2026-06-12 16:15:46,398 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:16:05,349 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/workstations/?is_active=true&allow_api=true
+2026-06-12 16:16:05,349 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:16:05,630 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-06-12 16:16:05,630 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:16:17,573 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/workstations/?is_active=true&allow_api=true
+2026-06-12 16:16:17,573 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:16:17,848 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-06-12 16:16:17,848 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:16:27,120 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/workstations/?is_active=true&allow_api=true
+2026-06-12 16:16:27,120 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:16:27,421 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-06-12 16:16:27,421 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:16:43,570 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/workstations/?is_active=true&allow_api=true
+2026-06-12 16:16:43,574 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:16:43,859 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-06-12 16:16:43,859 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:16:58,426 - root - INFO - App process terminated by user.
+2026-06-12 16:17:36,134 - worker - INFO - DEBUG: settings path: C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\settings.py
+2026-06-12 16:17:36,135 - root - INFO - App process is starting...
+2026-06-12 16:17:47,101 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 16:17:47,104 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:17:47,397 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 16:17:47,398 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:17:47,398 - root - INFO - User 'd.santos' logged in.
+2026-06-12 16:17:53,714 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A17%3A53&evaluated_by=312&workstation_name=AOI_THT
+2026-06-12 16:17:53,716 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:17:54,016 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A17%3A53&evaluated_by=312&workstation_name=AOI_THT HTTP/1.1" 200 52
+2026-06-12 16:17:54,016 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:17:57,953 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/
+2026-06-12 16:17:57,953 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:17:58,253 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/ HTTP/1.1" 200 59862
+2026-06-12 16:17:58,253 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:17:58,259 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=2
+2026-06-12 16:17:58,259 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:17:58,579 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=2 HTTP/1.1" 200 56266
+2026-06-12 16:17:58,582 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:17:58,583 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=3
+2026-06-12 16:17:58,583 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:17:58,980 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=3 HTTP/1.1" 200 56100
+2026-06-12 16:17:58,982 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:17:58,984 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=4
+2026-06-12 16:17:58,984 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:17:59,414 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=4 HTTP/1.1" 200 58406
+2026-06-12 16:17:59,430 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:17:59,432 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=5
+2026-06-12 16:17:59,432 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:17:59,727 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=5 HTTP/1.1" 200 56355
+2026-06-12 16:17:59,729 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:17:59,730 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=6
+2026-06-12 16:17:59,732 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:18:00,018 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=6 HTTP/1.1" 200 56617
+2026-06-12 16:18:00,021 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:18:00,022 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=7
+2026-06-12 16:18:00,023 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:18:00,297 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=7 HTTP/1.1" 200 7492
+2026-06-12 16:18:00,297 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:18:04,631 - worker - INFO - Worker thread loop starting.
+2026-06-12 16:18:04,631 - worker - INFO - Worker job started.
+2026-06-12 16:18:04,631 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\worker\worker.py", line 47, in run
+    ignored = settings.ignored_directories
+AttributeError: module 'settings' has no attribute 'ignored_directories'
+2026-06-12 16:18:24,801 - root - INFO - App process terminated by user.
+2026-06-12 16:19:40,738 - worker - INFO - DEBUG: settings path: C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\settings.py
+2026-06-12 16:19:40,740 - root - INFO - App process is starting...
+2026-06-12 16:19:51,758 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 16:19:51,761 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:19:52,043 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 16:19:52,043 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:19:52,044 - root - INFO - User 'd.santos' logged in.
+2026-06-12 16:19:56,144 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A19%3A56&evaluated_by=312&workstation_name=AOI_THT
+2026-06-12 16:19:56,146 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:19:56,418 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A19%3A56&evaluated_by=312&workstation_name=AOI_THT HTTP/1.1" 200 52
+2026-06-12 16:19:56,418 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:19:58,400 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/
+2026-06-12 16:19:58,401 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:19:58,690 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/ HTTP/1.1" 200 59862
+2026-06-12 16:19:58,693 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:19:58,694 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=2
+2026-06-12 16:19:58,695 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:19:58,990 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=2 HTTP/1.1" 200 56266
+2026-06-12 16:19:58,992 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:19:58,993 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=3
+2026-06-12 16:19:58,994 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:19:59,283 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=3 HTTP/1.1" 200 56100
+2026-06-12 16:19:59,285 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:19:59,285 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=4
+2026-06-12 16:19:59,286 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:19:59,578 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=4 HTTP/1.1" 200 58406
+2026-06-12 16:19:59,582 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:19:59,582 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=5
+2026-06-12 16:19:59,583 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:19:59,894 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=5 HTTP/1.1" 200 56355
+2026-06-12 16:19:59,896 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:19:59,896 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=6
+2026-06-12 16:19:59,897 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:20:00,203 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=6 HTTP/1.1" 200 56617
+2026-06-12 16:20:00,204 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:20:00,207 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=7
+2026-06-12 16:20:00,208 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:20:00,494 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=7 HTTP/1.1" 200 7492
+2026-06-12 16:20:00,494 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:20:07,302 - worker - INFO - Worker thread loop starting.
+2026-06-12 16:20:07,303 - worker - INFO - Worker job started.
+2026-06-12 16:20:07,303 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\worker\worker.py", line 47, in run
+    ignored = settings.ignored_directories
+AttributeError: module 'settings' has no attribute 'ignored_directories'
+2026-06-12 16:28:57,367 - root - INFO - App process terminated by user.
+2026-06-12 16:29:03,055 - root - INFO - App process is starting...
+2026-06-12 16:29:12,208 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 16:29:12,211 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:29:12,497 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 16:29:12,497 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:29:12,498 - root - INFO - User 'd.santos' logged in.
+2026-06-12 16:29:16,723 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A29%3A16&evaluated_by=312&workstation_name=AOI_THT
+2026-06-12 16:29:16,723 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:29:17,000 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A29%3A16&evaluated_by=312&workstation_name=AOI_THT HTTP/1.1" 200 52
+2026-06-12 16:29:17,000 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:29:21,197 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\main.py", line 121, in __toggle_worker
+    self.__worker = Worker(
+TypeError: __init__() missing 1 required positional argument: 'settings_instance'
+2026-06-12 16:29:36,987 - root - INFO - App process is starting...
+2026-06-12 16:29:46,081 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 16:29:46,083 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:29:46,551 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 16:29:46,552 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:29:46,552 - root - INFO - User 'd.santos' logged in.
+2026-06-12 16:29:49,542 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A29%3A49&evaluated_by=312&workstation_name=AOI_THT
+2026-06-12 16:29:49,542 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:29:49,865 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A29%3A49&evaluated_by=312&workstation_name=AOI_THT HTTP/1.1" 200 52
+2026-06-12 16:29:49,866 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:29:59,422 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/workstations/?is_active=true&allow_api=true
+2026-06-12 16:29:59,422 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:29:59,718 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-06-12 16:29:59,718 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:30:05,862 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\main.py", line 121, in __toggle_worker
+    self.__worker = Worker(
+TypeError: __init__() missing 1 required positional argument: 'settings_instance'
+2026-06-12 16:36:24,926 - root - INFO - App process is starting...
+2026-06-12 16:36:33,426 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 16:36:33,427 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:36:33,752 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 16:36:33,752 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:36:33,753 - root - INFO - User 'd.santos' logged in.
+2026-06-12 16:36:38,126 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A36%3A38&evaluated_by=312&workstation_name=AOI_THT
+2026-06-12 16:36:38,127 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:36:38,417 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A36%3A38&evaluated_by=312&workstation_name=AOI_THT HTTP/1.1" 200 52
+2026-06-12 16:36:38,417 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:36:40,825 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/
+2026-06-12 16:36:40,827 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:36:41,117 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/ HTTP/1.1" 200 59838
+2026-06-12 16:36:41,120 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:36:41,120 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=2
+2026-06-12 16:36:41,121 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:36:41,438 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=2 HTTP/1.1" 200 56262
+2026-06-12 16:36:41,441 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:36:41,441 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=3
+2026-06-12 16:36:41,442 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:36:41,723 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=3 HTTP/1.1" 200 56070
+2026-06-12 16:36:41,725 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:36:41,726 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=4
+2026-06-12 16:36:41,727 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:36:42,030 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=4 HTTP/1.1" 200 58449
+2026-06-12 16:36:42,032 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:36:42,033 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=5
+2026-06-12 16:36:42,034 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:36:42,323 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=5 HTTP/1.1" 200 56366
+2026-06-12 16:36:42,326 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:36:42,327 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=6
+2026-06-12 16:36:42,328 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:36:42,618 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=6 HTTP/1.1" 200 56564
+2026-06-12 16:36:42,621 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:36:42,621 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=7
+2026-06-12 16:36:42,622 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:36:42,897 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=7 HTTP/1.1" 200 8063
+2026-06-12 16:36:42,897 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:36:46,541 - worker - INFO - Worker thread loop starting.
+2026-06-12 16:36:46,541 - worker - INFO - Starting worker...
+2026-06-12 16:36:46,541 - worker - INFO - Ignored directories: ['console_logs']
+2026-06-12 16:36:46,543 - worker - INFO - Worker job started.
+2026-06-12 16:36:46,559 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT262424046323754_120626123852.json.
+2026-06-12 16:36:46,559 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT262424046323754_120626123852.json done.
+	{'status': 'error', 'path': 'C:\\Users\\dsantos\\Desktop\\TestingLog\\PC_UT262424046323754_120626123852.json', 'message': 'Extensão de ficheiro não suportada.', 'ignore': True}
+2026-06-12 16:42:00,581 - root - INFO - App process terminated by user.
+2026-06-12 16:42:05,789 - root - INFO - App process is starting...
+2026-06-12 16:42:17,928 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 16:42:17,930 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:42:18,320 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 16:42:18,321 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:42:18,322 - root - INFO - User 'd.santos' logged in.
+2026-06-12 16:42:18,329 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A42%3A18&evaluated_by=312&workstation_name=STARKTEST_PC2
+2026-06-12 16:42:18,331 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:42:18,657 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A42%3A18&evaluated_by=312&workstation_name=STARKTEST_PC2 HTTP/1.1" 200 52
+2026-06-12 16:42:18,657 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:42:25,062 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/
+2026-06-12 16:42:25,062 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:42:25,361 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/ HTTP/1.1" 200 59849
+2026-06-12 16:42:25,364 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:42:25,364 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=2
+2026-06-12 16:42:25,365 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:42:25,660 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=2 HTTP/1.1" 200 56262
+2026-06-12 16:42:25,662 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:42:25,662 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=3
+2026-06-12 16:42:25,663 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:42:25,944 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=3 HTTP/1.1" 200 56070
+2026-06-12 16:42:25,947 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:42:25,947 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=4
+2026-06-12 16:42:25,948 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:42:26,252 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=4 HTTP/1.1" 200 58449
+2026-06-12 16:42:26,253 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:42:26,255 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=5
+2026-06-12 16:42:26,255 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:42:26,540 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=5 HTTP/1.1" 200 56366
+2026-06-12 16:42:26,542 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:42:26,543 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=6
+2026-06-12 16:42:26,543 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:42:26,822 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=6 HTTP/1.1" 200 56564
+2026-06-12 16:42:26,825 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:42:26,826 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/products/?page=7
+2026-06-12 16:42:26,826 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:42:27,112 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/products/?page=7 HTTP/1.1" 200 8063
+2026-06-12 16:42:27,112 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:42:31,691 - worker - INFO - Worker thread loop starting.
+2026-06-12 16:42:31,691 - worker - INFO - Worker job started.
+2026-06-12 16:42:31,691 - worker - INFO - Starting worker...
+2026-06-12 16:42:31,695 - worker - INFO - Ignored directories: ['console_logs']
+2026-06-12 16:43:24,412 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261724046116920_010626181028.json.
+2026-06-12 16:43:24,412 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261724046116920_010626181028.json done.
+	{'status': 'error', 'path': 'C:\\Users\\dsantos\\Desktop\\TestingLog\\PC_UT261724046116920_010626181028.json', 'message': 'Extensão de ficheiro não suportada.', 'ignore': True}
+2026-06-12 16:44:17,134 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\console_PC_UT262424046323754_120626123513.txt.
+2026-06-12 16:44:17,134 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\console_PC_UT262424046323754_120626123513.txt done.
+	{'status': 'error', 'path': 'C:\\Users\\dsantos\\Desktop\\TestingLog\\console_PC_UT262424046323754_120626123513.txt', 'message': 'Extensão de ficheiro não suportada.', 'ignore': True}
+2026-06-12 16:45:34,111 - worker - INFO - Worker job finished.
+2026-06-12 16:45:35,295 - worker - INFO - Worker thread loop starting.
+2026-06-12 16:45:35,295 - worker - INFO - Worker job started.
+2026-06-12 16:45:35,295 - worker - INFO - Starting worker...
+2026-06-12 16:45:35,299 - worker - INFO - Ignored directories: ['console_logs']
+2026-06-12 16:45:54,515 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\console_PC_UT262424046323754_120626123513.txt.
+2026-06-12 16:45:54,515 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\console_PC_UT262424046323754_120626123513.txt done.
+	{'status': 'error', 'path': 'C:\\Users\\dsantos\\Desktop\\TestingLog\\console_PC_UT262424046323754_120626123513.txt', 'message': 'Extensão de ficheiro não suportada.', 'ignore': True}
+2026-06-12 16:46:31,006 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\console_PC_UT262424046323754_120626123513.txt.
+2026-06-12 16:46:31,006 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\console_PC_UT262424046323754_120626123513.txt done.
+	{'status': 'error', 'path': 'C:\\Users\\dsantos\\Desktop\\TestingLog\\console_PC_UT262424046323754_120626123513.txt', 'message': 'Extensão de ficheiro não suportada.', 'ignore': True}
+2026-06-12 16:47:08,501 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261724046116920_010626181028.json.
+2026-06-12 16:47:08,501 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261724046116920_010626181028.json done.
+	{'status': 'error', 'path': 'C:\\Users\\dsantos\\Desktop\\TestingLog\\PC_UT261724046116920_010626181028.json', 'message': 'Extensão de ficheiro não suportada.', 'ignore': True}
+2026-06-12 16:47:25,710 - worker - INFO - Worker job finished.
+2026-06-12 16:47:32,216 - root - INFO - App process terminated by user.
+2026-06-12 16:57:32,327 - root - INFO - App process is starting...
+2026-06-12 16:57:41,166 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/accounts/login/
+2026-06-12 16:57:41,169 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:57:41,442 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/accounts/login/ HTTP/1.1" 200 123
+2026-06-12 16:57:41,442 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:57:41,442 - root - INFO - User 'd.santos' logged in.
+2026-06-12 16:57:41,449 - network - INFO - Sending GET request to http://192.168.1.222:8600/api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A57%3A41&evaluated_by=312&workstation_name=EOL
+2026-06-12 16:57:41,451 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:57:41,818 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "GET /api/v1/evaluations/?evaluated_at_after=2026-06-12%2007%3A57%3A41&evaluated_by=312&workstation_name=EOL HTTP/1.1" 200 52
+2026-06-12 16:57:41,819 - network - INFO - Server responded with a 200 status code.
+2026-06-12 16:57:47,001 - worker - INFO - Worker thread loop starting.
+2026-06-12 16:57:47,001 - worker - INFO - Worker job started.
+2026-06-12 16:57:47,001 - worker - INFO - Starting worker...
+2026-06-12 16:57:47,005 - worker - INFO - Ignored directories: ['console_logs']
+2026-06-12 16:58:02,191 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\console_PC_UT262424046323754_120626123513.txt.
+2026-06-12 16:58:02,191 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\console_PC_UT262424046323754_120626123513.txt done.
+	{'status': 'error', 'path': 'C:\\Users\\dsantos\\Desktop\\TestingLog\\console_PC_UT262424046323754_120626123513.txt', 'message': 'Extensão de ficheiro não suportada.', 'ignore': True}
+2026-06-12 16:58:20,512 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261524046116457_140526115748.json.
+2026-06-12 16:58:20,514 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261524046116457_140526115748.json done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\TestingLog\\PC_UT261524046116457_140526115748.json', 'data': {'serial_numbers': {'UT261524046116457': {'status': 'OK', 'timestamp': datetime.datetime(2026, 5, 14, 11, 57, 48)}}}, 'ignore': False}
+2026-06-12 16:58:20,514 - network - INFO - Sending POST request to http://192.168.1.222:8600/api/v2/evaluations/
+2026-06-12 16:58:20,515 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:58:20,805 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "POST /api/v2/evaluations/ HTTP/1.1" 400 49
+2026-06-12 16:58:20,805 - network - INFO - Server responded with a 400 status code.
+2026-06-12 16:58:20,805 - network - INFO - Server responded with a 400 status code.: {'message': 'Esta avaliação já foi registada.'}
+2026-06-12 16:58:26,891 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261524046116457_140526115748.json.
+2026-06-12 16:58:26,891 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261524046116457_140526115748.json done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\TestingLog\\PC_UT261524046116457_140526115748.json', 'data': {'serial_numbers': {'UT261524046116457': {'status': 'OK', 'timestamp': datetime.datetime(2026, 5, 14, 11, 57, 48)}}}, 'ignore': False}
+2026-06-12 16:58:26,891 - network - INFO - Sending POST request to http://192.168.1.222:8600/api/v2/evaluations/
+2026-06-12 16:58:26,893 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:58:27,198 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "POST /api/v2/evaluations/ HTTP/1.1" 400 49
+2026-06-12 16:58:27,199 - network - INFO - Server responded with a 400 status code.
+2026-06-12 16:58:27,199 - network - INFO - Server responded with a 400 status code.: {'message': 'Esta avaliação já foi registada.'}
+2026-06-12 16:58:28,235 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261524046116457_140526115748.json.
+2026-06-12 16:58:28,235 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261524046116457_140526115748.json done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\TestingLog\\PC_UT261524046116457_140526115748.json', 'data': {'serial_numbers': {'UT261524046116457': {'status': 'OK', 'timestamp': datetime.datetime(2026, 5, 14, 11, 57, 48)}}}, 'ignore': False}
+2026-06-12 16:58:28,235 - network - INFO - Sending POST request to http://192.168.1.222:8600/api/v2/evaluations/
+2026-06-12 16:58:28,237 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:58:28,707 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "POST /api/v2/evaluations/ HTTP/1.1" 400 49
+2026-06-12 16:58:28,707 - network - INFO - Server responded with a 400 status code.
+2026-06-12 16:58:28,707 - network - INFO - Server responded with a 400 status code.: {'message': 'Esta avaliação já foi registada.'}
+2026-06-12 16:58:29,746 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261524046116457_140526115748.json.
+2026-06-12 16:58:29,746 - worker - INFO - Parsing C:\Users\dsantos\Desktop\TestingLog\PC_UT261524046116457_140526115748.json done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\TestingLog\\PC_UT261524046116457_140526115748.json', 'data': {'serial_numbers': {'UT261524046116457': {'status': 'OK', 'timestamp': datetime.datetime(2026, 5, 14, 11, 57, 48)}}}, 'ignore': False}
+2026-06-12 16:58:29,747 - network - INFO - Sending POST request to http://192.168.1.222:8600/api/v2/evaluations/
+2026-06-12 16:58:29,747 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 192.168.1.222:8600
+2026-06-12 16:58:30,038 - urllib3.connectionpool - DEBUG - http://192.168.1.222:8600 "POST /api/v2/evaluations/ HTTP/1.1" 400 49
+2026-06-12 16:58:30,039 - network - INFO - Server responded with a 400 status code.
+2026-06-12 16:58:30,039 - network - INFO - Server responded with a 400 status code.: {'message': 'Esta avaliação já foi registada.'}
+2026-06-12 16:58:42,993 - root - INFO - App process terminated by user.

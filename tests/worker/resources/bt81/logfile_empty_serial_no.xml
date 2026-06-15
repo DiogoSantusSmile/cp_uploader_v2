@@ -1,0 +1,40 @@
+<example_file>
+  <filename>20250923163113_2417214486.xml</filename>
+  <supplier>GBT</supplier>
+  <date>20250923163113</date>
+  <station_ID>2</station_ID>
+  <serial_number></serial_number>
+  <serial_number_gbt>250000000002806</serial_number_gbt>
+  <starttime>20250923163128</starttime>
+  <endtime>20250923163210</endtime>
+  <result>PASSED</result>
+  <tasks>
+    <task name="Check Boot Mode">
+      <timestamp>20250923163129</timestamp>
+    </task>
+    <task name="Test Programming">
+      <timestamp>20250923163137</timestamp>
+    </task>
+    <task name="Functional">
+      <timestamp>20250923163152</timestamp>
+      <subtask name="LED Red">
+        <timestamp>20250923163154</timestamp>
+      </subtask>
+      <subtask name="LED Green">
+        <timestamp>20250923163154</timestamp>
+      </subtask>
+      <subtask name="RS485">
+        <timestamp>20250923163154</timestamp>
+      </subtask>
+      <subtask name="Modem USB">
+        <timestamp>20250923163152</timestamp>
+      </subtask>
+      <subtask name="Modem SIM">
+        <timestamp>20250923163152</timestamp>
+      </subtask>
+    </task>
+    <task name="Final Programming">
+      <timestamp>20250923163209</timestamp>
+    </task>
+  </tasks>
+</example_file>

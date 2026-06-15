@@ -1,0 +1,368 @@
+{
+    "Nome":"PCB_DUT1_V2",
+    "Descricao":"Dut 1 Versao 2",
+    "CodProduto":"teste",
+    "Lote":"teste",
+    "task_started_at":"02-06-2026 11:22:03",
+    "task_ended_at":"02-06-2026 11:22:16",
+    "Passos":[
+        {
+            "NomeTeste":"CloseALL",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:03",
+            "task_ended_at":"02-06-2026 11:22:03",
+            "ResultInfo":"CloseALL -- OK",
+            "ArrayResultInfo":[
+                "CloseALL--Ok--[PowerDut1:OFF]/[PowerDut2:OFF]/[PowerDut3:OFF]/[PowerDut5:OFF]/[PowerDut4:OFF]/[PowerDut6:OFF]/[Dut1_SwBoardMIO:OFF]/[Dut2_SwBoardMIO:OFF]/[Dut3_SwBoardMIO:OFF]/[Dut4_SwBoardMIO:OFF]/[Dut5_SwBoardMIO:OFF]/[Dut6_SwBoardMIO:OFF]/--[PowerDut1:OFF]/[PowerDut2:OFF]/[PowerDut3:OFF]/[PowerDut5:OFF]/[PowerDut4:OFF]/[PowerDut6:OFF]/[Dut1_SwBoardMIO:OFF]/[Dut2_SwBoardMIO:OFF]/[Dut3_SwBoardMIO:OFF]/[Dut4_SwBoardMIO:OFF]/[Dut5_SwBoardMIO:OFF]/[Dut6_SwBoardMIO:OFF]/--5ms/"
+            ]
+        },
+        {
+            "NomeTeste":"Liga_LedRed_DUT1",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:03",
+            "task_ended_at":"02-06-2026 11:22:03",
+            "ResultInfo":"Liga_LedRed_DUT1 -- OK",
+            "ArrayResultInfo":[
+                "Iiga led vermelho--Ok--[Led_Red_Dut1:ON]/[Led_Green_Dut1:OFF]/--[Led_Red_Dut1:ON]/[Led_Green_Dut1:OFF]/--5ms/"
+            ]
+        },
+        {
+            "NomeTeste":"Power ON DUT1",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:03",
+            "task_ended_at":"02-06-2026 11:22:03",
+            "ResultInfo":"Power ON DUT1 -- OK",
+            "ArrayResultInfo":[
+                "Alimenta Dut1--Ok--[PowerDut1:ON]/[PowerDut2:OFF]/[PowerDut3:OFF]/[PowerDut4:OFF]/[PowerDut5:OFF]/[PowerDut6:OFF]/--[PowerDut1:ON]/[PowerDut2:OFF]/[PowerDut3:OFF]/[PowerDut4:OFF]/[PowerDut5:OFF]/[PowerDut6:OFF]/--4ms/"
+            ]
+        },
+        {
+            "NomeTeste":"SwBoard DUT1",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:03",
+            "task_ended_at":"02-06-2026 11:22:03",
+            "ResultInfo":"SwBoard DUT1 -- OK",
+            "ArrayResultInfo":[
+                "Habilita SW MIO DUT 1--Ok--[Dut1_SwBoardMIO:ON]/[Dut2_SwBoardMIO:OFF]/[Dut3_SwBoardMIO:OFF]/[Dut4_SwBoardMIO:OFF]/[Dut5_SwBoardMIO:OFF]/[Dut6_SwBoardMIO:OFF]/--[Dut1_SwBoardMIO:ON]/[Dut2_SwBoardMIO:OFF]/[Dut3_SwBoardMIO:OFF]/[Dut4_SwBoardMIO:OFF]/[Dut5_SwBoardMIO:OFF]/[Dut6_SwBoardMIO:OFF]/--3ms/",
+                "Aguarda--Ok--100ms----100ms/"
+            ]
+        },
+        {
+            "NomeTeste":"Analog Signals",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:03",
+            "task_ended_at":"02-06-2026 11:22:04",
+            "ResultInfo":"Analog Signals -- OK",
+            "ArrayResultInfo":[
+                "aguarda 500ms--Ok--500ms----500ms/",
+                "PCB Signals Check--Ok--24,30/10,05/3,29/3,01/-4,91/-1,12/--[22,80--25,20]/[9,80--10,20]/[3,23--3,36]/[2,90--3,20]/[-5,25---4,75]/[-1,14---1,09]/--105ms/"
+            ]
+        },
+        {
+            "NomeTeste":"Programar PCB",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:04",
+            "task_ended_at":"02-06-2026 11:22:07",
+            "ResultInfo":"Programar PCB -- Write OK",
+            "ArrayResultInfo":[
+                "Programar PCB",
+                "Write OK",
+                "Writed 91",
+                "To Write 91",
+                "3041ms"
+            ]
+        },
+        {
+            "NomeTeste":"Analog Input DUT123",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:07",
+            "task_ended_at":"02-06-2026 11:22:11",
+            "ResultInfo":"Analog Input DUT123 -- OK",
+            "ArrayResultInfo":[
+                "aguarda inicio--Ok--1500ms----1500ms/",
+                "AI 1 e 2 Format 0-10V--Ok--AnalogIn1 : 0-10V -0/AnalogIn2 : 0-10V -0/--=0/=0/--35ms/",
+                "Set CH1 e CH2 to V--Ok--[Ch1/2 V/mA:OFF]/[Ch3/4 V/mA:OFF]/--[Ch1/2 V/mA:OFF]/[Ch3/4 V/mA:OFF]/--4ms/",
+                "Coloca 0v--Ok--0,00/0,00/----/--/--9ms/",
+                "espera--Ok--100ms----100ms/",
+                "Le AI1 e 2 0V --Ok--AnalogIn1 Read :  -65508/AnalogIn2 Read :  -65508/--Min-65400<>Max-65535/Min-65400<>Max-65535/--26ms/",
+                "Coloca 5V--Ok--5,00/5,00/----/--/--13ms/",
+                "espera 5v--Ok--100ms----100ms/",
+                "Le A1 e 2 5V--Ok--AnalogIn1 Read :  -2057/AnalogIn2 Read :  -2056/--Min-1844<>Max-2255/Min-1844<>Max-2255/--29ms/",
+                "Coloca 10V--Ok--10,00/10,00/----/--/--15ms/",
+                "espera 10v--Ok--100ms----100ms/",
+                "Le A1 e 2 10V--Ok--AnalogIn1 Read :  -4143/AnalogIn2 Read :  -4140/--Min-3688<>Max-4508/Min-3688<>Max-4508/--28ms/",
+                "espera mudanca--Ok--100ms----100ms/",
+                "AI 1 e 2 Format 0-20mA--Ok--AnalogIn1 : 0-20mA -1/AnalogIn2 : 0-20mA -1/--=1/=1/--25ms/",
+                "Set CH1 e CH2 to mA--Ok--[Ch1/2 V/mA:ON]/[Ch3/4 V/mA:ON]/--[Ch1/2 V/mA:ON]/[Ch3/4 V/mA:ON]/--5ms/",
+                "Coloca 0mA--Ok--0,00/0,00/----/--/--13ms/",
+                "espera 0mA--Ok--100ms----100ms/",
+                "Le 0mA--Ok--AnalogIn1 Read :  -0/AnalogIn2 Read :  -0/--=0/=0/--24ms/",
+                "Coloca 10mA--Ok--10,00/10,00/----/--/--13ms/",
+                "espera 10mA--Ok--1200ms----1200ms/",
+                "Le 10mA--Ok--AnalogIn1 Read :  -1983/AnalogIn2 Read :  -1981/--Min-1844<>Max-2254/Min-1844<>Max-2254/--32ms/",
+                "Coloca 20mA--Ok--20,00/20,00/----/--/--13ms/",
+                "espera 20mA--Ok--100ms----100ms/",
+                "Le 20mA--Ok--AnalogIn2 Read :  -3955/AnalogIn1 Read :  -3962/--Min-3688<>Max-4508/Min-3688<>Max-4508/--28ms/",
+                "Reset--Ok--0,00/0,00/0,00/0,00/----/--/--/--/--27ms/"
+            ]
+        },
+        {
+            "NomeTeste":"Analog Out DUT",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:11",
+            "task_ended_at":"02-06-2026 11:22:12",
+            "ResultInfo":"Analog Out DUT -- OK",
+            "ArrayResultInfo":[
+                "Analog Out Format 0-24v--Ok--AnalogOut : 0 or 24V -0/--=0/--13ms/",
+                "Coloca 24V na AO--Ok--AnalogOut Value :  -1/--=1/--17ms/",
+                "aguarda--Ok--220ms----220ms/",
+                "CheckAO Value--Ok--5,99/--[5,10--6,50]/--106ms/",
+                "Coloca 0V na AO--Ok--AnalogOut Value :  -0/--=0/--11ms/",
+                "AO Format 0-10V--Ok--AnalogOut : 0 to 10V -1/--=1/--17ms/",
+                "Coloca 0V--Ok--AnalogOut Value :  -0/--=0/--12ms/",
+                "espera 0v--Ok--120ms----120ms/",
+                "Detect 0V--Ok--0,00/--[0,00--0,00]/--106ms/",
+                "Coloca 5V--Ok--AnalogOut Value :  -2048/--=2048/--14ms/",
+                "espera 5v--Ok--120ms----120ms/",
+                "Detect 5v--Ok--1,24/--[1,10--1,35]/--105ms/",
+                "Coloca 10v--Ok--AnalogOut Value :  -4096/--=4096/--14ms/",
+                "espera 10v--Ok--120ms----120ms/",
+                "Detect 10v--Ok--2,48/--[2,20--2,60]/--105ms/",
+                "Reset--Ok--AnalogOut Value :  -0/--=0/--14ms/"
+            ]
+        },
+        {
+            "NomeTeste":"Test Buttons",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:12",
+            "task_ended_at":"02-06-2026 11:22:14",
+            "ResultInfo":"Test Buttons -- OK",
+            "ArrayResultInfo":[
+                "LigaBt1--Ok--[Val_Bt_1:ON]/[Val_Bt_2:OFF]/[Val_Bt_3:OFF]/[Val_Bt_4:OFF]/[Val_Bt_5:OFF]/--[Val_Bt_1:ON]/[Val_Bt_2:OFF]/[Val_Bt_3:OFF]/[Val_Bt_4:OFF]/[Val_Bt_5:OFF]/--6ms/",
+                "Aguarda BT1--Ok--250ms----250ms/",
+                "CheckBT1 ON--Ok--Button Inputs : Down -0/Button Inputs : Navigate -0/Button Inputs : STOP -0/Button Inputs : START -0/BT : Livre -32/--!=Dif-1/!=Dif-3/!=Dif-4/!=Dif-5/=32/--83ms/",
+                "LigaBt2--Ok--[Val_Bt_1:OFF]/[Val_Bt_2:ON]/[Val_Bt_3:OFF]/[Val_Bt_4:OFF]/[Val_Bt_5:OFF]/--[Val_Bt_1:OFF]/[Val_Bt_2:ON]/[Val_Bt_3:OFF]/[Val_Bt_4:OFF]/[Val_Bt_5:OFF]/--4ms/",
+                "Aguarda BT2--Ok--250ms----250ms/",
+                "CheckBt2 ON--Ok--Button Inputs : START -1/Button Inputs : Down -0/Button Inputs : UP -0/Button Inputs : Navigate -0/Button Inputs : STOP -0/BT : Livre -16/--=5/!=Dif-1/!=Dif-2/!=Dif-3/!=Dif-4/=16/--97ms/",
+                "LigaBt3--Ok--[Val_Bt_1:OFF]/[Val_Bt_2:OFF]/[Val_Bt_3:ON]/[Val_Bt_4:OFF]/[Val_Bt_5:OFF]/--[Val_Bt_1:OFF]/[Val_Bt_2:OFF]/[Val_Bt_3:ON]/[Val_Bt_4:OFF]/[Val_Bt_5:OFF]/--3ms/",
+                "Aguarda BT3--Ok--250ms----250ms/",
+                "CheckBt3 ON--Ok--Button Inputs : STOP -1/Button Inputs : Down -0/Button Inputs : UP -0/Button Inputs : Navigate -0/Button Inputs : START -0/BT : Livre -8/--=4/!=Dif-1/!=Dif-2/!=Dif-3/!=Dif-5/=8/--91ms/",
+                "LigaBt4--Ok--[Val_Bt_1:OFF]/[Val_Bt_2:OFF]/[Val_Bt_3:OFF]/[Val_Bt_4:ON]/[Val_Bt_5:OFF]/--[Val_Bt_1:OFF]/[Val_Bt_2:OFF]/[Val_Bt_3:OFF]/[Val_Bt_4:ON]/[Val_Bt_5:OFF]/--4ms/",
+                "Aguarda BT4--Ok--250ms----250ms/",
+                "CheckBt4--Ok--BT : Livre -2/--=2/--18ms/",
+                "LigaBt5--Ok--[Val_Bt_1:OFF]/[Val_Bt_2:OFF]/[Val_Bt_3:OFF]/[Val_Bt_4:OFF]/[Val_Bt_5:ON]/--[Val_Bt_1:OFF]/[Val_Bt_2:OFF]/[Val_Bt_3:OFF]/[Val_Bt_4:OFF]/[Val_Bt_5:ON]/--4ms/",
+                "Aguarda BT5--Ok--400ms----400ms/",
+                "CheckBt5--Ok--Button Inputs : STOP -0/Button Inputs : START -0/BT : Livre -4/--!=Dif-4/!=Dif-5/=4/--56ms/",
+                "AllBtOFF--Ok--[Val_Bt_1:OFF]/[Val_Bt_2:OFF]/[Val_Bt_3:OFF]/[Val_Bt_4:OFF]/[Val_Bt_5:OFF]/[EV_Ar:OFF]/--[Val_Bt_1:OFF]/[Val_Bt_2:OFF]/[Val_Bt_3:OFF]/[Val_Bt_4:OFF]/[Val_Bt_5:OFF]/[EV_Ar:OFF]/--4ms/"
+            ]
+        },
+        {
+            "NomeTeste":"Test DI 1e2 DUT1",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:14",
+            "task_ended_at":"02-06-2026 11:22:15",
+            "ResultInfo":"Test DI 1e2 DUT1 -- OK",
+            "ArrayResultInfo":[
+                "Liga Dos para as DI DUT1--Ok--[Dut1_DI1:ON]/[Dut1_DI2:ON]/--[Dut1_DI1:ON]/[Dut1_DI2:ON]/--3ms/",
+                "espera1--Ok--50ms----50ms/",
+                "Testa DI 1 e 2 DUT1--Ok--DigIn/AnaIn Status : DI2 -1/DigIn/AnaIn Status : DI1 -1/--=1/!=Dif-0/--25ms/",
+                "OFF--Ok--[Dut1_DI1:OFF]/[Dut1_DI2:OFF]/--[Dut1_DI1:OFF]/[Dut1_DI2:OFF]/--5ms/",
+                "espera2--Ok--50ms----50ms/",
+                "TestaDI1e2 OFF--Ok--DigIn/AnaIn Status : DI1 -0/DigIn/AnaIn Status : DI2 -0/--=0/!=Dif-1/--26ms/"
+            ]
+        },
+        {
+            "NomeTeste":"Relay Output DUT",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:15",
+            "task_ended_at":"02-06-2026 11:22:15",
+            "ResultInfo":"Relay Output DUT -- OK",
+            "ArrayResultInfo":[
+                "Rele ON--Ok--Relay Output : Close -1/--=1/--13ms/",
+                "Wait entre Rele on e off--Ok--135ms----135ms/",
+                "Check RELE ON--Ok--[DaqDI0_DUT Relay_2:Ok]/--ON/--20ms/",
+                "Rele OFF--Ok--Relay Output : Open -0/--=0/--18ms/",
+                "wait2--Ok--125ms----125ms/",
+                "Check Rele OFF--Ok--[DaqDI0_DUT Relay_2:Ok]/--OFF/--20ms/"
+            ]
+        },
+        {
+            "NomeTeste":"DUT123 Display8OffDot",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:15",
+            "task_ended_at":"02-06-2026 11:22:15",
+            "ResultInfo":"DUT123 Display8OffDot -- OK",
+            "ArrayResultInfo":[
+                "Coloca no ecra 888888--Ok--Display Value2 :  -88/Display Value1 :  -8888/--=88/=8888/--33ms/"
+            ]
+        },
+        {
+            "NomeTeste":"DUT1_MP1",
+            "Result":"OK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"DUT1_MP1 -- OK",
+            "ArrayResultInfo":[
+                "TestDut1888888-- # Ok--888888--OCR Lido =888888; OCR Esperado =888888; Diff-Ok --18ms/"
+            ]
+        },
+        {
+            "NomeTeste":"DUT123 Display888888",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:16",
+            "task_ended_at":"02-06-2026 11:22:16",
+            "ResultInfo":"DUT123 Display888888 -- OK",
+            "ArrayResultInfo":[
+                "Coloca no ecra 888888--Ok--Display Value1 :  -10000/--=10000/--20ms/"
+            ]
+        },
+        {
+            "NomeTeste":"DUT1_DOT1",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"DUT1_DOT1 -- NOK",
+            "ArrayResultInfo":[
+                "TestDut1DOT-- # Nok--0--Particulas Lido =0; Particulas Esperado =1--1ms/"
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"",
+            "Result":"NOK",
+            "task_started_at":"",
+            "task_ended_at":"",
+            "ResultInfo":"",
+            "ArrayResultInfo":[
+            ]
+        },
+        {
+            "NomeTeste":"CloseALL",
+            "Result":"OK",
+            "task_started_at":"02-06-2026 11:22:16",
+            "task_ended_at":"02-06-2026 11:22:16",
+            "ResultInfo":"CloseALL -- OK",
+            "ArrayResultInfo":[
+                "CloseALL--Ok--[PowerDut1:OFF]/[PowerDut2:OFF]/[PowerDut3:OFF]/[PowerDut5:OFF]/[PowerDut4:OFF]/[PowerDut6:OFF]/[Dut1_SwBoardMIO:OFF]/[Dut2_SwBoardMIO:OFF]/[Dut3_SwBoardMIO:OFF]/[Dut4_SwBoardMIO:OFF]/[Dut5_SwBoardMIO:OFF]/[Dut6_SwBoardMIO:OFF]/--[PowerDut1:OFF]/[PowerDut2:OFF]/[PowerDut3:OFF]/[PowerDut5:OFF]/[PowerDut4:OFF]/[PowerDut6:OFF]/[Dut1_SwBoardMIO:OFF]/[Dut2_SwBoardMIO:OFF]/[Dut3_SwBoardMIO:OFF]/[Dut4_SwBoardMIO:OFF]/[Dut5_SwBoardMIO:OFF]/[Dut6_SwBoardMIO:OFF]/--5ms/"
+            ]
+        }
+    ],
+    "CodUnico":"45-E366C-00-07;20260309;1;7.01;000014121",
+    "ResultadoFinal":"PASS"
+}

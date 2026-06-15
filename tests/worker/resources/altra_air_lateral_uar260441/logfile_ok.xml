@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<AirQualityFile>
+
+  <filename>U0050H5__20052026_145145_S0_P.xml</filename>
+
+  <supplier>Controlar</supplier>
+
+  <date>20052026_145145</date>
+
+  <station_ID>AIRQ</station_ID>
+
+  <serialnumber>U0050H5</serialnumber>
+
+  <endtime>14:51:59</endtime>
+
+  <executiontime>14.344018</executiontime>
+
+  <result>PASSED</result>
+
+  <tasks>
+    <task name="CAN Bus Test - Message Confirmation">
+      <TestNumber>1</TestNumber>
+      <Result>Passed</Result>
+      <Meas>31</Meas>
+      <LoLim>31</LoLim>
+      <HiLim>-</HiLim>
+      <Unit>Str</Unit>
+      <TimeStamp/>
+      <ExecTime/>
+      <DateTime>14:51:46</DateTime>
+    </task>
+    <task name="Ionization Test - Ion Count with Ionizers OFF">
+      <TestNumber>2</TestNumber>
+      <Result>Passed</Result>
+      <Meas>6000</Meas>
+      <LoLim>-50000</LoLim>
+      <HiLim>50000</HiLim>
+      <Unit>V</Unit>
+      <TimeStamp/>
+      <ExecTime/>
+      <DateTime>14:51:47</DateTime>
+    </task>
+    <task name="Ionization Test - Ion Count with Ionizer 1.0 ON">
+      <TestNumber>3</TestNumber>
+      <Result>Passed</Result>
+      <Meas>-19091000</Meas>
+      <LoLim>-150000000</LoLim>
+      <HiLim>-10000000</HiLim>
+      <Unit>V</Unit>
+      <TimeStamp/>
+      <ExecTime/>
+      <DateTime>14:51:49</DateTime>
+    </task>
+    <task name="Ionization Test - Ion Count with Ionizers OFF">
+      <TestNumber>4</TestNumber>
+      <Result>Passed</Result>
+      <Meas>-4000</Meas>
+      <LoLim>-50000</LoLim>
+      <HiLim>50000</HiLim>
+      <Unit>V</Unit>
+      <TimeStamp/>
+      <ExecTime/>
+      <DateTime>14:51:56</DateTime>
+    </task>
+    <task name="Ionization Test - Ion Count with Ionizer 2.0 ON">
+      <TestNumber>5</TestNumber>
+      <Result>Passed</Result>
+      <Meas>-13082000</Meas>
+      <LoLim>-150000000</LoLim>
+      <HiLim>-10000000</HiLim>
+      <Unit>V</Unit>
+      <TimeStamp/>
+      <ExecTime/>
+      <DateTime>14:51:58</DateTime>
+    </task>
+  </tasks>
+
+</AirQualityFile>

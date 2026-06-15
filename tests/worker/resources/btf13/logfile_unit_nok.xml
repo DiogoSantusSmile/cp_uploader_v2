@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LOG_XML>
+    <filename>R02.252385.Y25F86.000103_20250721_121708.xml</filename>
+    <serialnumber>R02.252385.Y25F86.000103</serialnumber>
+    <supplier>UARTRONICA</supplier>
+    <starttime>20250721_121659</starttime>
+    <endtime>20250721_121708</endtime>
+    <result>UNIT_SHOULD_BE_NG</result>
+    <tasks>
+        <task name="Bcode">
+            <result>PASS</result>
+        </task>
+        <task name="FW_FLASH">
+            <result>PASS</result>
+        </task>
+        <task name="INTENSITY_A">
+            <result>PASS</result>
+        </task>
+        <task name="INTENSITY_B">
+            <result>PASS</result>
+        </task>
+        <task name="INTENSITY_C">
+            <result>PASS</result>
+        </task>
+        <task name="COLOR_A">
+            <result>PASS</result>
+        </task>
+        <task name="COLOR_B">
+            <result>PASS</result>
+        </task>
+        <task name="COLOR_C">
+            <result>PASS</result>
+        </task>
+        <task name="CurrTest">
+            <result>PASS</result>
+        </task>
+        <task name="SYC">
+            <result>PASS</result>
+        </task>
+        <task name="Period">
+            <result>PASS</result>
+        </task>
+        <task name="Max current value">
+            <result>PASS</result>
+        </task>
+        <task name="Uptime">
+            <result>PASS</result>
+        </task>
+    </tasks>
+</LOG_XML>
