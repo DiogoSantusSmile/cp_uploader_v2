@@ -15,7 +15,9 @@ from .helpers import (
     parse_starktest_pc2,
     parse_automatic_label_check_01,
     parse_altra_air_lateral_uar260441,
-    parse_btf06
+    parse_btf06,
+    parse_leak_test_1,
+    parse_leak_test_2
 )
 from logger_config import setup_logger
 
@@ -90,6 +92,14 @@ TOOLS = {
     'BTF06': {
         'file_extensions': ['.json'],
         'parser': parse_btf06,
+    },
+    'LEAK_TEST_1': {
+        'file_extensions': ['.csv'],
+        'parser': parse_leak_test_1,
+    },
+    'LEAK_TEST_2': {
+        'file_extensions': ['.csv'],
+        'parser': parse_leak_test_2,
     }
 }
 

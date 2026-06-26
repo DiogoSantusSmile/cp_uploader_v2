@@ -9,9 +9,12 @@ class Settings:
     allowed_workstations = ''
     workstation = ''
     logs_location = ''
-    ignored_directories = [] # Lista base, incluindo o default atual
     date_start_logs = datetime.now()
     line = ''
+    ignored_directories = []
+    backup_enable = False
+    backup_location = None
+    backup_action = None
 
     def __init__(self):
         try:
@@ -31,14 +34,18 @@ class Settings:
         self.workstation = config.get('CORE', 'WORKSTATION')
         self.allowed_workstations = config.get('CORE', 'ALLOWED_WORKSTATIONS')
         self.logs_location = config.get('LOGS', 'LOGS_LOCATION')
-        # Ler lista do .ini (converter de string separada por vírgulas para lista)
-        ignored = config.get('LOGS', 'IGNORED_DIRECTORIES')
-        self.ignored_directories = [d.strip() for d in ignored.split(',')]
         self.date_start_logs = datetime.strptime(
             config.get('LOGS', 'DATE_START_LOGS'),
             '%Y-%m-%d %H:%M:%S'
         )
         self.line = config.get('UARTRACKER', 'LINE')
+
+        ignored = config.get('LOGS', 'IGNORED_DIRECTORIES')
+        self.ignored_directories = [d.strip() for d in ignored.split(',')]
+
+        self.backup_enable = config.getboolean('LOGS_BACKUP', 'ENABLE')
+        self.backup_location = config.get('LOGS_BACKUP', 'BACKUP_LOCATION')
+        self.backup_action = config.get('LOGS_BACKUP', 'ACTION')
 
     def save(self):
         """
@@ -60,6 +67,11 @@ class Settings:
                 'LOGS_LOCATION': self.logs_location,
                 'DATE_START_LOGS': self.date_start_logs.strftime('%Y-%m-%d %H:%M:%S'),
                 'IGNORED_DIRECTORIES': ','.join(self.ignored_directories)
+            },
+            'LOGS_BACKUP': {
+                'ENABLE': self.backup_enable,
+                'BACKUP_LOCATION': self.backup_location,
+                'ACTION': self.backup_action
             },
             'UARTRACKER': {
                 'LINE': self.line
@@ -89,6 +101,11 @@ class Settings:
                 'LOGS_LOCATION': self.logs_location,
                 'DATE_START_LOGS': self.date_start_logs,
             },
+            'LOGS_BACKUP': {
+                'ENABLE': self.backup_enable,
+                'BACKUP_LOCATION': self.backup_location,
+                'ACTION': self.backup_action
+            },
             'UARTRACKER': {
                 'LINE': self.line
             },
@@ -109,11 +126,14 @@ class Settings:
         """
         self.url = settings['NETWORK']['URL']
         self.tool = settings['CORE']['TOOL']
-        self.allowed_workstations = settings['CORE']['ALLOWED_WORKSTATIONS']
+        self.allowed_workstations = settings['CORE']['ALLOWED_WORKSTATIONS'] or self.allowed_workstations
         self.workstation = settings['CORE']['WORKSTATION']
         self.logs_location = settings['LOGS']['LOGS_LOCATION']
         self.date_start_logs = settings['LOGS']['DATE_START_LOGS']
         self.line = settings['UARTRACKER']['LINE']
+        self.backup_enable = settings['LOGS_BACKUP']['ENABLE']
+        self.backup_location = settings['LOGS_BACKUP']['BACKUP_LOCATION']
+        self.backup_action = settings['LOGS_BACKUP']['ACTION']
 
         if save:
             self.save()

@@ -4,9 +4,11 @@ from PyQt5.QtCore import QLockFile
 
 import os
 import shutil
+import sys
 
 os.environ['DATABASE_URL'] = 'sqlite:///./app.db'
 
+from backup import LogBackupThread
 from db import LogfileService
 from db.enums import UploadStatus
 from helpers import format_evaluation_data, move_logfile, format_evaluation_data_create_evaluation_v1_url
@@ -39,6 +41,7 @@ class Controller:
         self.__worker = None
         self.__product = None
         self.__order = None
+        self.__backup_thread = None
         self.__settings = Settings()
         logs_extensions = []
 
@@ -67,11 +70,29 @@ class Controller:
         )
         self.__network = Network(url=self.__settings.url)
 
+        if self.__settings.backup_enable:
+            self.__backup_thread = LogBackupThread(
+                origin=os.path.join(
+                    self.__settings.logs_location,
+                    'processed'
+                ),
+                destination=self.__settings.backup_location,
+                action=self.__settings.backup_action,
+                on_start=self.__backup_job_start_handler,
+                on_stop=self.__backup_job_stop_handler,
+                on_error=self.__backup_job_error_handler,
+                on_movement=self.__backup_job_movement_handler
+            )
+
     def run(self):
         if not lock.tryLock():
             logger.error('Another instance of the app is already running.')
             show_critical_error_message_box('Já existe uma instância do programa em execução.')
             return
+
+        # Inicia backup job se estiver habilitado
+        if self.__backup_thread is not None:
+            self.__backup_thread.start()
 
         self.__interface.show()
 
@@ -119,13 +140,13 @@ class Controller:
     def __toggle_worker(self):
         if self.__worker is None:
             self.__worker = Worker(
-                self.__settings,
                 location=self.__settings.logs_location,
                 parser=Parser(tool=self.__settings.tool),
                 on_start=lambda: self.__interface.update_worker_status('running'),
                 on_finish=lambda: self.__interface.update_worker_status('idle'),
                 on_parse=self.__logfile_parse_handler,
                 on_error=self.__worker_error_handler,
+                ignored_directories=self.__settings.ignored_directories
             )
 
         if not self.__worker.isRunning():
@@ -150,6 +171,18 @@ class Controller:
 
     def __close_handler(self):
         logger.info('App process terminated by user.')
+
+        # Encerra Backup Thread
+        try:
+            if self.__backup_thread is not None and self.__backup_thread.isRunning():
+                self.__backup_thread.stop()
+                # Dá 10 segundos ao backup thread para terminar, caso contrário força encerramento
+                finished = self.__backup_thread.wait(10000)
+                if not finished:
+                    logger.warning('Backup thread did not finish within timeout... proceeding to shutdown.')
+        except Exception:
+            logger.exception('Error while stopping backup thread')
+
         lock.unlock()
 
     def __logfile_parse_handler(self, result):
@@ -178,14 +211,15 @@ class Controller:
                 url = CREATE_EVALUATION_V1_URL
             elif self.__settings.tool == 'MIL07':
                 url = MIL07_URL
-                result['data'].update({'product_id': self.__product['id'],'order': self.__order})
+                result['data'].update({'product_id': self.__product['id'], 'order': self.__order})
             else:
                 url = CREATE_EVALUATION_V2_URL
 
             # checks if serial_no finds exactly one serial_no_2 in the database
             if self.__settings.tool in ['ZURC']:
                 for serial_number, details in list(result['data']['serial_numbers'].items()):
-                    get_data_response = self.__network.get_data(GET_UNIT_URL + f'?serial_no_2__icontains=NS{serial_number} L{details["lot_number"]}')
+                    get_data_response = self.__network.get_data(
+                        GET_UNIT_URL + f'?serial_no_2__icontains=NS{serial_number} L{details["lot_number"]}')
                     if len(get_data_response['data']['results']) == 0:
                         error_msg = f'Não foi possível encontar uma unidade com o excerto \'{serial_number}\' e lote \'{details["lot_number"]}\'.'
                         break
@@ -220,7 +254,6 @@ class Controller:
                             else:
                                 result['data']['serial_numbers'][serial_number].pop('tplaca', None)
                                 result['data']['serial_numbers'][serial_number].pop('fwversion', None)
-
 
             if self.__settings.tool in ['EOL ZIV', 'FCL0022', 'LVS']:
                 line_dict = {}
@@ -370,6 +403,9 @@ class Controller:
             'logs_location': settings['LOGS']['LOGS_LOCATION'],
             'logs_date_start': settings['LOGS']['DATE_START_LOGS'],
             'available_tools': list(TOOLS.keys()),
+            'enable_logs_backup': settings['LOGS_BACKUP']['ENABLE'],
+            'logs_backup_location': settings['LOGS_BACKUP']['BACKUP_LOCATION'],
+            'logs_backup_action': settings['LOGS_BACKUP']['ACTION'],
         }
 
     def __save_settings_handler(self, settings):
@@ -388,16 +424,28 @@ class Controller:
             'NETWORK': {'URL': settings['cp_url']},
             'CORE': {
                 'TOOL': settings['active_tool'],
-                'WORKSTATION': settings['active_workstation']
+                'WORKSTATION': settings['active_workstation'],
+                'ALLOWED_WORKSTATIONS': self.__settings.allowed_workstations
+                # TODO: isto deveria passar para a janela dos settings
             },
             'LOGS': {
                 'LOGS_LOCATION': settings['logs_location'],
                 'DATE_START_LOGS': settings['logs_date_start']
             },
+            'LOGS_BACKUP': {
+                'ENABLE': settings['enable_logs_backup'],
+                'BACKUP_LOCATION': settings['logs_backup_location'],
+                'ACTION': settings['logs_backup_action'],
+            },
             'UARTRACKER': {
                 'LINE': config.get('UARTRACKER', 'LINE')
             }
         })
+
+        # TODO: Este restart é abrupto, futuramente deve esperar que threads terminem antes de
+        #   encerrar a app bem como encerrar a app de forma mais elegante.
+        # Reinicia app para recarregar configurações.
+        os.execl(sys.executable, os.path.abspath(__file__), *sys.argv)
 
     def __get_workstations_handler(self):
         url = GET_WORKSTATIONS_LIST_URL + '?is_active=true&allow_api=true'
@@ -501,6 +549,18 @@ class Controller:
             'Erro de processamento de ficheiros',
             'Ocorreu um erro ao processar ficheiros de log!\nPor favor, tente novamente.'
         )
+
+    def __backup_job_error_handler(self, error):
+        print('[Controller] - backup_job_error_handler called', error)
+
+    def __backup_job_movement_handler(self, movement):
+        print('[Controller] - backup_job_movement_handler called', movement)
+
+    def __backup_job_start_handler(self):
+        print('[Controller] - backup_job_start_handler called')
+
+    def __backup_job_stop_handler(self):
+        print('[Controller] - backup_job_stop_handler called')
 
 
 if __name__ == '__main__':

@@ -12,7 +12,7 @@ class Worker(QThread):
     stop_signal = pyqtSignal()
     error_signal = pyqtSignal(str)
 
-    def __init__(self, settings_instance, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
         self.location = kwargs.pop('location')
         self.parser = kwargs.pop('parser')
         self.on_start = kwargs.pop('on_start')
@@ -20,9 +20,9 @@ class Worker(QThread):
         self.on_parse = kwargs.pop('on_parse')
         self.on_error = kwargs.pop('on_error')
         self.__wants_to_stop = False
+        self.ignored_directories = kwargs.pop('ignored_directories')
 
         super().__init__(*args, **kwargs)
-        self.settings = settings_instance # Armazena para usar no run()
         self.started.connect(self.start_handler)
         self.finished.connect(self.finish_handler)
         self.stop_signal.connect(self.stop)
@@ -37,15 +37,12 @@ class Worker(QThread):
         self.on_finish()
 
     def run(self):
-        # acesso à instância, não ao módulo
-        ignored = self.settings.ignored_directories
-
         self.__wants_to_stop = False
 
         while not self.__wants_to_stop:
             try:
                 # Passa os diretórios ignorados para a função
-                for file in get_files_from_location(self.location, ignored_dirs=ignored):
+                for file in get_files_from_location(self.location, ignored_dirs=self.ignored_directories):
                     if self.__wants_to_stop:
                         break
 

@@ -1,3 +1,11 @@
+Controlo de Produção 2.0.7.17 (15/06/2026)
+===========================================
+
+Features
+--------
+- Adiciona possibilidade de definir exclusões de processamento a sub-pastas do diretório dos logs.
+
+
 Controlo de Produção 2.0.7.16 (02/06/2026)
 ===========================================
 

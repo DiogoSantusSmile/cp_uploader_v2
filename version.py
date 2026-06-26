@@ -1,6 +1,6 @@
 from datetime import datetime
 
-__version__ = '2.0.7.16'
+__version__ = '2.0.7.17'
 __title__ = 'Controlo de Produção Uploader'
 __author__ = 'Uartrónica'
 __copyright__ = 'Copyright © 2024-{year} Uartrónica'.format(year=datetime.now().year)

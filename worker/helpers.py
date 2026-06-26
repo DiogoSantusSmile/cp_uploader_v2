@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 
 import json
 import os
@@ -52,9 +52,7 @@ def parse_aleader_aoi(path):
 
     :param path: Endereço absoluto do ficheiro a ser processado.
     :type path: str
-
     :raises ValueError: Caso o campo do número de série seja nulo.
-
     :return: Dicionário que contém lista de números de série, estados, data
              de processamento e outros.
     :rtype: dict
@@ -731,6 +729,168 @@ def parse_btf06(path):
             serial_number: {
                 'status': status,
                 'timestamp': datetime.strptime(data['task_ended_at'], "%d-%m-%Y %H:%M:%S")
+            }
+        }
+    }
+
+def parse_leak_test_1(path):
+    """
+    Função de processamento de logs de teste de fugas (IGBT Leak Test 1).
+
+    Analisa ficheiro CSV com resultados de Leak1, extrai número de série,
+    estado e timestamp. O timestamp é fornecido em UTC e convertido para hora local.
+
+    Apenas leak1 deve ser considerado na avaliação do estado.
+    Se leak1 ≤ 9 → OK, caso contrário → NG.
+
+    :param path: Endereço absoluto do ficheiro a ser processado.
+    :type path: str
+
+    :raises: ValueError: Caso o número de série seja nulo.
+
+    :return: Dicionário com números de série, estados e timestamps.
+    :rtype: dict
+    """
+    serial_numbers = {}
+
+    with open(path, 'r') as csv_file:
+        for i, row in enumerate(csv_file):
+            if i == 0:
+                continue # cabeçalho
+
+            cols = [c.strip().strip('"') for c in row.rstrip('\n').split(',')]
+            if len(cols) < 6 or not cols[1]:
+                continue
+
+            serial_number = cols[3]
+            if not serial_number:
+                raise ValueError('serial number is empty')
+
+            timestamp_utc = datetime.strptime(
+                f'{cols[1]} {cols[2]}', '%Y-%m-%d %H:%M:%S'
+            ).replace(tzinfo=timezone.utc)
+
+            timestamp_local = timestamp_utc.astimezone()
+
+            status = 'OK' if int(cols[4]) <= 9 else 'NG'
+
+            serial_numbers[serial_number] = {
+                'status': status,
+                'timestamp': timestamp_local,
+            }
+
+    return {'serial_numbers': serial_numbers}
+
+
+def parse_leak_test_2(path):
+    """
+    Função de processamento de logs de teste de fugas (IGBT Leak Test 2).
+
+    Analisa ficheiro CSV com resultados de Leak2, extrai número de série,
+    estado e timestamp. O timestamp é fornecido em UTC e convertido para hora local.
+
+    Apenas leak2 deve ser considerado na avaliação do estado.
+    Se leak2 ≤ 9 → OK, caso contrário → NG.
+
+    :param path: Endereço absoluto do ficheiro a ser processado.
+    :type path: str
+
+    :raises: ValueError: Caso o número de série seja nulo.
+
+    :return: Dicionário com números de série, estados e timestamps.
+    :rtype: dict
+    """
+    serial_numbers = {}
+
+    with open(path, 'r') as csv_file:
+        for i, row in enumerate(csv_file):
+            if i == 0:
+                continue # cabeçalho
+
+            cols = [c.strip().strip('"') for c in row.rstrip('\n').split(',')]
+            if len(cols) < 6 or not cols[1]:
+                continue
+
+            serial_number = cols[3]
+            if not serial_number:
+                raise ValueError('serial number is empty')
+
+            timestamp_utc = datetime.strptime(
+                f'{cols[1]} {cols[2]}', '%Y-%m-%d %H:%M:%S'
+            ).replace(tzinfo=timezone.utc)
+
+            timestamp_local = timestamp_utc.astimezone()
+
+            status = 'OK' if int(cols[5]) <= 9 else 'NG'
+
+            serial_numbers[serial_number] = {
+                'status': status,
+                'timestamp': timestamp_local,
+            }
+
+    return {'serial_numbers': serial_numbers}
+
+def parse_sram_mainboard_11(path):
+    """
+    Analisa ficheiro CSV com resultados da SRAM MAINBOARD 11.
+
+    Extrai o número de série, data e hora de início a partir do cabeçalho fixo,
+    e localiza dinamicamente a linha do 'FinalResult' para definir o estado.
+    Se o resultado for PASS → OK, caso contrário → NG.
+
+    :param path: Endereço absoluto do ficheiro a ser processado.
+    :type path: str
+    :raises ValueError: Caso o número de série seja nulo.
+    :return: Dicionário com números de série, estados e timestamps.
+    :rtype: dict
+    """
+    test_date = None
+    test_time = None
+    serial_number = None
+    status = 'NG'
+
+    with open(path, 'r', encoding='utf-8') as csv_file:
+        for i, row in enumerate(csv_file, start=1):
+            cols = [c.strip().strip('"') for c in row.rstrip('\n').split(',')]
+            if not cols or len(cols) < 2:
+                continue
+
+            # Metadados do cabeçalho (linhas fixas)
+            if i == 4:
+                test_date = cols[1]
+            elif i == 6:
+                test_time = cols[1]
+            elif i == 9:
+                serial_number = cols[1]
+
+            # Localização dinâmica do resultado final
+            if cols[1] == 'FinalResult':
+                if len(cols) >= 8 and cols[7] == 'PASS':
+                    status = 'OK'
+                else:
+                    status = 'NG'
+
+                # Garante que já passámos o cabeçalho antes de interromper o loop
+                if i > 9:
+                    break
+
+    if not serial_number:
+        raise ValueError('serial number is empty')
+
+    if test_date and test_time:
+        # Formato da data no ficheiro: DD/MM/YYYY hh:mm:ss
+        timestamp_utc = datetime.strptime(
+            f'{test_date} {test_time}', '%d/%m/%Y %H:%M:%S'
+        ).replace(tzinfo=timezone.utc)
+        timestamp_local = timestamp_utc.astimezone()
+    else:
+        timestamp_local = datetime.now().astimezone()
+
+    return {
+        'serial_numbers': {
+            serial_number: {
+                'status': status,
+                'timestamp': timestamp_local
             }
         }
     }

@@ -1,9 +1,8 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 import os
 import pytest
-import re
 import tempfile
 
 from worker.helpers import (
@@ -25,7 +24,9 @@ from worker.helpers import (
     parse_starktest_pc2,
     parse_automatic_label_check_01,
     parse_altra_air_lateral_uar260441,
-    parse_btf06
+    parse_btf06,
+    parse_leak_test_1,
+    parse_leak_test_2
 )
 
 
@@ -803,3 +804,99 @@ class TestParseBTF06:
 
         with pytest.raises(ValueError, match='serial number is empty'):
             parse_btf06(logfile)
+
+
+class TestParseLeakTest1:
+    @staticmethod
+    def _resource(filename):
+        return (
+                Path(__file__).parent
+                / 'resources'
+                / 'igbt_leaktest_1'
+                / filename
+        )
+
+    def _expected_local(self, date_str, time_str):
+        dt_utc = datetime.strptime(
+            f'{date_str} {time_str}',
+            '%Y-%m-%d %H:%M:%S'
+        ).replace(tzinfo=timezone.utc)
+
+        return dt_utc.astimezone()
+
+    def test_logfile_ok(self):
+        result = parse_leak_test_1(self._resource('logfile_ok.csv'))
+
+        assert result['serial_numbers']['SN001']['status'] == 'OK'
+        assert result['serial_numbers']['SN001']['timestamp'] == \
+               self._expected_local('2026-02-03', '08:23:05')
+
+    def test_logfile_unit_nok(self):
+        result = parse_leak_test_1(self._resource('logfile_unit_not_ok.csv'))
+
+        assert result['serial_numbers']['SN001']['status'] == 'NG'
+
+    def test_multiple_records(self):
+        result = parse_leak_test_1(self._resource('logfile_multiple_entries.csv'))
+
+        assert result['serial_numbers']['SN001']['status'] == 'OK'
+        assert result['serial_numbers']['SN002']['status'] == 'OK'
+        assert result['serial_numbers']['SN003']['status'] == 'NG'
+        assert result['serial_numbers']['SN004']['status'] == 'NG'
+
+    def test_empty_serial_no(self):
+        with pytest.raises(ValueError, match='serial number is empty'):
+            parse_leak_test_1(self._resource('logfile_empty_serial_number.csv'))
+
+    def test_leak2_does_not_affect_result(self):
+        result = parse_leak_test_1(self._resource('logfile_ok.csv'))
+
+        assert result['serial_numbers']['SN001']['status'] == 'OK'
+
+
+class TestParseLeakTest2:
+    @staticmethod
+    def _resource(filename):
+        return (
+                Path(__file__).parent
+                / 'resources'
+                / 'igbt_leaktest_2'
+                / filename
+        )
+
+    def _expected_local(self, date_str, time_str):
+        dt_utc = datetime.strptime(
+            f'{date_str} {time_str}',
+            '%Y-%m-%d %H:%M:%S'
+        ).replace(tzinfo=timezone.utc)
+
+        return dt_utc.astimezone()
+
+    def test_logfile_ok(self):
+        result = parse_leak_test_2(self._resource('logfile_ok.csv'))
+
+        assert result['serial_numbers']['SN001']['status'] == 'OK'
+        assert result['serial_numbers']['SN001']['timestamp'] == \
+               self._expected_local('2026-02-03', '08:23:05')
+
+    def test_logfile_unit_nok(self):
+        result = parse_leak_test_2(self._resource('logfile_unit_not_ok.csv'))
+
+        assert result['serial_numbers']['SN001']['status'] == 'NG'
+
+    def test_multiple_records(self):
+        result = parse_leak_test_2(self._resource('logfile_multiple_entries.csv'))
+
+        assert result['serial_numbers']['SN001']['status'] == 'OK'
+        assert result['serial_numbers']['SN002']['status'] == 'OK'
+        assert result['serial_numbers']['SN003']['status'] == 'NG'
+        assert result['serial_numbers']['SN004']['status'] == 'NG'
+
+    def test_empty_serial_no(self):
+        with pytest.raises(ValueError, match='serial number is empty'):
+            parse_leak_test_2(self._resource('logfile_empty_serial_number.csv'))
+
+    def test_leak2_does_not_affect_result(self):
+        result = parse_leak_test_2(self._resource('logfile_ok.csv'))
+
+        assert result['serial_numbers']['SN001']['status'] == 'OK'
