@@ -710,7 +710,6 @@ def parse_btf06(path):
 
     :param path: Endereço absoluto do ficheiro a ser processado.
     :type path: str
-
     :return: Dicionário que contém lista de números de série, estados e data
         de processamento.
     :rtype: dict
@@ -779,6 +778,9 @@ def parse_leak_test_1(path):
                 'timestamp': timestamp_local,
             }
 
+    if not serial_numbers:
+        raise ValueError('log file contains no measurements')
+
     return {'serial_numbers': serial_numbers}
 
 
@@ -827,6 +829,9 @@ def parse_leak_test_2(path):
                 'status': status,
                 'timestamp': timestamp_local,
             }
+
+    if not serial_numbers:
+        raise ValueError('log file contains no measurements')
 
     return {'serial_numbers': serial_numbers}
 

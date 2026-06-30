@@ -17,7 +17,8 @@ from .helpers import (
     parse_altra_air_lateral_uar260441,
     parse_btf06,
     parse_leak_test_1,
-    parse_leak_test_2
+    parse_leak_test_2,
+    parse_sram_mainboard_11
 )
 from logger_config import setup_logger
 
@@ -100,7 +101,11 @@ TOOLS = {
     'LEAK_TEST_2': {
         'file_extensions': ['.csv'],
         'parser': parse_leak_test_2,
-    }
+    },
+    'SRAM_MAINBOARD_11': {
+        'file_extensions': ['.csv'],
+        'parser': parse_sram_mainboard_11
+    },
 }
 
 

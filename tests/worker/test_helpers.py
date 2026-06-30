@@ -26,7 +26,8 @@ from worker.helpers import (
     parse_altra_air_lateral_uar260441,
     parse_btf06,
     parse_leak_test_1,
-    parse_leak_test_2
+    parse_leak_test_2,
+    parse_sram_mainboard_11
 )
 
 
@@ -853,6 +854,15 @@ class TestParseLeakTest1:
 
         assert result['serial_numbers']['SN001']['status'] == 'OK'
 
+    def test_empty_file(self):
+        with pytest.raises(
+            ValueError,
+            match='log file contains no measurements'
+        ):
+            parse_leak_test_1(
+                self._resource('logfile_empty.csv')
+            )
+
 
 class TestParseLeakTest2:
     @staticmethod
@@ -900,3 +910,62 @@ class TestParseLeakTest2:
         result = parse_leak_test_2(self._resource('logfile_ok.csv'))
 
         assert result['serial_numbers']['SN001']['status'] == 'OK'
+
+    def test_empty_file(self):
+        with pytest.raises(
+            ValueError,
+            match='log file contains no measurements'
+        ):
+            parse_leak_test_2(
+                self._resource('logfile_empty.csv')
+            )
+
+# Mapeamento do caminho relativo para a pasta de recursos criados
+RESOURCES_DIR = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    'resources',
+    'sram_mainboard_11'
+)
+
+class TestParseSramMainboard11:
+    def test_parse_sram_mainboard_11_ok(self):
+        path = os.path.join(RESOURCES_DIR, 'logfile_ok.csv')
+        result = parse_sram_mainboard_11(path)
+
+        assert '2309610036' in result['serial_numbers']
+        assert result['serial_numbers']['2309610036']['status'] == 'OK'
+
+        # Validação do timezone local esperado a partir do UTC do ficheiro
+        expected_dt = datetime.strptime(
+            '02/06/2026 10:50:41', '%d/%m/%Y %H:%M:%S'
+        ).replace(tzinfo=timezone.utc).astimezone()
+
+        assert result['serial_numbers']['2309610036']['timestamp'] == expected_dt
+
+    def test_parse_sram_mainboard_11_empty_serial_number(self):
+        path = os.path.join(RESOURCES_DIR, 'logfile_empty_serial_number.csv')
+
+        with pytest.raises(ValueError, match='serial number is empty'):
+            parse_sram_mainboard_11(path)
+
+    def test_parse_sram_mainboard_11_multiple_entries(self):
+        path = os.path.join(RESOURCES_DIR, 'logfile_multiple_entries.csv')
+        result = parse_sram_mainboard_11(path)
+
+        assert '2309610036' in result['serial_numbers']
+        assert result['serial_numbers']['2309610036']['status'] == 'OK'
+
+    def test_parse_sram_mainboard_11_timestamp_not_ok(self):
+        path = os.path.join(RESOURCES_DIR, 'logfile_timestamp_not_ok.csv')
+        result = parse_sram_mainboard_11(path)
+
+        assert '2309610036' in result['serial_numbers']
+        # Deve assumir uma instância válida de datetime correspondente à execução atual
+        assert isinstance(result['serial_numbers']['2309610036']['timestamp'], datetime)
+
+    def test_parse_sram_mainboard_11_unit_not_ok(self):
+        path = os.path.join(RESOURCES_DIR, 'logfile_unit_not_ok.csv')
+        result = parse_sram_mainboard_11(path)
+
+        assert '2309610036' in result['serial_numbers']
+        assert result['serial_numbers']['2309610036']['status'] == 'NG'
