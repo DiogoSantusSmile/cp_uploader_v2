@@ -6,6 +6,7 @@ import xml.etree.ElementTree as ET
 
 from helpers import parse_timestamp
 
+
 def get_files_from_location(location, ignored_dirs=None):
     """
     Obtém lista de ficheiros num diretório recursivamente.
@@ -201,6 +202,44 @@ def parse_stark_eol_v2(path):
         }
     }
 
+
+def parse_schreder(path):
+    """
+    Função de processamento de logs JSON da Schréder.
+
+    Extrai: 
+    - end_time como timestamp do teste;
+    - board_id como número de série;
+    - result como resultado do teste.
+
+    passed é normalizado para OK; qualquer outro resultado é
+    normalizado para NG``, mantendo a convenção dos restantes parsers.
+
+    :param path: Endereço absoluto do ficheiro a ser processado.
+    :type path: str
+    :raises ValueError: Caso o número de série esteja vazio.
+    :return: Dicionário compatível com o formato esperado pelo uploader.
+    :rtype: dict
+    """
+    with open(path, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+
+    serial_number = data['board_id']
+
+    if not serial_number:
+        raise ValueError('serial number is empty')
+
+    status = 'OK' if data['result'].lower() == 'passed' else 'NG'
+    timestamp = datetime.fromisoformat(data['end_time'])
+
+    return {
+        'serial_numbers': {
+            serial_number: {
+                'status': status,
+                'timestamp': timestamp
+            }
+        }
+    }
 
 def parse_ziv_eol(path):
     """
@@ -732,6 +771,7 @@ def parse_btf06(path):
         }
     }
 
+
 def parse_leak_test_1(path):
     """
     Função de processamento de logs de teste de fugas (IGBT Leak Test 1).
@@ -755,7 +795,7 @@ def parse_leak_test_1(path):
     with open(path, 'r') as csv_file:
         for i, row in enumerate(csv_file):
             if i == 0:
-                continue # cabeçalho
+                continue  # cabeçalho
 
             cols = [c.strip().strip('"') for c in row.rstrip('\n').split(',')]
             if len(cols) < 6 or not cols[1]:
@@ -779,8 +819,9 @@ def parse_leak_test_1(path):
             }
 
     if not serial_numbers:
-        raise ValueError('log file contains no measurements')
+        raise ValueError('O ficheiro não contém dados de teste.')
 
+    print("HELPERS - PARSER\n", {'serial_numbers': serial_numbers})
     return {'serial_numbers': serial_numbers}
 
 
@@ -807,7 +848,7 @@ def parse_leak_test_2(path):
     with open(path, 'r') as csv_file:
         for i, row in enumerate(csv_file):
             if i == 0:
-                continue # cabeçalho
+                continue  # cabeçalho
 
             cols = [c.strip().strip('"') for c in row.rstrip('\n').split(',')]
             if len(cols) < 6 or not cols[1]:
@@ -831,9 +872,10 @@ def parse_leak_test_2(path):
             }
 
     if not serial_numbers:
-        raise ValueError('log file contains no measurements')
+        raise ValueError('O ficheiro não contém dados de teste.')
 
     return {'serial_numbers': serial_numbers}
+
 
 def parse_sram_mainboard_11(path):
     """

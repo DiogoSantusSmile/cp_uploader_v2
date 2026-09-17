@@ -2,6 +2,7 @@ from .helpers import (
     parse_aleader_aoi,
     parse_aoi_mek,
     parse_stark_eol_v2,
+    parse_schreder,
     parse_ziv_eol,
     parse_btf13,
     parse_fcl0022,
@@ -36,6 +37,10 @@ TOOLS = {
     'EOL STARK': {
         'file_extensions': ['.json'],
         'parser': parse_stark_eol_v2
+    },
+    'SCHREDER': {
+        'file_extensions': ['.json'],
+        'parser': parse_schreder,
     },
     'EOL ZIV': {
         'file_extensions': ['.csv'],
