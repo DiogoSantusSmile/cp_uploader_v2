@@ -11,6 +11,7 @@ from worker.helpers import (
     parse_aleader_aoi,
     parse_stark_eol,
     parse_stark_eol_v2,
+    parse_schreder,
     parse_ziv_eol,
     parse_btf13,
     parse_fcl0022,
@@ -227,6 +228,42 @@ class TestEolStarkV2:
 
         with pytest.raises(ValueError, match='serial number is empty'):
             parse_stark_eol_v2(logfile)
+
+
+class TestParseSchreder:
+    def test_logfile_ok(self):
+        logfile = Path(__file__).parent / 'resources' / 'schreder' / 'logfile_ok.json'
+
+        result = parse_schreder(logfile)
+
+        assert result == {
+            'serial_numbers': {
+                'STHB263145000049': {
+                    'status': 'OK',
+                    'timestamp': datetime(2026, 9, 11, 12, 28, 3, 577817)
+                }
+            }
+        }
+
+    def test_logfile_unit_nok(self):
+        logfile = Path(__file__).parent / 'resources' / 'schreder' / 'logfile_unit_nok.json'
+
+        result = parse_schreder(logfile)
+
+        assert result == {
+            'serial_numbers': {
+                'STHB263145000049': {
+                    'status': 'NG',
+                    'timestamp': datetime(2026, 9, 11, 12, 28, 3, 577817)
+                }
+            }
+        }
+
+    def test_logfile_empty_serial_no(self):
+        logfile = Path(__file__).parent / 'resources' / 'schreder' / 'logfile_empty_serial_no.json'
+
+        with pytest.raises(ValueError, match='serial number is empty'):
+            parse_schreder(logfile)
 
 
 class TestParseZivEol:
@@ -857,7 +894,7 @@ class TestParseLeakTest1:
     def test_empty_file(self):
         with pytest.raises(
             ValueError,
-            match='log file contains no measurements'
+            match='O ficheiro não contém dados de teste.'
         ):
             parse_leak_test_1(
                 self._resource('logfile_empty.csv')
@@ -914,7 +951,7 @@ class TestParseLeakTest2:
     def test_empty_file(self):
         with pytest.raises(
             ValueError,
-            match='log file contains no measurements'
+            match='O ficheiro não contém dados de teste.'
         ):
             parse_leak_test_2(
                 self._resource('logfile_empty.csv')

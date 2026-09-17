@@ -24,6 +24,7 @@ Deve ser a ferramenta que define qual o parser a ser utilizado para os logs. Uma
 - AOI ALeader;
 - AOI MEK;
 - EOL STARK;
+- SCHREDER;
 - EOL ZIV;
 - BTF13;
 - FCL0022: máquina "FCL0022" da linha ZIV.
