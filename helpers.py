@@ -18,6 +18,9 @@ def format_evaluation_data_create_evaluation_v1_url(data):
     new_data['status'] = data['serial_numbers'][new_data['unit']]['status']
     new_data['evaluated_at'] = data['serial_numbers'][new_data['unit']]['timestamp'].isoformat()
     new_data['serial_no_2'] = data['serial_numbers'][new_data['unit']]['serial_no_2']
+    if new_data['serial_no_2'] == 'null':
+        new_data['serial_no_2'] = None
+        new_data['status'] = 'NG'
     new_data['line'] = data['line']
     new_data['workstation'] = data['workstation']
     new_data['attributes'] = data['attributes']
