@@ -10,3 +10,552 @@ Traceback (most recent call last):
   File "C:\Users\dsantos\Downloads\cp_uploader_v2_schreder\worker\helpers.py", line 224, in parse_schreder
     raise ValueError('serial number is empty')
 ValueError: serial number is empty
+2026-10-26 09:44:21,390 - db - INFO - Database does not exist, creating a new one...
+2026-10-26 09:44:22,251 - root - INFO - App process is starting...
+2026-10-26 09:44:36,681 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 09:44:36,684 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 09:44:38,725 - network - ERROR - HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000275CA05A280>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino
+as recusou ativamente
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 445, in request
+    self.endheaders()
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000275CA05A280>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino
+as recusou ativamente
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000275CA05A280>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.\network\network.py", line 49, in __send_request
+    response = requests.request(**request_kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000275CA05A280>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+2026-10-26 09:44:54,094 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 09:44:54,096 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 09:44:56,134 - network - ERROR - HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000275CBAF55E0>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino
+as recusou ativamente
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 445, in request
+    self.endheaders()
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000275CBAF55E0>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino
+as recusou ativamente
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000275CBAF55E0>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.\network\network.py", line 49, in __send_request
+    response = requests.request(**request_kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000275CBAF55E0>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+2026-10-26 09:45:10,026 - root - INFO - App process terminated by user.
+2026-10-26 09:54:25,008 - root - INFO - App process is starting...
+2026-10-26 09:54:25,544 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\Schreder\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 09:54:25,545 - backup - INFO - Worker job started.
+2026-10-26 09:54:25,545 - backup - ERROR - [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\Schreder\\processed'
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 241, in run
+    for directory_name in self.action.job(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 78, in move_job
+    for directory_name in os.listdir(origin):
+FileNotFoundError: [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\Schreder\\processed'
+2026-10-26 09:54:25,549 - backup - INFO - Backup thread finished
+2026-10-26 09:54:25,567 - backup - INFO - Worker job finished.
+2026-10-26 09:54:52,861 - root - INFO - App process terminated by user.
+2026-10-26 10:45:12,407 - root - INFO - App process is starting...
+2026-10-26 10:45:14,407 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\Schreder\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 10:45:14,408 - backup - INFO - Worker job started.
+2026-10-26 10:45:14,409 - backup - ERROR - [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\Schreder\\processed'
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 241, in run
+    for directory_name in self.action.job(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 78, in move_job
+    for directory_name in os.listdir(origin):
+FileNotFoundError: [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\Schreder\\processed'
+2026-10-26 10:45:14,413 - backup - INFO - Backup thread finished
+2026-10-26 10:45:14,431 - backup - INFO - Worker job finished.
+2026-10-26 10:45:17,380 - root - INFO - App process terminated by user.
+2026-10-26 10:48:21,407 - root - INFO - App process is starting...
+2026-10-26 10:48:22,543 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\Schreder\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 10:48:22,545 - backup - INFO - Worker job started.
+2026-10-26 10:48:22,545 - backup - ERROR - [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\Schreder\\processed'
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 241, in run
+    for directory_name in self.action.job(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 78, in move_job
+    for directory_name in os.listdir(origin):
+FileNotFoundError: [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\Schreder\\processed'
+2026-10-26 10:48:22,548 - backup - INFO - Backup thread finished
+2026-10-26 10:48:22,569 - backup - INFO - Worker job finished.
+2026-10-26 10:48:25,065 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 10:48:25,067 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 10:48:25,247 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-10-26 10:48:25,250 - network - INFO - Server responded with a 200 status code.
+2026-10-26 10:48:25,250 - root - INFO - User 'a' logged in.
+2026-10-26 10:48:25,257 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-10-26%2001%3A48%3A25&evaluated_by=309&workstation_name=EOL
+2026-10-26 10:48:25,260 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 10:48:25,513 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-10-26%2001%3A48%3A25&evaluated_by=309&workstation_name=EOL HTTP/1.1" 200 52
+2026-10-26 10:48:25,513 - network - INFO - Server responded with a 200 status code.
+2026-10-26 11:06:16,431 - root - INFO - App process terminated by user.
+2026-10-26 11:06:20,829 - root - INFO - App process is starting...
+2026-10-26 11:06:21,871 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 11:06:21,871 - backup - ERROR - [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\BTF1177\\processed'
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 241, in run
+    for directory_name in self.action.job(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 78, in move_job
+    for directory_name in os.listdir(origin):
+FileNotFoundError: [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\BTF1177\\processed'
+2026-10-26 11:06:21,872 - backup - INFO - Worker job started.
+2026-10-26 11:06:21,875 - backup - INFO - Backup thread finished
+2026-10-26 11:06:21,902 - backup - INFO - Worker job finished.
+2026-10-26 11:06:25,655 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 11:06:25,657 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:06:25,850 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-10-26 11:06:25,850 - network - INFO - Server responded with a 200 status code.
+2026-10-26 11:06:25,851 - root - INFO - User 'a' logged in.
+2026-10-26 11:06:25,858 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-10-26%2002%3A06%3A25&evaluated_by=309&workstation_name=EOL
+2026-10-26 11:06:25,860 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:06:26,086 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-10-26%2002%3A06%3A25&evaluated_by=309&workstation_name=EOL HTTP/1.1" 200 52
+2026-10-26 11:06:26,086 - network - INFO - Server responded with a 200 status code.
+2026-10-26 11:06:31,929 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\main_window.py", line 306, in __reprocess_handler
+    self.on_reprocess(selected_files)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\main.py", line 470, in __reprocess_files_handler
+    shutil.move(path, self.__settings.logs_location)
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 823, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+shutil.Error: Destination path 'C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json' already exists
+2026-10-26 11:06:41,882 - root - INFO - App process is starting...
+2026-10-26 11:06:42,421 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 11:06:42,422 - backup - ERROR - [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\BTF1177\\processed'
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 241, in run
+    for directory_name in self.action.job(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 78, in move_job
+    for directory_name in os.listdir(origin):
+FileNotFoundError: [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\BTF1177\\processed'
+2026-10-26 11:06:42,422 - backup - INFO - Worker job started.
+2026-10-26 11:06:42,424 - backup - INFO - Backup thread finished
+2026-10-26 11:06:42,447 - backup - INFO - Worker job finished.
+2026-10-26 11:06:45,559 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 11:06:45,561 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:06:45,722 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-10-26 11:06:45,722 - network - INFO - Server responded with a 200 status code.
+2026-10-26 11:06:45,723 - root - INFO - User 'a' logged in.
+2026-10-26 11:06:45,730 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-10-26%2002%3A06%3A45&evaluated_by=309&workstation_name=EOL
+2026-10-26 11:06:45,732 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:06:45,915 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-10-26%2002%3A06%3A45&evaluated_by=309&workstation_name=EOL HTTP/1.1" 200 52
+2026-10-26 11:06:45,915 - network - INFO - Server responded with a 200 status code.
+2026-10-26 11:06:50,166 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\main_window.py", line 306, in __reprocess_handler
+    self.on_reprocess(selected_files)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\main.py", line 470, in __reprocess_files_handler
+    shutil.move(path, self.__settings.logs_location)
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 823, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+shutil.Error: Destination path 'C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json' already exists
+2026-10-26 11:16:01,761 - root - INFO - App process is starting...
+2026-10-26 11:16:02,296 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 11:16:02,297 - backup - INFO - Worker job started.
+2026-10-26 11:16:02,298 - backup - ERROR - [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\BTF1177\\processed'
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 241, in run
+    for directory_name in self.action.job(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 78, in move_job
+    for directory_name in os.listdir(origin):
+FileNotFoundError: [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\CP_Uploader\\Test\\BTF1177\\processed'
+2026-10-26 11:16:02,301 - backup - INFO - Backup thread finished
+2026-10-26 11:16:02,323 - backup - INFO - Worker job finished.
+2026-10-26 11:16:04,871 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 11:16:04,873 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:16:05,037 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-10-26 11:16:05,037 - network - INFO - Server responded with a 200 status code.
+2026-10-26 11:16:05,037 - root - INFO - User 'a' logged in.
+2026-10-26 11:16:05,044 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-10-26%2002%3A16%3A05&evaluated_by=309&workstation_name=EOL
+2026-10-26 11:16:05,044 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:16:05,227 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-10-26%2002%3A16%3A05&evaluated_by=309&workstation_name=EOL HTTP/1.1" 200 52
+2026-10-26 11:16:05,228 - network - INFO - Server responded with a 200 status code.
+2026-10-26 11:16:33,502 - worker - INFO - Worker job started.
+2026-10-26 11:16:33,503 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 11:16:33,507 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'OK', 'timestamp': datetime.datetime(2026, 10, 16, 17, 4, 17), 'serial_no_2': 'ASX-001 16.10.26 0001 0718'}}}, 'ignore': False}
+2026-10-26 11:16:33,507 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 11:16:33,508 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:16:33,813 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 400 125
+2026-10-26 11:16:33,814 - network - INFO - Server responded with a 400 status code.
+2026-10-26 11:16:33,814 - network - INFO - Server responded with a 400 status code.: {'unit': ['Objeto com serial_no=00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07 não existe.']}
+2026-10-26 11:16:33,894 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 11:16:33,898 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'NG', 'timestamp': datetime.datetime(2026, 10, 21, 17, 3, 8), 'serial_no_2': 'null'}}}, 'ignore': False}
+2026-10-26 11:16:33,899 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 11:16:33,899 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:16:34,090 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 400 125
+2026-10-26 11:16:34,090 - network - INFO - Server responded with a 400 status code.
+2026-10-26 11:16:34,091 - network - INFO - Server responded with a 400 status code.: {'unit': ['Objeto com serial_no=00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07 não existe.']}
+2026-10-26 11:18:19,074 - worker - INFO - Worker job finished.
+2026-10-26 11:18:39,795 - worker - INFO - Worker job started.
+2026-10-26 11:18:39,798 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 11:18:39,798 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'OK', 'timestamp': datetime.datetime(2026, 10, 16, 17, 4, 17), 'serial_no_2': 'ASX-001 16.10.26 0001 0718'}}}, 'ignore': False}
+2026-10-26 11:18:39,798 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 11:18:39,800 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:18:39,984 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 400 125
+2026-10-26 11:18:39,984 - network - INFO - Server responded with a 400 status code.
+2026-10-26 11:18:39,984 - network - INFO - Server responded with a 400 status code.: {'unit': ['Objeto com serial_no=00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07 não existe.']}
+2026-10-26 11:18:54,492 - root - INFO - App process terminated by user.
+2026-10-26 11:19:31,640 - root - INFO - App process is starting...
+2026-10-26 11:19:32,212 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 11:19:32,213 - backup - INFO - Worker job started.
+2026-10-26 11:19:35,994 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 11:19:35,995 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:19:36,166 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-10-26 11:19:36,166 - network - INFO - Server responded with a 200 status code.
+2026-10-26 11:19:36,167 - root - INFO - User 'a' logged in.
+2026-10-26 11:19:36,174 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-10-26%2002%3A19%3A36&evaluated_by=309&workstation_name=EOL
+2026-10-26 11:19:36,177 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:19:36,371 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-10-26%2002%3A19%3A36&evaluated_by=309&workstation_name=EOL HTTP/1.1" 200 52
+2026-10-26 11:19:36,373 - network - INFO - Server responded with a 200 status code.
+2026-10-26 11:19:40,276 - worker - INFO - Worker job started.
+2026-10-26 11:25:21,720 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 11:25:21,721 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'OK', 'timestamp': datetime.datetime(2026, 10, 16, 17, 4, 17), 'serial_no_2': 'ASX-001 16.10.26 0001 0718'}}}, 'ignore': False}
+2026-10-26 11:25:21,721 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 11:25:21,722 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:25:21,939 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 400 125
+2026-10-26 11:25:21,939 - network - INFO - Server responded with a 400 status code.
+2026-10-26 11:25:21,939 - network - INFO - Server responded with a 400 status code.: {'unit': ['Objeto com serial_no=00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07 não existe.']}
+2026-10-26 11:25:28,038 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 11:25:28,039 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'NG', 'timestamp': datetime.datetime(2026, 10, 21, 17, 3, 8), 'serial_no_2': 'null'}}}, 'ignore': False}
+2026-10-26 11:25:28,039 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 11:25:28,040 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 11:25:28,217 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 400 125
+2026-10-26 11:25:28,217 - network - INFO - Server responded with a 400 status code.
+2026-10-26 11:25:28,217 - network - INFO - Server responded with a 400 status code.: {'unit': ['Objeto com serial_no=00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07 não existe.']}
+2026-10-26 13:45:25,735 - worker - INFO - Worker job finished.
+2026-10-26 13:45:28,391 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 13:45:28,404 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:45:30,424 - network - ERROR - HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B4C4CCD100>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino
+as recusou ativamente
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connectionpool.py", line 493, in _make_request
+    conn.request(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 445, in request
+    self.endheaders()
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 1040, in _send_output
+    self.send(msg)
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 980, in send
+    self.connect()
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 276, in connect
+    self.sock = self._new_conn()
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connection.py", line 213, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x000001B4C4CCD100>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino
+as recusou ativamente
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B4C4CCD100>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\network\network.py", line 49, in __send_request
+    response = requests.request(**request_kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B4C4CCD100>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+2026-10-26 13:45:38,666 - root - INFO - App process terminated by user.
+2026-10-26 13:45:38,815 - backup - INFO - Backup thread finished
+2026-10-26 13:45:38,835 - backup - INFO - Worker job finished.
+2026-10-26 13:45:58,134 - root - INFO - App process is starting...
+2026-10-26 13:45:59,481 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 13:45:59,481 - backup - INFO - Worker job started.
+2026-10-26 13:46:01,562 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 13:46:01,564 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:46:02,344 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-10-26 13:46:02,344 - network - INFO - Server responded with a 200 status code.
+2026-10-26 13:46:02,345 - root - INFO - User 'a' logged in.
+2026-10-26 13:46:02,353 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-10-26%2004%3A46%3A02&evaluated_by=309&workstation_name=EOL
+2026-10-26 13:46:02,354 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:46:02,602 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-10-26%2004%3A46%3A02&evaluated_by=309&workstation_name=EOL HTTP/1.1" 200 52
+2026-10-26 13:46:02,603 - network - INFO - Server responded with a 200 status code.
+2026-10-26 13:46:18,410 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\main_window.py", line 306, in __reprocess_handler
+    self.on_reprocess(selected_files)
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\main.py", line 470, in __reprocess_files_handler
+    shutil.move(path, self.__settings.logs_location)
+  File "C:\Users\dsantos\AppData\Local\Programs\Python\Python39\lib\shutil.py", line 823, in move
+    raise Error("Destination path '%s' already exists" % real_dst)
+shutil.Error: Destination path 'C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json' already exists
+2026-10-26 13:46:26,640 - root - INFO - App process is starting...
+2026-10-26 13:46:27,161 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 13:46:27,161 - backup - INFO - Worker job started.
+2026-10-26 13:46:29,498 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 13:46:29,499 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:46:29,671 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-10-26 13:46:29,672 - network - INFO - Server responded with a 200 status code.
+2026-10-26 13:46:29,672 - root - INFO - User 'a' logged in.
+2026-10-26 13:46:29,679 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-10-26%2004%3A46%3A29&evaluated_by=309&workstation_name=EOL
+2026-10-26 13:46:29,680 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:46:29,860 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-10-26%2004%3A46%3A29&evaluated_by=309&workstation_name=EOL HTTP/1.1" 200 52
+2026-10-26 13:46:29,860 - network - INFO - Server responded with a 200 status code.
+2026-10-26 13:46:33,477 - worker - INFO - Worker job started.
+2026-10-26 13:46:33,482 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 13:46:33,482 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'OK', 'timestamp': datetime.datetime(2026, 10, 16, 17, 4, 17), 'serial_no_2': 'ASX-001 16.10.26 0001 0718'}}}, 'ignore': False}
+2026-10-26 13:46:33,482 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 13:46:33,483 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:46:33,729 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 400 86
+2026-10-26 13:46:33,730 - network - INFO - Server responded with a 400 status code.
+2026-10-26 13:46:33,730 - network - INFO - Server responded with a 400 status code.: {'non_field_errors': ['Posto EOL não faz parte da programação do produto BTF1177.']}
+2026-10-26 13:46:33,794 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 13:46:33,797 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'NG', 'timestamp': datetime.datetime(2026, 10, 21, 17, 3, 8), 'serial_no_2': 'null'}}}, 'ignore': False}
+2026-10-26 13:46:33,797 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 13:46:33,798 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:46:33,982 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 400 86
+2026-10-26 13:46:33,982 - network - INFO - Server responded with a 400 status code.
+2026-10-26 13:46:33,982 - network - INFO - Server responded with a 400 status code.: {'non_field_errors': ['Posto EOL não faz parte da programação do produto BTF1177.']}
+2026-10-26 13:48:15,323 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/workstations/?is_active=true&allow_api=true
+2026-10-26 13:48:15,324 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:48:15,512 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-10-26 13:48:15,512 - network - INFO - Server responded with a 200 status code.
+2026-10-26 13:48:21,780 - root - INFO - App process is starting...
+2026-10-26 13:48:22,343 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 13:48:22,344 - backup - INFO - Worker job started.
+2026-10-26 13:48:22,344 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 221, in start_handler
+    self.on_start()
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\main.py", line 560, in __backup_job_start_handler
+    print('[Controller] - backup_job_start_handler called')
+OSError: [Errno 22] Invalid argument
+2026-10-26 13:48:31,676 - root - INFO - App process is starting...
+2026-10-26 13:48:32,208 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 13:48:32,208 - backup - INFO - Worker job started.
+2026-10-26 13:48:34,412 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 13:48:34,413 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:48:34,585 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-10-26 13:48:34,585 - network - INFO - Server responded with a 200 status code.
+2026-10-26 13:48:34,586 - root - INFO - User 'a' logged in.
+2026-10-26 13:48:34,592 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-10-26%2004%3A48%3A34&evaluated_by=309&workstation_name=Teste
+2026-10-26 13:48:34,593 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:48:34,962 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-10-26%2004%3A48%3A34&evaluated_by=309&workstation_name=Teste HTTP/1.1" 200 52
+2026-10-26 13:48:34,963 - network - INFO - Server responded with a 200 status code.
+2026-10-26 13:48:50,507 - worker - INFO - Worker job started.
+2026-10-26 13:48:50,512 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 13:48:50,513 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'OK', 'timestamp': datetime.datetime(2026, 10, 16, 17, 4, 17), 'serial_no_2': 'ASX-001 16.10.26 0001 0718'}}}, 'ignore': False}
+2026-10-26 13:48:50,513 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 13:48:50,513 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:48:50,693 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 400 88
+2026-10-26 13:48:50,694 - network - INFO - Server responded with a 400 status code.
+2026-10-26 13:48:50,694 - network - INFO - Server responded with a 400 status code.: {'non_field_errors': ['Posto Teste não faz parte da programação do produto BTF1177.']}
+2026-10-26 13:48:50,733 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 13:48:50,736 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'NG', 'timestamp': datetime.datetime(2026, 10, 21, 17, 3, 8), 'serial_no_2': 'null'}}}, 'ignore': False}
+2026-10-26 13:48:50,737 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 13:48:50,737 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 13:48:50,914 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 400 88
+2026-10-26 13:48:50,915 - network - INFO - Server responded with a 400 status code.
+2026-10-26 13:48:50,915 - network - INFO - Server responded with a 400 status code.: {'non_field_errors': ['Posto Teste não faz parte da programação do produto BTF1177.']}
+2026-10-26 13:51:47,294 - root - INFO - App process terminated by user.
+2026-10-26 13:51:47,766 - backup - INFO - Backup thread finished
+2026-10-26 13:51:47,780 - backup - INFO - Worker job finished.
+2026-10-26 14:54:50,138 - root - INFO - App process is starting...
+2026-10-26 14:54:52,159 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 14:54:52,159 - backup - INFO - Worker job started.
+2026-10-26 14:55:00,057 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 14:55:00,058 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 14:55:01,012 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-10-26 14:55:01,012 - network - INFO - Server responded with a 200 status code.
+2026-10-26 14:55:01,013 - root - INFO - User 'a' logged in.
+2026-10-26 14:55:01,020 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-10-26%2005%3A55%3A01&evaluated_by=309&workstation_name=Teste
+2026-10-26 14:55:01,021 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 14:55:01,554 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-10-26%2005%3A55%3A01&evaluated_by=309&workstation_name=Teste HTTP/1.1" 200 52
+2026-10-26 14:55:01,555 - network - INFO - Server responded with a 200 status code.
+2026-10-26 14:55:17,433 - worker - INFO - Worker job started.
+2026-10-26 14:55:17,437 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 14:55:17,438 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'OK', 'timestamp': datetime.datetime(2026, 10, 16, 17, 4, 17), 'serial_no_2': 'ASX-001 16.10.26 0001 0718'}}}, 'ignore': False}
+2026-10-26 14:55:17,438 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 14:55:17,438 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 14:55:17,692 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 400 88
+2026-10-26 14:55:17,693 - network - INFO - Server responded with a 400 status code.
+2026-10-26 14:55:17,693 - network - INFO - Server responded with a 400 status code.: {'non_field_errors': ['Posto Teste não faz parte da programação do produto BTF1177.']}
+2026-10-26 14:55:17,773 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 14:55:17,775 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'NG', 'timestamp': datetime.datetime(2026, 10, 21, 17, 3, 8), 'serial_no_2': 'null'}}}, 'ignore': False}
+2026-10-26 14:55:17,775 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 14:55:17,776 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 14:55:17,962 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 400 88
+2026-10-26 14:55:17,963 - network - INFO - Server responded with a 400 status code.
+2026-10-26 14:55:17,963 - network - INFO - Server responded with a 400 status code.: {'non_field_errors': ['Posto Teste não faz parte da programação do produto BTF1177.']}
+2026-10-26 14:55:26,642 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/workstations/?is_active=true&allow_api=true
+2026-10-26 14:55:26,643 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 14:55:26,855 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/workstations/?is_active=true&allow_api=true HTTP/1.1" 200 231
+2026-10-26 14:55:26,856 - network - INFO - Server responded with a 200 status code.
+2026-10-26 14:57:46,644 - root - INFO - App process terminated by user.
+2026-10-26 14:57:47,622 - backup - INFO - Backup thread finished
+2026-10-26 14:57:47,638 - backup - INFO - Worker job finished.
+2026-10-26 15:03:07,369 - root - INFO - App process is starting...
+2026-10-26 15:03:07,882 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-26 15:03:07,882 - backup - INFO - Worker job started.
+2026-10-26 15:03:09,998 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-10-26 15:03:09,999 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 15:03:10,591 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-10-26 15:03:10,591 - network - INFO - Server responded with a 200 status code.
+2026-10-26 15:03:10,592 - root - INFO - User 'a' logged in.
+2026-10-26 15:03:10,599 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-10-26%2006%3A03%3A10&evaluated_by=309&workstation_name=Teste
+2026-10-26 15:03:10,600 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 15:03:11,059 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-10-26%2006%3A03%3A10&evaluated_by=309&workstation_name=Teste HTTP/1.1" 200 52
+2026-10-26 15:03:11,059 - network - INFO - Server responded with a 200 status code.
+2026-10-26 15:03:20,249 - worker - INFO - Worker job started.
+2026-10-26 15:03:20,253 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 15:03:20,254 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261016170417_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'OK', 'timestamp': datetime.datetime(2026, 10, 16, 17, 4, 17), 'serial_no_2': 'ASX-001 16.10.26 0001 0718'}}}, 'ignore': False}
+2026-10-26 15:03:20,254 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 15:03:20,255 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 15:03:20,553 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 201 354
+2026-10-26 15:03:20,554 - network - INFO - Server responded with a 201 status code.
+2026-10-26 15:03:20,593 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json.
+2026-10-26 15:03:20,597 - worker - INFO - Parsing C:\CP_Uploader\Test\BTF1177\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json done.
+	{'status': 'success', 'path': 'C:\\CP_Uploader\\Test\\BTF1177\\20261021170308_00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07.json', 'data': {'serial_numbers': {'00000000000000133009@261959@HZ-M3-3@8J-8F-EBXD46@09-06-26@1177 20-0188-217@R07': {'status': 'NG', 'timestamp': datetime.datetime(2026, 10, 21, 17, 3, 8), 'serial_no_2': 'null'}}}, 'ignore': False}
+2026-10-26 15:03:20,597 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v1/evaluations/
+2026-10-26 15:03:20,598 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-10-26 15:03:20,833 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v1/evaluations/ HTTP/1.1" 201 354
+2026-10-26 15:03:20,833 - network - INFO - Server responded with a 201 status code.
+2026-10-26 16:33:46,607 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\main_window.py", line 204, in closeEvent
+    def closeEvent(self, event):
+KeyboardInterrupt
+2026-10-27 08:54:43,185 - root - INFO - App process is starting...
+2026-10-27 08:54:44,906 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-27 08:54:44,908 - backup - INFO - Worker job started.
+2026-10-27 08:54:48,023 - root - INFO - App process terminated by user.
+2026-10-27 08:54:48,944 - backup - INFO - Backup thread finished
+2026-10-27 08:54:48,964 - backup - INFO - Worker job finished.
+2026-10-27 09:14:08,481 - root - INFO - App process is starting...
+2026-10-27 09:14:09,284 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-27 09:14:09,285 - backup - INFO - Worker job started.
+2026-10-27 09:14:14,082 - root - INFO - App process terminated by user.
+2026-10-27 09:14:14,323 - backup - INFO - Backup thread finished
+2026-10-27 09:14:14,340 - backup - INFO - Worker job finished.

@@ -1,6 +1,7 @@
 from configparser import ConfigParser
 from datetime import datetime, timedelta
 from PyQt5.QtCore import QLockFile
+from multiprocessing import freeze_support
 
 import os
 import shutil
@@ -564,6 +565,7 @@ class Controller:
 
 
 if __name__ == '__main__':
+    freeze_support()
     try:
         logger.info('App process is starting...')
 

@@ -38,7 +38,7 @@ TOOLS = {
         'file_extensions': ['.json'],
         'parser': parse_stark_eol_v2
     },
-    'SCHREDER': {
+    'SCHREDER_STHUB': {
         'file_extensions': ['.json'],
         'parser': parse_schreder,
     },

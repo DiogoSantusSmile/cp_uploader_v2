@@ -1,0 +1,42 @@
+2026-10-27 09:13:21,023 - db - INFO - Database does not exist, creating a new one...
+2026-10-27 09:13:21,023 - db - ERROR - No 'script_location' key found in configuration.
+Traceback (most recent call last):
+  File "db\__init__.py", line 24, in <module>
+  File "alembic\command.py", line 388, in upgrade
+  File "alembic\script\base.py", line 170, in from_config
+alembic.util.exc.CommandError: No 'script_location' key found in configuration.
+2026-10-27 09:13:21,176 - root - INFO - App process is starting...
+2026-10-27 09:13:21,176 - root - ERROR - App shutdown abruptly!
+Traceback (most recent call last):
+  File "settings.py", line 21, in __init__
+  File "settings.py", line 32, in load
+  File "configparser.py", line 781, in get
+  File "configparser.py", line 1152, in _unify_values
+configparser.NoSectionError: No section: 'NETWORK'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 572, in <module>
+  File "main.py", line 46, in __init__
+  File "settings.py", line 23, in __init__
+  File "settings.py", line 57, in save
+  File "_collections_abc.py", line 941, in update
+  File "configparser.py", line 977, in __setitem__
+  File "configparser.py", line 754, in read_dict
+  File "configparser.py", line 1203, in set
+  File "configparser.py", line 1188, in _validate_value_types
+TypeError: option values must be strings
+2026-10-27 09:14:30,268 - db - INFO - Database does not exist, creating a new one...
+2026-10-27 09:14:30,268 - db - ERROR - No 'script_location' key found in configuration.
+Traceback (most recent call last):
+  File "db\__init__.py", line 24, in <module>
+  File "alembic\command.py", line 388, in upgrade
+  File "alembic\script\base.py", line 170, in from_config
+alembic.util.exc.CommandError: No 'script_location' key found in configuration.
+2026-10-27 09:14:30,385 - root - INFO - App process is starting...
+2026-10-27 09:14:30,777 - backup - INFO - Backup thread started. Origin=C:\CP_Uploader\Test\BTF1177\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-10-27 09:14:30,778 - backup - INFO - Worker job started.
+2026-10-27 09:15:32,911 - root - INFO - App process terminated by user.
+2026-10-27 09:15:33,566 - backup - INFO - Backup thread finished
+2026-10-27 09:15:33,585 - backup - INFO - Worker job finished.
