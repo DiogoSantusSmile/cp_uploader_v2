@@ -559,3 +559,596 @@ KeyboardInterrupt
 2026-10-27 09:14:14,082 - root - INFO - App process terminated by user.
 2026-10-27 09:14:14,323 - backup - INFO - Backup thread finished
 2026-10-27 09:14:14,340 - backup - INFO - Worker job finished.
+2026-11-06 10:55:19,373 - root - INFO - App process is starting...
+2026-11-06 10:55:21,599 - backup - INFO - Backup thread started. Origin=C:\Users\dsantos\Desktop\test_results\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-11-06 10:55:21,600 - backup - INFO - Worker job started.
+2026-11-06 10:55:21,600 - backup - ERROR - [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\Users\\dsantos\\Desktop\\test_results\\processed'
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 241, in run
+    for directory_name in self.action.job(
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\backup\backup.py", line 78, in move_job
+    for directory_name in os.listdir(origin):
+FileNotFoundError: [WinError 3] O sistema não conseguiu localizar o caminho especificado: 'C:\\Users\\dsantos\\Desktop\\test_results\\processed'
+2026-11-06 10:55:21,604 - backup - INFO - Backup thread finished
+2026-11-06 10:55:21,632 - backup - INFO - Worker job finished.
+2026-11-06 10:55:25,704 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-11-06 10:55:25,705 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:26,505 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-11-06 10:55:26,505 - network - INFO - Server responded with a 200 status code.
+2026-11-06 10:55:26,507 - root - INFO - User 'a' logged in.
+2026-11-06 10:55:26,515 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-11-06%2001%3A55%3A26&evaluated_by=309&workstation_name=Teste
+2026-11-06 10:55:26,518 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:27,478 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-11-06%2001%3A55%3A26&evaluated_by=309&workstation_name=Teste HTTP/1.1" 200 52
+2026-11-06 10:55:27,480 - network - INFO - Server responded with a 200 status code.
+2026-11-06 10:55:31,413 - worker - INFO - Worker job started.
+2026-11-06 10:55:31,451 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610001\ftf_sf_du_mainboard_2345610001_1793708986\ftf_sf_du_mainboard_2345610001_1793708986.csv.
+2026-11-06 10:55:31,453 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610001\ftf_sf_du_mainboard_2345610001_1793708986\ftf_sf_du_mainboard_2345610001_1793708986.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610001\\ftf_sf_du_mainboard_2345610001_1793708986\\ftf_sf_du_mainboard_2345610001_1793708986.csv', 'data': {'serial_numbers': {'2345610001': {'status': 'NG', 'timestamp': datetime.datetime(2026, 11, 3, 12, 29, 46, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:31,453 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:31,454 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:32,355 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:32,355 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:32,356 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610001' não encontrada."}
+2026-11-06 10:55:32,428 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610001\ftf_sf_du_mainboard_2345610001_1793709305\ftf_sf_du_mainboard_2345610001_1793709305.csv.
+2026-11-06 10:55:32,435 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610001\ftf_sf_du_mainboard_2345610001_1793709305\ftf_sf_du_mainboard_2345610001_1793709305.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610001\\ftf_sf_du_mainboard_2345610001_1793709305\\ftf_sf_du_mainboard_2345610001_1793709305.csv', 'data': {'serial_numbers': {'2345610001': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 35, 5, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:32,436 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:32,436 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:32,753 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:32,753 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:32,753 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610001' não encontrada."}
+2026-11-06 10:55:32,784 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610002\ftf_sf_du_mainboard_2345610002_1793709471\ftf_sf_du_mainboard_2345610002_1793709471.csv.
+2026-11-06 10:55:32,788 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610002\ftf_sf_du_mainboard_2345610002_1793709471\ftf_sf_du_mainboard_2345610002_1793709471.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610002\\ftf_sf_du_mainboard_2345610002_1793709471\\ftf_sf_du_mainboard_2345610002_1793709471.csv', 'data': {'serial_numbers': {'2345610002': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 37, 51, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:32,788 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:32,789 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:33,152 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:33,152 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:33,152 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610002' não encontrada."}
+2026-11-06 10:55:33,192 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610003\ftf_sf_du_mainboard_2345610003_1793709848\ftf_sf_du_mainboard_2345610003_1793709848.csv.
+2026-11-06 10:55:33,198 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610003\ftf_sf_du_mainboard_2345610003_1793709848\ftf_sf_du_mainboard_2345610003_1793709848.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610003\\ftf_sf_du_mainboard_2345610003_1793709848\\ftf_sf_du_mainboard_2345610003_1793709848.csv', 'data': {'serial_numbers': {'2345610003': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 44, 8, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:33,198 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:33,199 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:33,594 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:33,595 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:33,595 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610003' não encontrada."}
+2026-11-06 10:55:33,655 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610004\ftf_sf_du_mainboard_2345610004_1793709135\ftf_sf_du_mainboard_2345610004_1793709135.csv.
+2026-11-06 10:55:33,658 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610004\ftf_sf_du_mainboard_2345610004_1793709135\ftf_sf_du_mainboard_2345610004_1793709135.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610004\\ftf_sf_du_mainboard_2345610004_1793709135\\ftf_sf_du_mainboard_2345610004_1793709135.csv', 'data': {'serial_numbers': {'2345610004': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 32, 15, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:33,658 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:33,660 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:34,003 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:34,003 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:34,003 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610004' não encontrada."}
+2026-11-06 10:55:34,027 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610005\ftf_sf_du_mainboard_2345610005_1793708348\ftf_sf_du_mainboard_2345610005_1793708348.csv.
+2026-11-06 10:55:34,032 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610005\ftf_sf_du_mainboard_2345610005_1793708348\ftf_sf_du_mainboard_2345610005_1793708348.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610005\\ftf_sf_du_mainboard_2345610005_1793708348\\ftf_sf_du_mainboard_2345610005_1793708348.csv', 'data': {'serial_numbers': {'2345610005': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 19, 8, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:34,032 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:34,032 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:34,510 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:34,510 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:34,510 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610005' não encontrada."}
+2026-11-06 10:55:34,543 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610006\ftf_sf_du_mainboard_2345610006_1793708752\ftf_sf_du_mainboard_2345610006_1793708752.csv.
+2026-11-06 10:55:34,547 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610006\ftf_sf_du_mainboard_2345610006_1793708752\ftf_sf_du_mainboard_2345610006_1793708752.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610006\\ftf_sf_du_mainboard_2345610006_1793708752\\ftf_sf_du_mainboard_2345610006_1793708752.csv', 'data': {'serial_numbers': {'2345610006': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 25, 52, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:34,547 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:34,548 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:34,933 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:34,934 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:34,934 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610006' não encontrada."}
+2026-11-06 10:55:34,953 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610007\ftf_sf_du_mainboard_2345610007_1793708586\ftf_sf_du_mainboard_2345610007_1793708586.csv.
+2026-11-06 10:55:34,958 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610007\ftf_sf_du_mainboard_2345610007_1793708586\ftf_sf_du_mainboard_2345610007_1793708586.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610007\\ftf_sf_du_mainboard_2345610007_1793708586\\ftf_sf_du_mainboard_2345610007_1793708586.csv', 'data': {'serial_numbers': {'2345610007': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 23, 6, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:34,958 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:34,958 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:35,345 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:35,346 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:35,346 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610007' não encontrada."}
+2026-11-06 10:55:35,368 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610008\ftf_sf_du_mainboard_2345610008_1793709653\ftf_sf_du_mainboard_2345610008_1793709653.csv.
+2026-11-06 10:55:35,373 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610008\ftf_sf_du_mainboard_2345610008_1793709653\ftf_sf_du_mainboard_2345610008_1793709653.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610008\\ftf_sf_du_mainboard_2345610008_1793709653\\ftf_sf_du_mainboard_2345610008_1793709653.csv', 'data': {'serial_numbers': {'2345610008': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 40, 53, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:35,373 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:35,374 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:35,775 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:35,776 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:35,776 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610008' não encontrada."}
+2026-11-06 10:55:35,796 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610009\ftf_sf_du_mainboard_2345610009_1793702539\ftf_sf_du_mainboard_2345610009_1793702539.csv.
+2026-11-06 10:55:35,800 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610009\ftf_sf_du_mainboard_2345610009_1793702539\ftf_sf_du_mainboard_2345610009_1793702539.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610009\\ftf_sf_du_mainboard_2345610009_1793702539\\ftf_sf_du_mainboard_2345610009_1793702539.csv', 'data': {'serial_numbers': {'2345610009': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 10, 42, 19, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:35,800 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:35,801 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:36,173 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:36,175 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:36,175 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610009' não encontrada."}
+2026-11-06 10:55:36,211 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610010\ftf_sf_du_mainboard_2345610010_1793702345\ftf_sf_du_mainboard_2345610010_1793702345.csv.
+2026-11-06 10:55:36,215 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610010\ftf_sf_du_mainboard_2345610010_1793702345\ftf_sf_du_mainboard_2345610010_1793702345.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610010\\ftf_sf_du_mainboard_2345610010_1793702345\\ftf_sf_du_mainboard_2345610010_1793702345.csv', 'data': {'serial_numbers': {'2345610010': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 10, 39, 5, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:36,215 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:36,217 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:36,571 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:36,571 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:36,571 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610010' não encontrada."}
+2026-11-06 10:55:36,611 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610011\ftf_sf_du_mainboard_2345610011_1793702743\ftf_sf_du_mainboard_2345610011_1793702743.csv.
+2026-11-06 10:55:36,617 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610011\ftf_sf_du_mainboard_2345610011_1793702743\ftf_sf_du_mainboard_2345610011_1793702743.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610011\\ftf_sf_du_mainboard_2345610011_1793702743\\ftf_sf_du_mainboard_2345610011_1793702743.csv', 'data': {'serial_numbers': {'2345610011': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 10, 45, 43, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:36,617 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:36,618 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:37,046 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:37,047 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:37,047 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610011' não encontrada."}
+2026-11-06 10:55:37,073 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610012\ftf_sf_du_mainboard_2345610012_1793701209\ftf_sf_du_mainboard_2345610012_1793701209.csv.
+2026-11-06 10:55:37,079 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610012\ftf_sf_du_mainboard_2345610012_1793701209\ftf_sf_du_mainboard_2345610012_1793701209.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610012\\ftf_sf_du_mainboard_2345610012_1793701209\\ftf_sf_du_mainboard_2345610012_1793701209.csv', 'data': {'serial_numbers': {'2345610012': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 10, 20, 9, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:37,080 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:37,081 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:37,505 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:37,505 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:37,506 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610012' não encontrada."}
+2026-11-06 10:55:37,531 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610013\ftf_sf_du_mainboard_2345610013_1793793941\ftf_sf_du_mainboard_2345610013_1793793941.csv.
+2026-11-06 10:55:37,537 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610013\ftf_sf_du_mainboard_2345610013_1793793941\ftf_sf_du_mainboard_2345610013_1793793941.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610013\\ftf_sf_du_mainboard_2345610013_1793793941\\ftf_sf_du_mainboard_2345610013_1793793941.csv', 'data': {'serial_numbers': {'2345610013': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 12, 5, 41, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:37,537 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:37,538 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:37,912 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:37,913 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:37,913 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610013' não encontrada."}
+2026-11-06 10:55:37,937 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610014\ftf_sf_du_mainboard_2345610014_1793794649\ftf_sf_du_mainboard_2345610014_1793794649.csv.
+2026-11-06 10:55:37,942 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610014\ftf_sf_du_mainboard_2345610014_1793794649\ftf_sf_du_mainboard_2345610014_1793794649.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610014\\ftf_sf_du_mainboard_2345610014_1793794649\\ftf_sf_du_mainboard_2345610014_1793794649.csv', 'data': {'serial_numbers': {'2345610014': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 12, 17, 29, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:37,942 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:37,943 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:38,284 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:38,284 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:38,284 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610014' não encontrada."}
+2026-11-06 10:55:38,321 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610015\ftf_sf_du_mainboard_2345610015_1793794152\ftf_sf_du_mainboard_2345610015_1793794152.csv.
+2026-11-06 10:55:38,325 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610015\ftf_sf_du_mainboard_2345610015_1793794152\ftf_sf_du_mainboard_2345610015_1793794152.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610015\\ftf_sf_du_mainboard_2345610015_1793794152\\ftf_sf_du_mainboard_2345610015_1793794152.csv', 'data': {'serial_numbers': {'2345610015': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 12, 9, 12, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:38,325 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:38,326 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:38,700 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:38,700 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:38,700 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610015' não encontrada."}
+2026-11-06 10:55:38,743 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610016\ftf_sf_du_mainboard_2345610016_1793794326\ftf_sf_du_mainboard_2345610016_1793794326.csv.
+2026-11-06 10:55:38,747 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610016\ftf_sf_du_mainboard_2345610016_1793794326\ftf_sf_du_mainboard_2345610016_1793794326.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610016\\ftf_sf_du_mainboard_2345610016_1793794326\\ftf_sf_du_mainboard_2345610016_1793794326.csv', 'data': {'serial_numbers': {'2345610016': {'status': 'NG', 'timestamp': datetime.datetime(2026, 11, 4, 12, 12, 6, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:38,747 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:38,748 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:39,096 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:39,097 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:39,097 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610016' não encontrada."}
+2026-11-06 10:55:39,119 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610016\ftf_sf_du_mainboard_2345610016_1793794457\ftf_sf_du_mainboard_2345610016_1793794457.csv.
+2026-11-06 10:55:39,126 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610016\ftf_sf_du_mainboard_2345610016_1793794457\ftf_sf_du_mainboard_2345610016_1793794457.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610016\\ftf_sf_du_mainboard_2345610016_1793794457\\ftf_sf_du_mainboard_2345610016_1793794457.csv', 'data': {'serial_numbers': {'2345610016': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 12, 14, 17, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:39,126 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:39,127 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:39,447 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:39,448 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:39,448 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610016' não encontrada."}
+2026-11-06 10:55:39,477 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610017\ftf_sf_du_mainboard_2345610017_1793704572\ftf_sf_du_mainboard_2345610017_1793704572.csv.
+2026-11-06 10:55:39,481 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610017\ftf_sf_du_mainboard_2345610017_1793704572\ftf_sf_du_mainboard_2345610017_1793704572.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610017\\ftf_sf_du_mainboard_2345610017_1793704572\\ftf_sf_du_mainboard_2345610017_1793704572.csv', 'data': {'serial_numbers': {'2345610017': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 16, 12, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:39,482 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:39,482 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:39,826 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:39,827 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:39,827 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610017' não encontrada."}
+2026-11-06 10:55:39,850 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610018\ftf_sf_du_mainboard_2345610018_1793705229\ftf_sf_du_mainboard_2345610018_1793705229.csv.
+2026-11-06 10:55:39,854 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610018\ftf_sf_du_mainboard_2345610018_1793705229\ftf_sf_du_mainboard_2345610018_1793705229.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610018\\ftf_sf_du_mainboard_2345610018_1793705229\\ftf_sf_du_mainboard_2345610018_1793705229.csv', 'data': {'serial_numbers': {'2345610018': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 27, 9, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:39,854 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:39,855 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:40,207 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:40,207 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:40,208 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610018' não encontrada."}
+2026-11-06 10:55:40,229 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610019\ftf_sf_du_mainboard_2345610019_1793704739\ftf_sf_du_mainboard_2345610019_1793704739.csv.
+2026-11-06 10:55:40,233 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610019\ftf_sf_du_mainboard_2345610019_1793704739\ftf_sf_du_mainboard_2345610019_1793704739.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610019\\ftf_sf_du_mainboard_2345610019_1793704739\\ftf_sf_du_mainboard_2345610019_1793704739.csv', 'data': {'serial_numbers': {'2345610019': {'status': 'NG', 'timestamp': datetime.datetime(2026, 11, 3, 11, 18, 59, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:40,233 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:40,234 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:40,573 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:40,573 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:40,573 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610019' não encontrada."}
+2026-11-06 10:55:40,592 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610019\ftf_sf_du_mainboard_2345610019_1793704868\ftf_sf_du_mainboard_2345610019_1793704868.csv.
+2026-11-06 10:55:40,597 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610019\ftf_sf_du_mainboard_2345610019_1793704868\ftf_sf_du_mainboard_2345610019_1793704868.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610019\\ftf_sf_du_mainboard_2345610019_1793704868\\ftf_sf_du_mainboard_2345610019_1793704868.csv', 'data': {'serial_numbers': {'2345610019': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 21, 8, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:40,597 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:40,597 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:40,925 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:40,926 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:40,926 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610019' não encontrada."}
+2026-11-06 10:55:40,961 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610020\ftf_sf_du_mainboard_2345610020_1793705037\ftf_sf_du_mainboard_2345610020_1793705037.csv.
+2026-11-06 10:55:40,966 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610020\ftf_sf_du_mainboard_2345610020_1793705037\ftf_sf_du_mainboard_2345610020_1793705037.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610020\\ftf_sf_du_mainboard_2345610020_1793705037\\ftf_sf_du_mainboard_2345610020_1793705037.csv', 'data': {'serial_numbers': {'2345610020': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 23, 57, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:40,966 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:40,967 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:41,335 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:41,335 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:41,335 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610020' não encontrada."}
+2026-11-06 10:55:41,361 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610021\ftf_sf_du_mainboard_2345610021_1793792349\ftf_sf_du_mainboard_2345610021_1793792349.csv.
+2026-11-06 10:55:41,366 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610021\ftf_sf_du_mainboard_2345610021_1793792349\ftf_sf_du_mainboard_2345610021_1793792349.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610021\\ftf_sf_du_mainboard_2345610021_1793792349\\ftf_sf_du_mainboard_2345610021_1793792349.csv', 'data': {'serial_numbers': {'2345610021': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 39, 9, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:41,366 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:41,367 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:41,699 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:41,700 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:41,700 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610021' não encontrada."}
+2026-11-06 10:55:41,753 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610022\ftf_sf_du_mainboard_2345610022_1793792916\ftf_sf_du_mainboard_2345610022_1793792916.csv.
+2026-11-06 10:55:41,758 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610022\ftf_sf_du_mainboard_2345610022_1793792916\ftf_sf_du_mainboard_2345610022_1793792916.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610022\\ftf_sf_du_mainboard_2345610022_1793792916\\ftf_sf_du_mainboard_2345610022_1793792916.csv', 'data': {'serial_numbers': {'2345610022': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 48, 36, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:41,758 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:41,759 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:42,105 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:42,105 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:42,105 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610022' não encontrada."}
+2026-11-06 10:55:42,133 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610023\ftf_sf_du_mainboard_2345610023_1793792533\ftf_sf_du_mainboard_2345610023_1793792533.csv.
+2026-11-06 10:55:42,136 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610023\ftf_sf_du_mainboard_2345610023_1793792533\ftf_sf_du_mainboard_2345610023_1793792533.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610023\\ftf_sf_du_mainboard_2345610023_1793792533\\ftf_sf_du_mainboard_2345610023_1793792533.csv', 'data': {'serial_numbers': {'2345610023': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 42, 13, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:42,136 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:42,137 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:42,477 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:42,477 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:42,477 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610023' não encontrada."}
+2026-11-06 10:55:42,507 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610024\ftf_sf_du_mainboard_2345610024_1793792731\ftf_sf_du_mainboard_2345610024_1793792731.csv.
+2026-11-06 10:55:42,513 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610024\ftf_sf_du_mainboard_2345610024_1793792731\ftf_sf_du_mainboard_2345610024_1793792731.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610024\\ftf_sf_du_mainboard_2345610024_1793792731\\ftf_sf_du_mainboard_2345610024_1793792731.csv', 'data': {'serial_numbers': {'2345610024': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 45, 31, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:42,514 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:42,515 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:42,882 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:42,882 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:42,882 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610024' não encontrada."}
+2026-11-06 10:55:42,906 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610025\ftf_sf_du_mainboard_2345610025_1793710213\ftf_sf_du_mainboard_2345610025_1793710213.csv.
+2026-11-06 10:55:42,912 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610025\ftf_sf_du_mainboard_2345610025_1793710213\ftf_sf_du_mainboard_2345610025_1793710213.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610025\\ftf_sf_du_mainboard_2345610025_1793710213\\ftf_sf_du_mainboard_2345610025_1793710213.csv', 'data': {'serial_numbers': {'2345610025': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 50, 13, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:42,912 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:42,913 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:43,264 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:43,264 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:43,265 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610025' não encontrada."}
+2026-11-06 10:55:43,288 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610026\ftf_sf_du_mainboard_2345610026_1793710018\ftf_sf_du_mainboard_2345610026_1793710018.csv.
+2026-11-06 10:55:43,294 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610026\ftf_sf_du_mainboard_2345610026_1793710018\ftf_sf_du_mainboard_2345610026_1793710018.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610026\\ftf_sf_du_mainboard_2345610026_1793710018\\ftf_sf_du_mainboard_2345610026_1793710018.csv', 'data': {'serial_numbers': {'2345610026': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 46, 58, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:43,294 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:43,295 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:43,769 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:43,770 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:43,770 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610026' não encontrada."}
+2026-11-06 10:55:43,797 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610027\ftf_sf_du_mainboard_2345610027_1793710428\ftf_sf_du_mainboard_2345610027_1793710428.csv.
+2026-11-06 10:55:43,801 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610027\ftf_sf_du_mainboard_2345610027_1793710428\ftf_sf_du_mainboard_2345610027_1793710428.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610027\\ftf_sf_du_mainboard_2345610027_1793710428\\ftf_sf_du_mainboard_2345610027_1793710428.csv', 'data': {'serial_numbers': {'2345610027': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 53, 48, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:43,801 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:43,803 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:44,134 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:44,134 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:44,135 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610027' não encontrada."}
+2026-11-06 10:55:44,178 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610028\ftf_sf_du_mainboard_2345610028_1793710594\ftf_sf_du_mainboard_2345610028_1793710594.csv.
+2026-11-06 10:55:44,182 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610028\ftf_sf_du_mainboard_2345610028_1793710594\ftf_sf_du_mainboard_2345610028_1793710594.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610028\\ftf_sf_du_mainboard_2345610028_1793710594\\ftf_sf_du_mainboard_2345610028_1793710594.csv', 'data': {'serial_numbers': {'2345610028': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 56, 34, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:44,182 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:44,182 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:44,529 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:44,529 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:44,529 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610028' não encontrada."}
+2026-11-06 10:55:44,558 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610029\ftf_sf_du_mainboard_2345610029_1793702941\ftf_sf_du_mainboard_2345610029_1793702941.csv.
+2026-11-06 10:55:44,563 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610029\ftf_sf_du_mainboard_2345610029_1793702941\ftf_sf_du_mainboard_2345610029_1793702941.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610029\\ftf_sf_du_mainboard_2345610029_1793702941\\ftf_sf_du_mainboard_2345610029_1793702941.csv', 'data': {'serial_numbers': {'2345610029': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 10, 49, 1, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:44,563 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:44,563 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:44,903 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:44,903 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:44,903 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610029' não encontrada."}
+2026-11-06 10:55:44,957 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610030\ftf_sf_du_mainboard_2345610030_1793703342\ftf_sf_du_mainboard_2345610030_1793703342.csv.
+2026-11-06 10:55:44,961 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610030\ftf_sf_du_mainboard_2345610030_1793703342\ftf_sf_du_mainboard_2345610030_1793703342.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610030\\ftf_sf_du_mainboard_2345610030_1793703342\\ftf_sf_du_mainboard_2345610030_1793703342.csv', 'data': {'serial_numbers': {'2345610030': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 10, 55, 42, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:44,961 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:44,962 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:45,295 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:45,296 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:45,296 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610030' não encontrada."}
+2026-11-06 10:55:45,330 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610031\ftf_sf_du_mainboard_2345610031_1793703143\ftf_sf_du_mainboard_2345610031_1793703143.csv.
+2026-11-06 10:55:45,334 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610031\ftf_sf_du_mainboard_2345610031_1793703143\ftf_sf_du_mainboard_2345610031_1793703143.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610031\\ftf_sf_du_mainboard_2345610031_1793703143\\ftf_sf_du_mainboard_2345610031_1793703143.csv', 'data': {'serial_numbers': {'2345610031': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 10, 52, 23, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:45,334 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:45,334 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:45,682 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:45,683 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:45,683 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610031' não encontrada."}
+2026-11-06 10:55:45,711 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610032\ftf_sf_du_mainboard_2345610032_1793703528\ftf_sf_du_mainboard_2345610032_1793703528.csv.
+2026-11-06 10:55:45,715 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610032\ftf_sf_du_mainboard_2345610032_1793703528\ftf_sf_du_mainboard_2345610032_1793703528.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610032\\ftf_sf_du_mainboard_2345610032_1793703528\\ftf_sf_du_mainboard_2345610032_1793703528.csv', 'data': {'serial_numbers': {'2345610032': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 10, 58, 48, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:45,715 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:45,716 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:46,061 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:46,061 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:46,061 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610032' não encontrada."}
+2026-11-06 10:55:46,085 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610033\ftf_sf_du_mainboard_2345610033_1793793503\ftf_sf_du_mainboard_2345610033_1793793503.csv.
+2026-11-06 10:55:46,090 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610033\ftf_sf_du_mainboard_2345610033_1793793503\ftf_sf_du_mainboard_2345610033_1793793503.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610033\\ftf_sf_du_mainboard_2345610033_1793793503\\ftf_sf_du_mainboard_2345610033_1793793503.csv', 'data': {'serial_numbers': {'2345610033': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 58, 23, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:46,090 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:46,091 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:46,418 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:46,418 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:46,418 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610033' não encontrada."}
+2026-11-06 10:55:46,447 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610034\ftf_sf_du_mainboard_2345610034_1793793117\ftf_sf_du_mainboard_2345610034_1793793117.csv.
+2026-11-06 10:55:46,449 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610034\ftf_sf_du_mainboard_2345610034_1793793117\ftf_sf_du_mainboard_2345610034_1793793117.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610034\\ftf_sf_du_mainboard_2345610034_1793793117\\ftf_sf_du_mainboard_2345610034_1793793117.csv', 'data': {'serial_numbers': {'2345610034': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 51, 57, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:46,450 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:46,450 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:46,759 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:46,759 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:46,759 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610034' não encontrada."}
+2026-11-06 10:55:46,779 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610035\ftf_sf_du_mainboard_2345610035_1793793742\ftf_sf_du_mainboard_2345610035_1793793742.csv.
+2026-11-06 10:55:46,783 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610035\ftf_sf_du_mainboard_2345610035_1793793742\ftf_sf_du_mainboard_2345610035_1793793742.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610035\\ftf_sf_du_mainboard_2345610035_1793793742\\ftf_sf_du_mainboard_2345610035_1793793742.csv', 'data': {'serial_numbers': {'2345610035': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 12, 2, 22, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:46,783 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:46,784 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:47,087 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:47,087 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:47,087 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610035' não encontrada."}
+2026-11-06 10:55:47,114 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610036\ftf_sf_du_mainboard_2345610036_1793793303\ftf_sf_du_mainboard_2345610036_1793793303.csv.
+2026-11-06 10:55:47,118 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610036\ftf_sf_du_mainboard_2345610036_1793793303\ftf_sf_du_mainboard_2345610036_1793793303.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610036\\ftf_sf_du_mainboard_2345610036_1793793303\\ftf_sf_du_mainboard_2345610036_1793793303.csv', 'data': {'serial_numbers': {'2345610036': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 55, 3, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:47,118 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:47,119 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:47,530 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:47,531 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:47,531 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610036' não encontrada."}
+2026-11-06 10:55:47,571 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610037\ftf_sf_du_mainboard_2345610037_1793706512\ftf_sf_du_mainboard_2345610037_1793706512.csv.
+2026-11-06 10:55:47,575 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610037\ftf_sf_du_mainboard_2345610037_1793706512\ftf_sf_du_mainboard_2345610037_1793706512.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610037\\ftf_sf_du_mainboard_2345610037_1793706512\\ftf_sf_du_mainboard_2345610037_1793706512.csv', 'data': {'serial_numbers': {'2345610037': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 48, 32, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:47,575 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:47,576 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:47,890 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:47,891 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:47,891 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610037' não encontrada."}
+2026-11-06 10:55:47,912 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610038\ftf_sf_du_mainboard_2345610038_1793706163\ftf_sf_du_mainboard_2345610038_1793706163.csv.
+2026-11-06 10:55:47,916 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610038\ftf_sf_du_mainboard_2345610038_1793706163\ftf_sf_du_mainboard_2345610038_1793706163.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610038\\ftf_sf_du_mainboard_2345610038_1793706163\\ftf_sf_du_mainboard_2345610038_1793706163.csv', 'data': {'serial_numbers': {'2345610038': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 42, 43, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:47,916 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:47,916 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:48,252 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:48,253 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:48,253 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610038' não encontrada."}
+2026-11-06 10:55:48,276 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610039\ftf_sf_du_mainboard_2345610039_1793706338\ftf_sf_du_mainboard_2345610039_1793706338.csv.
+2026-11-06 10:55:48,281 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610039\ftf_sf_du_mainboard_2345610039_1793706338\ftf_sf_du_mainboard_2345610039_1793706338.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610039\\ftf_sf_du_mainboard_2345610039_1793706338\\ftf_sf_du_mainboard_2345610039_1793706338.csv', 'data': {'serial_numbers': {'2345610039': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 45, 38, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:48,281 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:48,282 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:48,623 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:48,623 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:48,623 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610039' não encontrada."}
+2026-11-06 10:55:48,645 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610040\ftf_sf_du_mainboard_2345610040_1793706749\ftf_sf_du_mainboard_2345610040_1793706749.csv.
+2026-11-06 10:55:48,648 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610040\ftf_sf_du_mainboard_2345610040_1793706749\ftf_sf_du_mainboard_2345610040_1793706749.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610040\\ftf_sf_du_mainboard_2345610040_1793706749\\ftf_sf_du_mainboard_2345610040_1793706749.csv', 'data': {'serial_numbers': {'2345610040': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 52, 29, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:48,648 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:48,649 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:48,977 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:48,977 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:48,978 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610040' não encontrada."}
+2026-11-06 10:55:49,022 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610041\ftf_sf_du_mainboard_2345610041_1793791271\ftf_sf_du_mainboard_2345610041_1793791271.csv.
+2026-11-06 10:55:49,027 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610041\ftf_sf_du_mainboard_2345610041_1793791271\ftf_sf_du_mainboard_2345610041_1793791271.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610041\\ftf_sf_du_mainboard_2345610041_1793791271\\ftf_sf_du_mainboard_2345610041_1793791271.csv', 'data': {'serial_numbers': {'2345610041': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 21, 11, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:49,027 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:49,027 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:49,348 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:49,348 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:49,348 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610041' não encontrada."}
+2026-11-06 10:55:49,372 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610042\ftf_sf_du_mainboard_2345610042_1793791479\ftf_sf_du_mainboard_2345610042_1793791479.csv.
+2026-11-06 10:55:49,375 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610042\ftf_sf_du_mainboard_2345610042_1793791479\ftf_sf_du_mainboard_2345610042_1793791479.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610042\\ftf_sf_du_mainboard_2345610042_1793791479\\ftf_sf_du_mainboard_2345610042_1793791479.csv', 'data': {'serial_numbers': {'2345610042': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 24, 39, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:49,375 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:49,376 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:49,748 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:49,749 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:49,749 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610042' não encontrada."}
+2026-11-06 10:55:49,776 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610043\ftf_sf_du_mainboard_2345610043_1793790834\ftf_sf_du_mainboard_2345610043_1793790834.csv.
+2026-11-06 10:55:49,781 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610043\ftf_sf_du_mainboard_2345610043_1793790834\ftf_sf_du_mainboard_2345610043_1793790834.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610043\\ftf_sf_du_mainboard_2345610043_1793790834\\ftf_sf_du_mainboard_2345610043_1793790834.csv', 'data': {'serial_numbers': {'2345610043': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 13, 54, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:49,782 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:49,782 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:50,122 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:50,122 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:50,122 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610043' não encontrada."}
+2026-11-06 10:55:50,157 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610044\ftf_sf_du_mainboard_2345610044_1793791024\ftf_sf_du_mainboard_2345610044_1793791024.csv.
+2026-11-06 10:55:50,161 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610044\ftf_sf_du_mainboard_2345610044_1793791024\ftf_sf_du_mainboard_2345610044_1793791024.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610044\\ftf_sf_du_mainboard_2345610044_1793791024\\ftf_sf_du_mainboard_2345610044_1793791024.csv', 'data': {'serial_numbers': {'2345610044': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 17, 4, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:50,161 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:50,162 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:50,506 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:50,506 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:50,506 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610044' não encontrada."}
+2026-11-06 10:55:50,526 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610045\ftf_sf_du_mainboard_2345610045_1793707280\ftf_sf_du_mainboard_2345610045_1793707280.csv.
+2026-11-06 10:55:50,530 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610045\ftf_sf_du_mainboard_2345610045_1793707280\ftf_sf_du_mainboard_2345610045_1793707280.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610045\\ftf_sf_du_mainboard_2345610045_1793707280\\ftf_sf_du_mainboard_2345610045_1793707280.csv', 'data': {'serial_numbers': {'2345610045': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 1, 20, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:50,530 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:50,531 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:50,873 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:50,873 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:50,874 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610045' não encontrada."}
+2026-11-06 10:55:50,905 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610046\ftf_sf_du_mainboard_2345610046_1793707104\ftf_sf_du_mainboard_2345610046_1793707104.csv.
+2026-11-06 10:55:50,913 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610046\ftf_sf_du_mainboard_2345610046_1793707104\ftf_sf_du_mainboard_2345610046_1793707104.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610046\\ftf_sf_du_mainboard_2345610046_1793707104\\ftf_sf_du_mainboard_2345610046_1793707104.csv', 'data': {'serial_numbers': {'2345610046': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 58, 24, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:50,913 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:50,914 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:51,338 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:51,339 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:51,339 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610046' não encontrada."}
+2026-11-06 10:55:51,363 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610047\ftf_sf_du_mainboard_2345610047_1793707445\ftf_sf_du_mainboard_2345610047_1793707445.csv.
+2026-11-06 10:55:51,369 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610047\ftf_sf_du_mainboard_2345610047_1793707445\ftf_sf_du_mainboard_2345610047_1793707445.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610047\\ftf_sf_du_mainboard_2345610047_1793707445\\ftf_sf_du_mainboard_2345610047_1793707445.csv', 'data': {'serial_numbers': {'2345610047': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 4, 5, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:51,369 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:51,371 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:51,805 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:51,806 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:51,806 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610047' não encontrada."}
+2026-11-06 10:55:51,842 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610048\ftf_sf_du_mainboard_2345610048_1793706911\ftf_sf_du_mainboard_2345610048_1793706911.csv.
+2026-11-06 10:55:51,849 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610048\ftf_sf_du_mainboard_2345610048_1793706911\ftf_sf_du_mainboard_2345610048_1793706911.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610048\\ftf_sf_du_mainboard_2345610048_1793706911\\ftf_sf_du_mainboard_2345610048_1793706911.csv', 'data': {'serial_numbers': {'2345610048': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 55, 11, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:51,850 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:51,851 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:52,342 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:52,343 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:52,343 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610048' não encontrada."}
+2026-11-06 10:55:52,372 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610049\ftf_sf_du_mainboard_2345610049_1793707815\ftf_sf_du_mainboard_2345610049_1793707815.csv.
+2026-11-06 10:55:52,377 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610049\ftf_sf_du_mainboard_2345610049_1793707815\ftf_sf_du_mainboard_2345610049_1793707815.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610049\\ftf_sf_du_mainboard_2345610049_1793707815\\ftf_sf_du_mainboard_2345610049_1793707815.csv', 'data': {'serial_numbers': {'2345610049': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 10, 15, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:52,379 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:52,380 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:52,842 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:52,842 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:52,842 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610049' não encontrada."}
+2026-11-06 10:55:52,877 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610050\ftf_sf_du_mainboard_2345610050_1793707625\ftf_sf_du_mainboard_2345610050_1793707625.csv.
+2026-11-06 10:55:52,884 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610050\ftf_sf_du_mainboard_2345610050_1793707625\ftf_sf_du_mainboard_2345610050_1793707625.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610050\\ftf_sf_du_mainboard_2345610050_1793707625\\ftf_sf_du_mainboard_2345610050_1793707625.csv', 'data': {'serial_numbers': {'2345610050': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 7, 5, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:52,884 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:52,886 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:53,320 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:53,320 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:53,320 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610050' não encontrada."}
+2026-11-06 10:55:53,344 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610051\ftf_sf_du_mainboard_2345610051_1793707991\ftf_sf_du_mainboard_2345610051_1793707991.csv.
+2026-11-06 10:55:53,349 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610051\ftf_sf_du_mainboard_2345610051_1793707991\ftf_sf_du_mainboard_2345610051_1793707991.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610051\\ftf_sf_du_mainboard_2345610051_1793707991\\ftf_sf_du_mainboard_2345610051_1793707991.csv', 'data': {'serial_numbers': {'2345610051': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 13, 11, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:53,349 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:53,350 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:53,850 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:53,850 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:53,850 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610051' não encontrada."}
+2026-11-06 10:55:53,880 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610052\ftf_sf_du_mainboard_2345610052_1793708165\ftf_sf_du_mainboard_2345610052_1793708165.csv.
+2026-11-06 10:55:53,887 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610052\ftf_sf_du_mainboard_2345610052_1793708165\ftf_sf_du_mainboard_2345610052_1793708165.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610052\\ftf_sf_du_mainboard_2345610052_1793708165\\ftf_sf_du_mainboard_2345610052_1793708165.csv', 'data': {'serial_numbers': {'2345610052': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 12, 16, 5, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:53,887 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:53,888 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:54,342 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:54,342 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:54,342 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610052' não encontrada."}
+2026-11-06 10:55:54,373 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610054\ftf_sf_du_mainboard_2345610054_1793791691\ftf_sf_du_mainboard_2345610054_1793791691.csv.
+2026-11-06 10:55:54,380 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610054\ftf_sf_du_mainboard_2345610054_1793791691\ftf_sf_du_mainboard_2345610054_1793791691.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610054\\ftf_sf_du_mainboard_2345610054_1793791691\\ftf_sf_du_mainboard_2345610054_1793791691.csv', 'data': {'serial_numbers': {'2345610054': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 28, 11, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:54,380 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:54,381 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:54,835 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:54,835 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:54,835 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610054' não encontrada."}
+2026-11-06 10:55:54,862 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610055\ftf_sf_du_mainboard_2345610055_1793792092\ftf_sf_du_mainboard_2345610055_1793792092.csv.
+2026-11-06 10:55:54,868 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610055\ftf_sf_du_mainboard_2345610055_1793792092\ftf_sf_du_mainboard_2345610055_1793792092.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610055\\ftf_sf_du_mainboard_2345610055_1793792092\\ftf_sf_du_mainboard_2345610055_1793792092.csv', 'data': {'serial_numbers': {'2345610055': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 34, 52, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:54,868 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:54,868 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:55,365 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:55,366 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:55,366 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610055' não encontrada."}
+2026-11-06 10:55:55,392 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610056\ftf_sf_du_mainboard_2345610056_1793791886\ftf_sf_du_mainboard_2345610056_1793791886.csv.
+2026-11-06 10:55:55,397 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610056\ftf_sf_du_mainboard_2345610056_1793791886\ftf_sf_du_mainboard_2345610056_1793791886.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610056\\ftf_sf_du_mainboard_2345610056_1793791886\\ftf_sf_du_mainboard_2345610056_1793791886.csv', 'data': {'serial_numbers': {'2345610056': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 4, 11, 31, 26, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:55,397 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:55,399 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:55,908 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:55,910 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:55,910 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610056' não encontrada."}
+2026-11-06 10:55:55,936 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610057\ftf_sf_du_mainboard_2345610057_1793705594\ftf_sf_du_mainboard_2345610057_1793705594.csv.
+2026-11-06 10:55:55,942 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610057\ftf_sf_du_mainboard_2345610057_1793705594\ftf_sf_du_mainboard_2345610057_1793705594.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610057\\ftf_sf_du_mainboard_2345610057_1793705594\\ftf_sf_du_mainboard_2345610057_1793705594.csv', 'data': {'serial_numbers': {'2345610057': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 33, 14, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:55,942 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:55,943 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:56,510 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:56,510 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:56,510 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610057' não encontrada."}
+2026-11-06 10:55:56,540 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610058\ftf_sf_du_mainboard_2345610058_1793705996\ftf_sf_du_mainboard_2345610058_1793705996.csv.
+2026-11-06 10:55:56,545 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610058\ftf_sf_du_mainboard_2345610058_1793705996\ftf_sf_du_mainboard_2345610058_1793705996.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610058\\ftf_sf_du_mainboard_2345610058_1793705996\\ftf_sf_du_mainboard_2345610058_1793705996.csv', 'data': {'serial_numbers': {'2345610058': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 39, 56, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:56,545 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:56,546 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:57,027 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:57,027 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:57,027 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610058' não encontrada."}
+2026-11-06 10:55:57,051 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610059\ftf_sf_du_mainboard_2345610059_1793705420\ftf_sf_du_mainboard_2345610059_1793705420.csv.
+2026-11-06 10:55:57,056 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610059\ftf_sf_du_mainboard_2345610059_1793705420\ftf_sf_du_mainboard_2345610059_1793705420.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610059\\ftf_sf_du_mainboard_2345610059_1793705420\\ftf_sf_du_mainboard_2345610059_1793705420.csv', 'data': {'serial_numbers': {'2345610059': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 30, 20, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:57,056 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:57,057 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:57,625 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:57,625 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:57,627 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610059' não encontrada."}
+2026-11-06 10:55:57,666 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610060\ftf_sf_du_mainboard_2345610060_1793705803\ftf_sf_du_mainboard_2345610060_1793705803.csv.
+2026-11-06 10:55:57,673 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610060\ftf_sf_du_mainboard_2345610060_1793705803\ftf_sf_du_mainboard_2345610060_1793705803.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610060\\ftf_sf_du_mainboard_2345610060_1793705803\\ftf_sf_du_mainboard_2345610060_1793705803.csv', 'data': {'serial_numbers': {'2345610060': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 36, 43, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:57,673 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:57,674 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:58,239 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:58,239 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:58,239 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610060' não encontrada."}
+2026-11-06 10:55:58,273 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610061\ftf_sf_du_mainboard_2345610061_1793703716\ftf_sf_du_mainboard_2345610061_1793703716.csv.
+2026-11-06 10:55:58,279 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610061\ftf_sf_du_mainboard_2345610061_1793703716\ftf_sf_du_mainboard_2345610061_1793703716.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610061\\ftf_sf_du_mainboard_2345610061_1793703716\\ftf_sf_du_mainboard_2345610061_1793703716.csv', 'data': {'serial_numbers': {'2345610061': {'status': 'NG', 'timestamp': datetime.datetime(2026, 11, 3, 11, 1, 56, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:58,279 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:58,280 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:58,730 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:58,730 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:58,730 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610061' não encontrada."}
+2026-11-06 10:55:58,764 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610061\ftf_sf_du_mainboard_2345610061_1793704060\ftf_sf_du_mainboard_2345610061_1793704060.csv.
+2026-11-06 10:55:58,768 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610061\ftf_sf_du_mainboard_2345610061_1793704060\ftf_sf_du_mainboard_2345610061_1793704060.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610061\\ftf_sf_du_mainboard_2345610061_1793704060\\ftf_sf_du_mainboard_2345610061_1793704060.csv', 'data': {'serial_numbers': {'2345610061': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 7, 40, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:58,768 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:58,769 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:59,251 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:59,252 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:59,252 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610061' não encontrada."}
+2026-11-06 10:55:59,285 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610062\ftf_sf_du_mainboard_2345610062_1793704235\ftf_sf_du_mainboard_2345610062_1793704235.csv.
+2026-11-06 10:55:59,291 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610062\ftf_sf_du_mainboard_2345610062_1793704235\ftf_sf_du_mainboard_2345610062_1793704235.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610062\\ftf_sf_du_mainboard_2345610062_1793704235\\ftf_sf_du_mainboard_2345610062_1793704235.csv', 'data': {'serial_numbers': {'2345610062': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 10, 35, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:59,291 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:59,293 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:55:59,762 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:55:59,762 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:55:59,762 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610062' não encontrada."}
+2026-11-06 10:55:59,785 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610063\ftf_sf_du_mainboard_2345610063_1793703880\ftf_sf_du_mainboard_2345610063_1793703880.csv.
+2026-11-06 10:55:59,791 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610063\ftf_sf_du_mainboard_2345610063_1793703880\ftf_sf_du_mainboard_2345610063_1793703880.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610063\\ftf_sf_du_mainboard_2345610063_1793703880\\ftf_sf_du_mainboard_2345610063_1793703880.csv', 'data': {'serial_numbers': {'2345610063': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 4, 40, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:55:59,791 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:55:59,793 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:56:00,307 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:56:00,308 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:56:00,308 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610063' não encontrada."}
+2026-11-06 10:56:00,348 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610064\ftf_sf_du_mainboard_2345610064_1793704404\ftf_sf_du_mainboard_2345610064_1793704404.csv.
+2026-11-06 10:56:00,357 - worker - INFO - Parsing C:\Users\dsantos\Desktop\test_results\ftf_sf_du_mainboard\2345610064\ftf_sf_du_mainboard_2345610064_1793704404\ftf_sf_du_mainboard_2345610064_1793704404.csv done.
+	{'status': 'success', 'path': 'C:\\Users\\dsantos\\Desktop\\test_results\\ftf_sf_du_mainboard\\2345610064\\ftf_sf_du_mainboard_2345610064_1793704404\\ftf_sf_du_mainboard_2345610064_1793704404.csv', 'data': {'serial_numbers': {'2345610064': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 3, 11, 13, 24, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-06 10:56:00,358 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-06 10:56:00,358 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 10:56:00,844 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 51
+2026-11-06 10:56:00,844 - network - INFO - Server responded with a 400 status code.
+2026-11-06 10:56:00,844 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade '2345610064' não encontrada."}
+2026-11-06 10:57:18,384 - root - INFO - App process terminated by user.
+2026-11-06 11:06:16,761 - root - INFO - App process is starting...
+2026-11-06 11:06:17,950 - backup - INFO - Backup thread started. Origin=C:\Users\dsantos\Desktop\test_results\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-11-06 11:06:17,950 - backup - INFO - Worker job started.
+2026-11-06 11:06:20,345 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-11-06 11:06:20,348 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 11:06:20,554 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-11-06 11:06:20,555 - network - INFO - Server responded with a 200 status code.
+2026-11-06 11:06:20,557 - root - INFO - User 'a' logged in.
+2026-11-06 11:06:20,567 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-11-06%2002%3A06%3A20&evaluated_by=309&workstation_name=Teste
+2026-11-06 11:06:20,569 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 11:06:20,967 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-11-06%2002%3A06%3A20&evaluated_by=309&workstation_name=Teste HTTP/1.1" 200 52
+2026-11-06 11:06:20,967 - network - INFO - Server responded with a 200 status code.
+2026-11-06 11:06:23,613 - worker - INFO - Worker job started.
+2026-11-06 12:25:44,886 - worker - INFO - Worker job finished.
+2026-11-06 12:25:46,116 - worker - INFO - Worker job started.
+2026-11-06 12:25:54,113 - root - INFO - App process terminated by user.
+2026-11-06 12:25:54,321 - backup - INFO - Backup thread finished
+2026-11-06 12:25:54,349 - backup - INFO - Worker job finished.
+2026-11-06 12:26:31,272 - root - INFO - App process is starting...
+2026-11-06 12:26:33,668 - backup - INFO - Backup thread started. Origin=C:\Users\dsantos\Desktop\test_results\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-11-06 12:26:33,670 - backup - INFO - Worker job started.
+2026-11-06 12:26:36,485 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-11-06 12:26:36,491 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 12:26:36,819 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-11-06 12:26:36,820 - network - INFO - Server responded with a 200 status code.
+2026-11-06 12:26:36,820 - root - INFO - User 'a' logged in.
+2026-11-06 12:26:36,832 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-11-06%2003%3A26%3A36&evaluated_by=309&workstation_name=Teste
+2026-11-06 12:26:36,833 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-06 12:26:37,491 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-11-06%2003%3A26%3A36&evaluated_by=309&workstation_name=Teste HTTP/1.1" 200 52
+2026-11-06 12:26:37,492 - network - INFO - Server responded with a 200 status code.
+2026-11-06 12:26:43,724 - worker - INFO - Worker job started.
+2026-11-06 12:27:14,425 - root - INFO - App process terminated by user.
+2026-11-06 12:27:15,075 - backup - INFO - Backup thread finished
+2026-11-06 12:27:15,105 - backup - INFO - Worker job finished.

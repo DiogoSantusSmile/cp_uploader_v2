@@ -109,7 +109,9 @@ TOOLS = {
     },
     'SRAM_MAINBOARD_11': {
         'file_extensions': ['.csv'],
-        'parser': parse_sram_mainboard_11
+        'parser': parse_sram_mainboard_11,
+        # A bancada gera também .txt/.xlsx/.png na mesma pasta; são deixados intactos.
+        'skip_unsupported_files': True,
     },
 }
 
@@ -122,6 +124,13 @@ class Parser:
 
     def __init__(self, tool):
         self.tool = tool
+
+    @property
+    def skip_unsupported_files(self):
+        return TOOLS[self.__tool].get('skip_unsupported_files', False)
+
+    def is_supported(self, path):
+        return not self.__extensions or path.lower().endswith(tuple(self.__extensions))
 
     def parse(self, path):
         if self.__extensions and not path.lower().endswith(tuple(self.__extensions)):
