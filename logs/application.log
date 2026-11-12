@@ -1152,3 +1152,931 @@ FileNotFoundError: [WinError 3] O sistema não conseguiu localizar o caminho espe
 2026-11-06 12:27:14,425 - root - INFO - App process terminated by user.
 2026-11-06 12:27:15,075 - backup - INFO - Backup thread finished
 2026-11-06 12:27:15,105 - backup - INFO - Worker job finished.
+2026-11-11 12:42:18,872 - root - INFO - App process is starting...
+2026-11-11 12:42:20,802 - backup - INFO - Backup thread started. Origin=C:\Temp\igbt_teste\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-11-11 12:42:20,802 - backup - INFO - Worker job started.
+2026-11-11 12:42:39,006 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-11-11 12:42:39,006 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:42:39,796 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/accounts/login/ HTTP/1.1" 200 83
+2026-11-11 12:42:39,797 - network - INFO - Server responded with a 200 status code.
+2026-11-11 12:42:39,797 - root - INFO - User 'a' logged in.
+2026-11-11 12:42:39,805 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/evaluations/?evaluated_at_after=2026-11-11%2003%3A42%3A39&evaluated_by=309&workstation_name=Teste
+2026-11-11 12:42:39,808 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:42:40,251 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "GET /api/v1/evaluations/?evaluated_at_after=2026-11-11%2003%3A42%3A39&evaluated_by=309&workstation_name=Teste HTTP/1.1" 200 52
+2026-11-11 12:42:40,254 - network - INFO - Server responded with a 200 status code.
+2026-11-11 12:43:14,347 - worker - INFO - Worker job started.
+2026-11-11 12:43:14,359 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\nok\UAR0001.json.
+2026-11-11 12:43:14,361 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\nok\UAR0001.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\nok\\UAR0001.json', 'data': {'serial_numbers': {'UAR0001': {'status': 'NG', 'timestamp': datetime.datetime(2026, 11, 10, 8, 0, 38, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:14,361 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:14,362 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:15,227 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 48
+2026-11-11 12:43:15,227 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:15,227 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UAR0001' não encontrada."}
+2026-11-11 12:43:15,310 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\nok\UT253724046113406.json.
+2026-11-11 12:43:15,318 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\nok\UT253724046113406.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\nok\\UT253724046113406.json', 'data': {'serial_numbers': {'UT253724046113406': {'status': 'NG', 'timestamp': datetime.datetime(2026, 11, 10, 11, 16, 53, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:15,318 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:15,318 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:15,512 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 64
+2026-11-11 12:43:15,518 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:15,518 - network - INFO - Server responded with a 400 status code.: {'message': 'O posto Teste não foi definido para este produto.'}
+2026-11-11 12:43:15,542 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\nok\UT264324046325771_UT264324046325771_140303_L3.json.
+2026-11-11 12:43:15,545 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\nok\UT264324046325771_UT264324046325771_140303_L3.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\nok\\UT264324046325771_UT264324046325771_140303_L3.json', 'data': {'serial_numbers': {'UT264324046325771': {'status': 'NG', 'timestamp': datetime.datetime(2026, 10, 23, 15, 3, 3, tzinfo=datetime.timezone(datetime.timedelta(seconds=3600), 'Hora de Verão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:15,545 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:15,545 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:15,847 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:15,847 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:15,847 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264324046325771' não encontrada."}
+2026-11-11 12:43:15,865 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\nok\UT264324046325772_UT264324046325772_140524_L4.json.
+2026-11-11 12:43:15,865 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\nok\UT264324046325772_UT264324046325772_140524_L4.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\nok\\UT264324046325772_UT264324046325772_140524_L4.json', 'data': {'serial_numbers': {'UT264324046325772': {'status': 'NG', 'timestamp': datetime.datetime(2026, 10, 23, 15, 5, 24, tzinfo=datetime.timezone(datetime.timedelta(seconds=3600), 'Hora de Verão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:15,865 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:15,865 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:16,199 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:16,199 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:16,199 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264324046325772' não encontrada."}
+2026-11-11 12:43:16,229 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\A1A4MA01A000013.json.
+2026-11-11 12:43:16,229 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\A1A4MA01A000013.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\A1A4MA01A000013.json', 'data': {'serial_numbers': {'A1A4MA01A000013': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 12, 44, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:16,229 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:16,229 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:16,564 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 56
+2026-11-11 12:43:16,564 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:16,564 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'A1A4MA01A000013' não encontrada."}
+2026-11-11 12:43:16,602 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UAR0005.json.
+2026-11-11 12:43:16,610 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UAR0005.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UAR0005.json', 'data': {'serial_numbers': {'UAR0005': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 8, 3, 47, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:16,610 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:16,610 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:16,943 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 48
+2026-11-11 12:43:16,943 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:16,943 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UAR0005' não encontrada."}
+2026-11-11 12:43:16,965 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326086.json.
+2026-11-11 12:43:16,967 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326086.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326086.json', 'data': {'serial_numbers': {'UT264524046326086': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 8, 16, 33, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:16,967 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:16,967 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:17,284 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:17,284 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:17,284 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326086' não encontrada."}
+2026-11-11 12:43:17,308 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326103.json.
+2026-11-11 12:43:17,309 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326103.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326103.json', 'data': {'serial_numbers': {'UT264524046326103': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 25, 59, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:17,309 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:17,311 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:17,665 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:17,665 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:17,665 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326103' não encontrada."}
+2026-11-11 12:43:17,707 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326110.json.
+2026-11-11 12:43:17,710 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326110.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326110.json', 'data': {'serial_numbers': {'UT264524046326110': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 41, 16, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:17,710 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:17,710 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:18,043 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:18,043 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:18,043 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326110' não encontrada."}
+2026-11-11 12:43:18,086 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326111.json.
+2026-11-11 12:43:18,087 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326111.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326111.json', 'data': {'serial_numbers': {'UT264524046326111': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 8, 6, 52, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:18,087 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:18,091 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:18,444 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:18,444 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:18,444 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326111' não encontrada."}
+2026-11-11 12:43:18,477 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326112.json.
+2026-11-11 12:43:18,480 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326112.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326112.json', 'data': {'serial_numbers': {'UT264524046326112': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 43, 32, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:18,480 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:18,480 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:18,881 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:18,881 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:18,881 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326112' não encontrada."}
+2026-11-11 12:43:18,902 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326113.json.
+2026-11-11 12:43:18,910 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326113.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326113.json', 'data': {'serial_numbers': {'UT264524046326113': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 48, 32, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:18,910 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:18,910 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:19,272 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:19,272 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:19,272 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326113' não encontrada."}
+2026-11-11 12:43:19,296 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326114.json.
+2026-11-11 12:43:19,296 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326114.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326114.json', 'data': {'serial_numbers': {'UT264524046326114': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 30, 53, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:19,296 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:19,296 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:19,668 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:19,668 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:19,668 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326114' não encontrada."}
+2026-11-11 12:43:19,695 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326115.json.
+2026-11-11 12:43:19,698 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326115.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326115.json', 'data': {'serial_numbers': {'UT264524046326115': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 36, 14, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:19,699 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:19,699 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:20,035 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:20,035 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:20,035 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326115' não encontrada."}
+2026-11-11 12:43:20,055 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326116.json.
+2026-11-11 12:43:20,055 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326116.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326116.json', 'data': {'serial_numbers': {'UT264524046326116': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 51, 47, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:20,055 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:20,055 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:20,390 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:20,390 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:20,390 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326116' não encontrada."}
+2026-11-11 12:43:20,415 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326119.json.
+2026-11-11 12:43:20,417 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326119.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326119.json', 'data': {'serial_numbers': {'UT264524046326119': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 45, 49, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:20,417 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:20,420 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:20,749 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:20,749 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:20,749 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326119' não encontrada."}
+2026-11-11 12:43:20,772 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326123.json.
+2026-11-11 12:43:20,776 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326123.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326123.json', 'data': {'serial_numbers': {'UT264524046326123': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 9, 10, 2, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:20,776 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:20,779 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:21,085 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:21,085 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:21,085 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326123' não encontrada."}
+2026-11-11 12:43:21,110 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326126.json.
+2026-11-11 12:43:21,113 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326126.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326126.json', 'data': {'serial_numbers': {'UT264524046326126': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 15, 42, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:21,113 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:21,114 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:21,433 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:21,433 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:21,433 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326126' não encontrada."}
+2026-11-11 12:43:21,468 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326133.json.
+2026-11-11 12:43:21,470 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326133.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326133.json', 'data': {'serial_numbers': {'UT264524046326133': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 54, 26, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:21,470 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:21,470 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:21,824 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:21,825 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:21,825 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326133' não encontrada."}
+2026-11-11 12:43:21,850 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326135.json.
+2026-11-11 12:43:21,853 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326135.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326135.json', 'data': {'serial_numbers': {'UT264524046326135': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 9, 35, 43, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:21,854 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:21,854 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:22,168 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:22,170 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:22,170 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326135' não encontrada."}
+2026-11-11 12:43:22,193 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326136.json.
+2026-11-11 12:43:22,196 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326136.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326136.json', 'data': {'serial_numbers': {'UT264524046326136': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 4, 9, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:22,196 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:22,196 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:22,527 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:22,528 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:22,528 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326136' não encontrada."}
+2026-11-11 12:43:22,560 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326137.json.
+2026-11-11 12:43:22,562 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326137.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326137.json', 'data': {'serial_numbers': {'UT264524046326137': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 9, 56, 51, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:22,562 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:22,563 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:22,883 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:22,884 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:22,884 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326137' não encontrada."}
+2026-11-11 12:43:22,907 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326141.json.
+2026-11-11 12:43:22,910 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326141.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326141.json', 'data': {'serial_numbers': {'UT264524046326141': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 10, 19, 46, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:22,910 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:22,911 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:23,220 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:23,221 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:23,221 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326141' não encontrada."}
+2026-11-11 12:43:23,253 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326142.json.
+2026-11-11 12:43:23,256 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326142.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326142.json', 'data': {'serial_numbers': {'UT264524046326142': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 9, 16, 10, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:23,256 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:23,257 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:23,560 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:23,562 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:23,562 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326142' não encontrada."}
+2026-11-11 12:43:23,588 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326144.json.
+2026-11-11 12:43:23,590 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326144.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326144.json', 'data': {'serial_numbers': {'UT264524046326144': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 9, 33, 12, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:23,590 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:23,592 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:23,927 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:23,928 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:23,928 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326144' não encontrada."}
+2026-11-11 12:43:23,950 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326146.json.
+2026-11-11 12:43:23,953 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326146.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326146.json', 'data': {'serial_numbers': {'UT264524046326146': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 8, 47, 3, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:23,953 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:23,954 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:24,257 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:24,257 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:24,257 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326146' não encontrada."}
+2026-11-11 12:43:24,285 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326147.json.
+2026-11-11 12:43:24,288 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326147.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326147.json', 'data': {'serial_numbers': {'UT264524046326147': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 9, 19, 8, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:24,289 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:24,289 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:24,629 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:24,630 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:24,630 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326147' não encontrada."}
+2026-11-11 12:43:24,657 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326148.json.
+2026-11-11 12:43:24,660 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326148.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326148.json', 'data': {'serial_numbers': {'UT264524046326148': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 8, 50, 36, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:24,660 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:24,661 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:24,990 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:24,991 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:24,991 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326148' não encontrada."}
+2026-11-11 12:43:25,020 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326151.json.
+2026-11-11 12:43:25,023 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326151.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326151.json', 'data': {'serial_numbers': {'UT264524046326151': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 9, 13, 13, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:25,023 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:25,024 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:25,351 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:25,351 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:25,351 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326151' não encontrada."}
+2026-11-11 12:43:25,382 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326153.json.
+2026-11-11 12:43:25,385 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326153.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326153.json', 'data': {'serial_numbers': {'UT264524046326153': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 9, 26, 10, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:25,385 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:25,385 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:25,715 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:25,715 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:25,715 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326153' não encontrada."}
+2026-11-11 12:43:25,740 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326154.json.
+2026-11-11 12:43:25,744 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326154.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326154.json', 'data': {'serial_numbers': {'UT264524046326154': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 8, 48, 34, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:25,744 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:25,745 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:26,051 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:26,052 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:26,052 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326154' não encontrada."}
+2026-11-11 12:43:26,069 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326157.json.
+2026-11-11 12:43:26,075 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326157.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326157.json', 'data': {'serial_numbers': {'UT264524046326157': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 15, 20, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:26,075 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:26,077 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:26,382 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:26,383 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:26,383 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326157' não encontrada."}
+2026-11-11 12:43:26,402 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326159.json.
+2026-11-11 12:43:26,408 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264524046326159.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264524046326159.json', 'data': {'serial_numbers': {'UT264524046326159': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 9, 21, 55, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:26,408 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:26,408 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:26,725 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:26,725 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:26,725 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264524046326159' não encontrada."}
+2026-11-11 12:43:26,751 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326160.json.
+2026-11-11 12:43:26,756 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326160.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326160.json', 'data': {'serial_numbers': {'UT264624046326160': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 24, 57, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:26,756 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:26,756 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:27,081 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:27,081 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:27,081 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326160' não encontrada."}
+2026-11-11 12:43:27,125 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326167.json.
+2026-11-11 12:43:27,130 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326167.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326167.json', 'data': {'serial_numbers': {'UT264624046326167': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 57, 24, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:27,131 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:27,132 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:27,467 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:27,467 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:27,467 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326167' não encontrada."}
+2026-11-11 12:43:27,486 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326168.json.
+2026-11-11 12:43:27,493 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326168.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326168.json', 'data': {'serial_numbers': {'UT264624046326168': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 13, 57, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:27,493 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:27,493 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:27,888 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:27,888 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:27,888 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326168' não encontrada."}
+2026-11-11 12:43:27,926 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326169.json.
+2026-11-11 12:43:27,930 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326169.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326169.json', 'data': {'serial_numbers': {'UT264624046326169': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 27, 33, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:27,930 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:27,932 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:28,253 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:28,253 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:28,253 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326169' não encontrada."}
+2026-11-11 12:43:28,276 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326170.json.
+2026-11-11 12:43:28,282 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326170.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326170.json', 'data': {'serial_numbers': {'UT264624046326170': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 22, 21, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:28,282 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:28,282 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:28,625 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:28,625 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:28,625 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326170' não encontrada."}
+2026-11-11 12:43:28,648 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326174.json.
+2026-11-11 12:43:28,648 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326174.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326174.json', 'data': {'serial_numbers': {'UT264624046326174': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 8, 31, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:28,648 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:28,657 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:28,976 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:28,977 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:28,977 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326174' não encontrada."}
+2026-11-11 12:43:29,003 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326177.json.
+2026-11-11 12:43:29,008 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326177.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326177.json', 'data': {'serial_numbers': {'UT264624046326177': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 32, 31, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:29,008 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:29,008 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:29,319 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:29,319 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:29,319 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326177' não encontrada."}
+2026-11-11 12:43:29,353 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326178.json.
+2026-11-11 12:43:29,353 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326178.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326178.json', 'data': {'serial_numbers': {'UT264624046326178': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 28, 59, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:29,353 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:29,353 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:29,701 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:29,701 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:29,701 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326178' não encontrada."}
+2026-11-11 12:43:29,738 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326180.json.
+2026-11-11 12:43:29,748 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326180.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326180.json', 'data': {'serial_numbers': {'UT264624046326180': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 23, 42, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:29,748 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:29,749 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:30,069 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:30,069 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:30,069 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326180' não encontrada."}
+2026-11-11 12:43:30,103 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326181.json.
+2026-11-11 12:43:30,107 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326181.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326181.json', 'data': {'serial_numbers': {'UT264624046326181': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 55, 59, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:30,107 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:30,108 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:30,428 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:30,428 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:30,428 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326181' não encontrada."}
+2026-11-11 12:43:30,468 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326182.json.
+2026-11-11 12:43:30,468 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326182.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326182.json', 'data': {'serial_numbers': {'UT264624046326182': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 20, 58, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:30,468 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:30,468 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:30,797 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:30,797 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:30,797 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326182' não encontrada."}
+2026-11-11 12:43:30,828 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326183.json.
+2026-11-11 12:43:30,830 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326183.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326183.json', 'data': {'serial_numbers': {'UT264624046326183': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 9, 53, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:30,830 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:30,830 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:31,264 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:31,264 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:31,268 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326183' não encontrada."}
+2026-11-11 12:43:31,286 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326184.json.
+2026-11-11 12:43:31,286 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326184.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326184.json', 'data': {'serial_numbers': {'UT264624046326184': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 16, 38, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:31,286 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:31,286 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:31,611 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:31,611 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:31,611 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326184' não encontrada."}
+2026-11-11 12:43:31,636 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326185.json.
+2026-11-11 12:43:31,639 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326185.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326185.json', 'data': {'serial_numbers': {'UT264624046326185': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 58, 45, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:31,639 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:31,639 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:31,953 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:31,953 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:31,953 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326185' não encontrada."}
+2026-11-11 12:43:31,984 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326186.json.
+2026-11-11 12:43:31,986 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326186.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326186.json', 'data': {'serial_numbers': {'UT264624046326186': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 30, 31, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:31,986 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:31,986 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:32,319 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:32,319 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:32,319 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326186' não encontrada."}
+2026-11-11 12:43:32,352 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326190.json.
+2026-11-11 12:43:32,352 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326190.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326190.json', 'data': {'serial_numbers': {'UT264624046326190': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 53, 27, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:32,352 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:32,362 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:32,671 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:32,671 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:32,671 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326190' não encontrada."}
+2026-11-11 12:43:32,685 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326195.json.
+2026-11-11 12:43:32,685 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326195.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326195.json', 'data': {'serial_numbers': {'UT264624046326195': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 12, 34, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:32,685 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:32,685 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:33,005 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:33,005 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:33,005 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326195' não encontrada."}
+2026-11-11 12:43:33,021 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326200.json.
+2026-11-11 12:43:33,035 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326200.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326200.json', 'data': {'serial_numbers': {'UT264624046326200': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 19, 38, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:33,035 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:33,036 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:33,319 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:33,319 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:33,319 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326200' não encontrada."}
+2026-11-11 12:43:33,338 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326206.json.
+2026-11-11 12:43:33,341 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326206.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326206.json', 'data': {'serial_numbers': {'UT264624046326206': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 18, 19, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:33,342 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:33,342 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:33,742 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:33,742 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:33,742 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326206' não encontrada."}
+2026-11-11 12:43:33,764 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326207.json.
+2026-11-11 12:43:33,768 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326207.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326207.json', 'data': {'serial_numbers': {'UT264624046326207': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 11, 9, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:33,768 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:33,768 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:34,083 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:34,084 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:34,084 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326207' não encontrada."}
+2026-11-11 12:43:34,107 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326209.json.
+2026-11-11 12:43:34,113 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326209.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326209.json', 'data': {'serial_numbers': {'UT264624046326209': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 26, 18, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:34,113 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:34,113 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:34,418 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:34,418 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:34,418 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326209' não encontrada."}
+2026-11-11 12:43:34,440 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326214.json.
+2026-11-11 12:43:34,442 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326214.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326214.json', 'data': {'serial_numbers': {'UT264624046326214': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 23, 7, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:34,442 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:34,442 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:34,752 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:34,752 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:34,752 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326214' não encontrada."}
+2026-11-11 12:43:34,782 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326215.json.
+2026-11-11 12:43:34,785 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326215.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326215.json', 'data': {'serial_numbers': {'UT264624046326215': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 32, 39, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:34,785 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:34,785 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:35,089 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:35,089 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:35,089 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326215' não encontrada."}
+2026-11-11 12:43:35,118 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326216.json.
+2026-11-11 12:43:35,123 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326216.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326216.json', 'data': {'serial_numbers': {'UT264624046326216': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 38, 20, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:35,123 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:35,123 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:35,438 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:35,438 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:35,438 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326216' não encontrada."}
+2026-11-11 12:43:35,462 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326217.json.
+2026-11-11 12:43:35,465 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326217.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326217.json', 'data': {'serial_numbers': {'UT264624046326217': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 25, 58, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:35,465 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:35,465 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:35,777 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:35,780 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:35,780 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326217' não encontrada."}
+2026-11-11 12:43:35,802 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326218.json.
+2026-11-11 12:43:35,805 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326218.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326218.json', 'data': {'serial_numbers': {'UT264624046326218': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 37, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:35,805 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:35,805 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:36,113 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:36,114 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:36,114 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326218' não encontrada."}
+2026-11-11 12:43:36,153 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326219.json.
+2026-11-11 12:43:36,153 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326219.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326219.json', 'data': {'serial_numbers': {'UT264624046326219': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 35, 51, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:36,153 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:36,153 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:36,452 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:36,452 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:36,452 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326219' não encontrada."}
+2026-11-11 12:43:36,474 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326220.json.
+2026-11-11 12:43:36,474 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326220.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326220.json', 'data': {'serial_numbers': {'UT264624046326220': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 35, 14, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:36,474 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:36,474 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:36,791 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:36,791 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:36,791 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326220' não encontrada."}
+2026-11-11 12:43:36,814 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326221.json.
+2026-11-11 12:43:36,817 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326221.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326221.json', 'data': {'serial_numbers': {'UT264624046326221': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 24, 6, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:36,817 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:36,817 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:37,180 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:37,180 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:37,180 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326221' não encontrada."}
+2026-11-11 12:43:37,203 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326222.json.
+2026-11-11 12:43:37,205 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326222.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326222.json', 'data': {'serial_numbers': {'UT264624046326222': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 22, 26, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:37,205 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:37,205 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:37,511 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:37,511 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:37,511 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326222' não encontrada."}
+2026-11-11 12:43:37,538 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326223.json.
+2026-11-11 12:43:37,538 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326223.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326223.json', 'data': {'serial_numbers': {'UT264624046326223': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 25, 25, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:37,538 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:37,538 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:37,844 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:37,846 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:37,846 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326223' não encontrada."}
+2026-11-11 12:43:37,862 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326224.json.
+2026-11-11 12:43:37,872 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326224.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326224.json', 'data': {'serial_numbers': {'UT264624046326224': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 34, 6, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:37,872 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:37,872 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:38,175 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:38,175 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:38,175 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326224' não encontrada."}
+2026-11-11 12:43:38,202 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326225.json.
+2026-11-11 12:43:38,205 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326225.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326225.json', 'data': {'serial_numbers': {'UT264624046326225': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 37, 37, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:38,205 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:38,205 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:38,612 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:38,612 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:38,612 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326225' não encontrada."}
+2026-11-11 12:43:38,640 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326226.json.
+2026-11-11 12:43:38,640 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326226.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326226.json', 'data': {'serial_numbers': {'UT264624046326226': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 24, 38, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:38,640 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:38,640 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:39,056 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:39,057 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:39,057 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326226' não encontrada."}
+2026-11-11 12:43:39,078 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326227.json.
+2026-11-11 12:43:39,081 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326227.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326227.json', 'data': {'serial_numbers': {'UT264624046326227': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 41, 57, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:39,082 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:39,083 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:39,402 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:39,403 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:39,403 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326227' não encontrada."}
+2026-11-11 12:43:39,439 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326228.json.
+2026-11-11 12:43:39,442 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326228.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326228.json', 'data': {'serial_numbers': {'UT264624046326228': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 21, 7, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:39,443 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:39,443 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:39,753 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:39,753 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:39,753 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326228' não encontrada."}
+2026-11-11 12:43:39,777 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326229.json.
+2026-11-11 12:43:39,783 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326229.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326229.json', 'data': {'serial_numbers': {'UT264624046326229': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 45, 1, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:39,783 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:39,785 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:40,105 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:40,105 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:40,105 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326229' não encontrada."}
+2026-11-11 12:43:40,136 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326230.json.
+2026-11-11 12:43:40,136 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326230.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326230.json', 'data': {'serial_numbers': {'UT264624046326230': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 43, 39, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:40,136 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:40,140 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:40,439 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:40,439 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:40,439 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326230' não encontrada."}
+2026-11-11 12:43:40,460 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326231.json.
+2026-11-11 12:43:40,469 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326231.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326231.json', 'data': {'serial_numbers': {'UT264624046326231': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 45, 59, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:40,469 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:40,469 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:40,774 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:40,774 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:40,776 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326231' não encontrada."}
+2026-11-11 12:43:40,793 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326232.json.
+2026-11-11 12:43:40,804 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326232.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326232.json', 'data': {'serial_numbers': {'UT264624046326232': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 46, 34, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:40,804 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:40,804 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:41,108 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:41,109 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:41,109 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326232' não encontrada."}
+2026-11-11 12:43:41,126 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326233.json.
+2026-11-11 12:43:41,126 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326233.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326233.json', 'data': {'serial_numbers': {'UT264624046326233': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 40, 22, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:41,126 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:41,137 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:41,454 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:41,454 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:41,454 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326233' não encontrada."}
+2026-11-11 12:43:41,482 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326234.json.
+2026-11-11 12:43:41,485 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326234.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326234.json', 'data': {'serial_numbers': {'UT264624046326234': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 21, 40, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:41,485 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:41,487 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:41,783 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:41,783 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:41,783 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326234' não encontrada."}
+2026-11-11 12:43:41,806 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326235.json.
+2026-11-11 12:43:41,809 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326235.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326235.json', 'data': {'serial_numbers': {'UT264624046326235': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 19, 59, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:41,809 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:41,809 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:42,122 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:42,122 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:42,122 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326235' não encontrada."}
+2026-11-11 12:43:42,159 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326236.json.
+2026-11-11 12:43:42,163 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326236.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326236.json', 'data': {'serial_numbers': {'UT264624046326236': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 19, 25, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:42,163 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:42,164 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:42,542 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:42,542 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:42,542 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326236' não encontrada."}
+2026-11-11 12:43:42,562 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326237.json.
+2026-11-11 12:43:42,568 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326237.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326237.json', 'data': {'serial_numbers': {'UT264624046326237': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 20, 32, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:42,568 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:42,568 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:42,878 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:42,878 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:42,878 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326237' não encontrada."}
+2026-11-11 12:43:42,902 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326238.json.
+2026-11-11 12:43:42,906 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326238.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326238.json', 'data': {'serial_numbers': {'UT264624046326238': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 32, 5, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:42,906 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:42,908 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:43,189 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:43,189 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:43,189 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326238' não encontrada."}
+2026-11-11 12:43:43,212 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326239.json.
+2026-11-11 12:43:43,219 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326239.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326239.json', 'data': {'serial_numbers': {'UT264624046326239': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 48, 34, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:43,219 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:43,219 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:43,509 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:43,509 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:43,511 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326239' não encontrada."}
+2026-11-11 12:43:43,533 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326240.json.
+2026-11-11 12:43:43,533 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326240.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326240.json', 'data': {'serial_numbers': {'UT264624046326240': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 34, 40, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:43,533 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:43,538 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:43,838 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:43,839 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:43,839 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326240' não encontrada."}
+2026-11-11 12:43:43,868 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326241.json.
+2026-11-11 12:43:43,873 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326241.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326241.json', 'data': {'serial_numbers': {'UT264624046326241': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 36, 25, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:43,873 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:43,873 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:44,213 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:44,213 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:44,213 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326241' não encontrada."}
+2026-11-11 12:43:44,240 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326242.json.
+2026-11-11 12:43:44,243 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326242.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326242.json', 'data': {'serial_numbers': {'UT264624046326242': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 31, 30, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:44,243 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:44,244 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:44,555 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:44,555 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:44,555 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326242' não encontrada."}
+2026-11-11 12:43:44,588 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326243.json.
+2026-11-11 12:43:44,588 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326243.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326243.json', 'data': {'serial_numbers': {'UT264624046326243': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 30, 53, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:44,588 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:44,588 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:44,920 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:44,922 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:44,922 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326243' não encontrada."}
+2026-11-11 12:43:44,943 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326244.json.
+2026-11-11 12:43:44,951 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326244.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326244.json', 'data': {'serial_numbers': {'UT264624046326244': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 26, 52, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:44,951 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:44,952 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:45,376 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:45,376 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:45,376 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326244' não encontrada."}
+2026-11-11 12:43:45,398 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326245.json.
+2026-11-11 12:43:45,398 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326245.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326245.json', 'data': {'serial_numbers': {'UT264624046326245': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 44, 27, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:45,398 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:45,398 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:45,743 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:45,743 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:45,743 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326245' não encontrada."}
+2026-11-11 12:43:45,769 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326246.json.
+2026-11-11 12:43:45,773 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326246.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326246.json', 'data': {'serial_numbers': {'UT264624046326246': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 28, 32, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:45,776 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:45,776 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:46,076 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:46,082 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:46,082 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326246' não encontrada."}
+2026-11-11 12:43:46,110 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326247.json.
+2026-11-11 12:43:46,113 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326247.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326247.json', 'data': {'serial_numbers': {'UT264624046326247': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 27, 52, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:46,113 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:46,113 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:46,431 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:46,431 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:46,431 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326247' não encontrada."}
+2026-11-11 12:43:46,454 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326248.json.
+2026-11-11 12:43:46,457 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326248.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326248.json', 'data': {'serial_numbers': {'UT264624046326248': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 29, 43, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:46,457 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:46,459 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:46,750 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:46,754 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:46,754 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326248' não encontrada."}
+2026-11-11 12:43:46,780 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326249.json.
+2026-11-11 12:43:46,786 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326249.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326249.json', 'data': {'serial_numbers': {'UT264624046326249': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 30, 20, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:46,786 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:46,786 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:47,131 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:47,131 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:47,131 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326249' não encontrada."}
+2026-11-11 12:43:47,159 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326250.json.
+2026-11-11 12:43:47,164 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326250.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326250.json', 'data': {'serial_numbers': {'UT264624046326250': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 48, 51, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:47,164 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:47,164 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:47,508 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:47,508 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:47,508 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326250' não encontrada."}
+2026-11-11 12:43:47,533 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326251.json.
+2026-11-11 12:43:47,538 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326251.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326251.json', 'data': {'serial_numbers': {'UT264624046326251': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 50, 19, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:47,538 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:47,538 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:47,970 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:47,970 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:47,970 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326251' não encontrada."}
+2026-11-11 12:43:48,000 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326252.json.
+2026-11-11 12:43:48,010 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326252.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326252.json', 'data': {'serial_numbers': {'UT264624046326252': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 47, 58, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:48,010 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:48,011 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:48,331 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:48,331 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:48,331 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326252' não encontrada."}
+2026-11-11 12:43:48,373 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326253.json.
+2026-11-11 12:43:48,376 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326253.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326253.json', 'data': {'serial_numbers': {'UT264624046326253': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 11, 50, 50, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:48,376 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:48,377 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:48,688 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:48,688 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:48,688 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326253' não encontrada."}
+2026-11-11 12:43:48,711 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326254.json.
+2026-11-11 12:43:48,720 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326254.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326254.json', 'data': {'serial_numbers': {'UT264624046326254': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 29, 29, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:48,722 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:48,722 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:49,042 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:49,042 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:49,042 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326254' não encontrada."}
+2026-11-11 12:43:49,064 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326255.json.
+2026-11-11 12:43:49,064 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326255.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326255.json', 'data': {'serial_numbers': {'UT264624046326255': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 33, 32, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:49,064 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:49,068 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:49,395 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:49,395 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:49,395 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326255' não encontrada."}
+2026-11-11 12:43:49,422 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326256.json.
+2026-11-11 12:43:49,422 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326256.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326256.json', 'data': {'serial_numbers': {'UT264624046326256': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 28, 54, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:49,422 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:49,426 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:49,760 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:49,760 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:49,760 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326256' não encontrada."}
+2026-11-11 12:43:49,790 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326257.json.
+2026-11-11 12:43:49,790 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326257.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326257.json', 'data': {'serial_numbers': {'UT264624046326257': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 47, 32, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:49,790 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:49,790 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:50,093 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:50,093 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:50,093 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326257' não encontrada."}
+2026-11-11 12:43:50,123 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326258.json.
+2026-11-11 12:43:50,124 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326258.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326258.json', 'data': {'serial_numbers': {'UT264624046326258': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 34, 43, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:50,124 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:50,124 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:50,510 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:50,510 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:50,511 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326258' não encontrada."}
+2026-11-11 12:43:50,541 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326259.json.
+2026-11-11 12:43:50,544 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326259.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326259.json', 'data': {'serial_numbers': {'UT264624046326259': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 38, 18, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:50,545 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:50,545 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:50,863 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:50,863 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:50,870 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326259' não encontrada."}
+2026-11-11 12:43:50,893 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326260.json.
+2026-11-11 12:43:50,893 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326260.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326260.json', 'data': {'serial_numbers': {'UT264624046326260': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 36, 37, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:50,893 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:50,893 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:51,219 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:51,219 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:51,219 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326260' não encontrada."}
+2026-11-11 12:43:51,239 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326261.json.
+2026-11-11 12:43:51,242 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326261.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326261.json', 'data': {'serial_numbers': {'UT264624046326261': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 35, 23, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:51,242 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:51,243 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:51,517 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:51,517 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:51,517 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326261' não encontrada."}
+2026-11-11 12:43:51,542 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326262.json.
+2026-11-11 12:43:51,545 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326262.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326262.json', 'data': {'serial_numbers': {'UT264624046326262': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 30, 39, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:51,545 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:51,545 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:51,826 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:51,826 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:51,826 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326262' não encontrada."}
+2026-11-11 12:43:51,857 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326263.json.
+2026-11-11 12:43:51,857 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326263.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326263.json', 'data': {'serial_numbers': {'UT264624046326263': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 30, 4, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:51,857 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:51,857 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:52,191 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:52,191 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:52,191 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326263' não encontrada."}
+2026-11-11 12:43:52,222 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326264.json.
+2026-11-11 12:43:52,227 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326264.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326264.json', 'data': {'serial_numbers': {'UT264624046326264': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 26, 49, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:52,227 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:52,228 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:52,537 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:52,537 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:52,537 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326264' não encontrada."}
+2026-11-11 12:43:52,573 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326265.json.
+2026-11-11 12:43:52,576 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326265.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326265.json', 'data': {'serial_numbers': {'UT264624046326265': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 36, 3, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:52,578 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:52,578 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:52,883 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:52,883 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:52,883 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326265' não encontrada."}
+2026-11-11 12:43:52,911 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326266.json.
+2026-11-11 12:43:52,919 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326266.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326266.json', 'data': {'serial_numbers': {'UT264624046326266': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 41, 17, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:52,919 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:52,919 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:53,282 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:53,282 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:53,282 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326266' não encontrada."}
+2026-11-11 12:43:53,310 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326267.json.
+2026-11-11 12:43:53,313 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326267.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326267.json', 'data': {'serial_numbers': {'UT264624046326267': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 41, 54, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:53,313 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:53,313 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:53,599 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:53,599 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:53,599 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326267' não encontrada."}
+2026-11-11 12:43:53,623 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326268.json.
+2026-11-11 12:43:53,626 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326268.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326268.json', 'data': {'serial_numbers': {'UT264624046326268': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 28, 20, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:53,626 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:53,627 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:53,916 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:53,916 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:53,916 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326268' não encontrada."}
+2026-11-11 12:43:53,941 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326269.json.
+2026-11-11 12:43:53,944 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326269.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326269.json', 'data': {'serial_numbers': {'UT264624046326269': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 14, 32, 51, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:53,945 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:53,945 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:54,224 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:54,224 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:54,224 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326269' não encontrada."}
+2026-11-11 12:43:54,251 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326270.json.
+2026-11-11 12:43:54,256 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326270.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326270.json', 'data': {'serial_numbers': {'UT264624046326270': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 11, 8, 42, 11, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:54,256 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:54,257 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:54,593 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:54,593 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:54,593 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326270' não encontrada."}
+2026-11-11 12:43:54,615 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326271.json.
+2026-11-11 12:43:54,620 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326271.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326271.json', 'data': {'serial_numbers': {'UT264624046326271': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 55, 36, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:54,620 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:54,620 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:54,919 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:54,919 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:54,919 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326271' não encontrada."}
+2026-11-11 12:43:54,944 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326272.json.
+2026-11-11 12:43:54,948 - worker - INFO - Parsing C:\Temp\igbt_teste\igbt\ok\UT264624046326272.json done.
+	{'status': 'success', 'path': 'C:\\Temp\\igbt_teste\\igbt\\ok\\UT264624046326272.json', 'data': {'serial_numbers': {'UT264624046326272': {'status': 'OK', 'timestamp': datetime.datetime(2026, 11, 10, 15, 57, 34, tzinfo=datetime.timezone(datetime.timedelta(0), 'Hora padrão de GMT'))}}}, 'ignore': False}
+2026-11-11 12:43:54,948 - network - INFO - Sending POST request to http://127.0.0.1:8000/api/v2/evaluations/
+2026-11-11 12:43:54,948 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 12:43:55,352 - urllib3.connectionpool - DEBUG - http://127.0.0.1:8000 "POST /api/v2/evaluations/ HTTP/1.1" 400 58
+2026-11-11 12:43:55,352 - network - INFO - Server responded with a 400 status code.
+2026-11-11 12:43:55,352 - network - INFO - Server responded with a 400 status code.: {'message': "Unidade 'UT264624046326272' não encontrada."}
+2026-11-11 15:08:44,136 - root - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\ui\components\main_window.py", line 204, in closeEvent
+    def closeEvent(self, event):
+KeyboardInterrupt
+2026-11-11 15:27:14,770 - root - INFO - App process is starting...
+2026-11-11 15:27:16,845 - backup - INFO - Backup thread started. Origin=C:\Temp\igbt_teste\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-11-11 15:27:16,845 - backup - INFO - Worker job started.
+2026-11-11 15:27:19,414 - root - INFO - App process terminated by user.
+2026-11-11 15:27:19,862 - backup - INFO - Backup thread finished
+2026-11-11 15:27:19,883 - backup - INFO - Worker job finished.

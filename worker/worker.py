@@ -46,10 +46,6 @@ class Worker(QThread):
                     if self.__wants_to_stop:
                         break
 
-                    # Não processa/move ficheiros de extensão não suportada (ex.: .png/.xlsx da SRAM)
-                    if self.parser.skip_unsupported_files and not self.parser.is_supported(file):
-                        continue
-
                     logger.info(f'Parsing {file}.')
                     result = self.parser.parse(file)
                     logger.info(f'Parsing {file} done.\n\t{result}')

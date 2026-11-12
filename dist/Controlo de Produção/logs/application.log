@@ -1,0 +1,164 @@
+2026-11-11 15:26:20,431 - db - INFO - Database does not exist, creating a new one...
+2026-11-11 15:26:20,568 - root - INFO - App process is starting...
+2026-11-11 15:26:20,568 - root - ERROR - App shutdown abruptly!
+Traceback (most recent call last):
+  File "settings.py", line 21, in __init__
+  File "settings.py", line 32, in load
+  File "configparser.py", line 781, in get
+  File "configparser.py", line 1152, in _unify_values
+configparser.NoSectionError: No section: 'NETWORK'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 575, in <module>
+  File "main.py", line 45, in __init__
+  File "settings.py", line 23, in __init__
+  File "settings.py", line 57, in save
+  File "_collections_abc.py", line 941, in update
+  File "configparser.py", line 977, in __setitem__
+  File "configparser.py", line 754, in read_dict
+  File "configparser.py", line 1203, in set
+  File "configparser.py", line 1188, in _validate_value_types
+TypeError: option values must be strings
+2026-11-11 15:26:23,842 - root - INFO - App process is starting...
+2026-11-11 15:26:23,847 - root - ERROR - App shutdown abruptly!
+Traceback (most recent call last):
+  File "settings.py", line 21, in __init__
+  File "settings.py", line 32, in load
+  File "configparser.py", line 781, in get
+  File "configparser.py", line 1152, in _unify_values
+configparser.NoSectionError: No section: 'NETWORK'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 575, in <module>
+  File "main.py", line 45, in __init__
+  File "settings.py", line 23, in __init__
+  File "settings.py", line 57, in save
+  File "_collections_abc.py", line 941, in update
+  File "configparser.py", line 977, in __setitem__
+  File "configparser.py", line 754, in read_dict
+  File "configparser.py", line 1203, in set
+  File "configparser.py", line 1188, in _validate_value_types
+TypeError: option values must be strings
+2026-11-11 15:28:02,638 - root - INFO - App process is starting...
+2026-11-11 15:28:02,638 - root - ERROR - App shutdown abruptly!
+Traceback (most recent call last):
+  File "settings.py", line 21, in __init__
+  File "settings.py", line 32, in load
+  File "configparser.py", line 781, in get
+  File "configparser.py", line 1152, in _unify_values
+configparser.NoSectionError: No section: 'NETWORK'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 575, in <module>
+  File "main.py", line 45, in __init__
+  File "settings.py", line 23, in __init__
+  File "settings.py", line 57, in save
+  File "_collections_abc.py", line 941, in update
+  File "configparser.py", line 977, in __setitem__
+  File "configparser.py", line 754, in read_dict
+  File "configparser.py", line 1203, in set
+  File "configparser.py", line 1188, in _validate_value_types
+TypeError: option values must be strings
+2026-11-11 15:28:11,016 - root - INFO - App process is starting...
+2026-11-11 15:28:11,016 - root - ERROR - App shutdown abruptly!
+Traceback (most recent call last):
+  File "settings.py", line 21, in __init__
+  File "settings.py", line 32, in load
+  File "configparser.py", line 781, in get
+  File "configparser.py", line 1152, in _unify_values
+configparser.NoSectionError: No section: 'NETWORK'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 575, in <module>
+  File "main.py", line 45, in __init__
+  File "settings.py", line 23, in __init__
+  File "settings.py", line 57, in save
+  File "_collections_abc.py", line 941, in update
+  File "configparser.py", line 977, in __setitem__
+  File "configparser.py", line 754, in read_dict
+  File "configparser.py", line 1203, in set
+  File "configparser.py", line 1188, in _validate_value_types
+TypeError: option values must be strings
+2026-11-11 15:36:26,550 - root - INFO - App process is starting...
+2026-11-11 15:36:26,550 - root - ERROR - App shutdown abruptly!
+Traceback (most recent call last):
+  File "settings.py", line 21, in __init__
+  File "settings.py", line 32, in load
+  File "configparser.py", line 781, in get
+  File "configparser.py", line 1152, in _unify_values
+configparser.NoSectionError: No section: 'NETWORK'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 575, in <module>
+  File "main.py", line 45, in __init__
+  File "settings.py", line 23, in __init__
+  File "settings.py", line 57, in save
+  File "_collections_abc.py", line 941, in update
+  File "configparser.py", line 977, in __setitem__
+  File "configparser.py", line 754, in read_dict
+  File "configparser.py", line 1203, in set
+  File "configparser.py", line 1188, in _validate_value_types
+TypeError: option values must be strings
+2026-11-11 15:37:07,560 - root - INFO - App process is starting...
+2026-11-11 15:37:07,895 - backup - INFO - Backup thread started. Origin=C:\Temp\igbt_teste\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-11-11 15:37:07,895 - backup - INFO - Worker job started.
+2026-11-11 15:37:26,645 - root - INFO - App process terminated by user.
+2026-11-11 15:37:27,060 - backup - INFO - Backup thread finished
+2026-11-11 15:37:27,086 - backup - INFO - Worker job finished.
+2026-11-11 16:16:15,582 - root - INFO - App process is starting...
+2026-11-11 16:16:16,252 - backup - INFO - Backup thread started. Origin=C:\Temp\igbt_teste\processed, Destination=C:\Temp\LogsBackup, Action=MOVE
+2026-11-11 16:16:16,252 - backup - INFO - Worker job started.
+2026-11-11 16:16:56,440 - network - INFO - Sending GET request to http://127.0.0.1:8000/api/v1/accounts/login/
+2026-11-11 16:16:56,449 - urllib3.connectionpool - DEBUG - Starting new HTTP connection (1): 127.0.0.1:8000
+2026-11-11 16:16:58,511 - network - ERROR - HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028BA98D7E80>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+Traceback (most recent call last):
+  File "urllib3\connection.py", line 198, in _new_conn
+  File "urllib3\util\connection.py", line 85, in create_connection
+  File "urllib3\util\connection.py", line 73, in create_connection
+ConnectionRefusedError: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino
+as recusou ativamente
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "urllib3\connectionpool.py", line 787, in urlopen
+  File "urllib3\connectionpool.py", line 493, in _make_request
+  File "urllib3\connection.py", line 445, in request
+  File "http\client.py", line 1280, in endheaders
+  File "http\client.py", line 1040, in _send_output
+  File "http\client.py", line 980, in send
+  File "urllib3\connection.py", line 276, in connect
+  File "urllib3\connection.py", line 213, in _new_conn
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000028BA98D7E80>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino
+as recusou ativamente
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "requests\adapters.py", line 667, in send
+  File "urllib3\connectionpool.py", line 841, in urlopen
+  File "urllib3\util\retry.py", line 519, in increment
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028BA98D7E80>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "network\network.py", line 49, in __send_request
+  File "requests\api.py", line 59, in request
+  File "requests\sessions.py", line 589, in request
+  File "requests\sessions.py", line 703, in send
+  File "requests\adapters.py", line 700, in send
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /api/v1/accounts/login/ (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028BA98D7E80>: Failed to establish a new connection: [WinError 10061] Nenhuma ligação pôde ser feita porque o computador de destino\r\nas recusou ativamente'))
+2026-11-11 16:17:09,320 - root - INFO - App process terminated by user.
+2026-11-11 16:17:09,643 - backup - INFO - Backup thread finished
+2026-11-11 16:17:09,665 - backup - INFO - Worker job finished.

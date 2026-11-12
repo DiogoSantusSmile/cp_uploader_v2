@@ -75,8 +75,6 @@ def move_job(origin, destination):
 
     os.makedirs(destination, exist_ok=True)
 
-    if not os.path.isdir(origin):
-        return
     for directory_name in os.listdir(origin):
 
         source_directory = os.path.join(
