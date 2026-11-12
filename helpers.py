@@ -24,7 +24,7 @@ def format_evaluation_data_create_evaluation_v1_url(data):
 
     return new_data
 
-def move_logfile(origin, destination, status):
+def move_logfile(origin, destination, status, unique=False):
     if status == 'success':
         subfolder = os.path.join(destination, "processed", "OK")
     else:
@@ -33,7 +33,13 @@ def move_logfile(origin, destination, status):
     if not os.path.exists(subfolder):
         os.makedirs(subfolder)
 
-    new_path = os.path.join(subfolder, os.path.basename(origin))
+    filename = os.path.basename(origin)
+
+    if unique:
+        name, extension = os.path.splitext(filename)
+        filename = f'{name}_{datetime.now().strftime("%Y%m%d_%H%M%S_%f")}{extension}'
+
+    new_path = os.path.join(subfolder, filename)
 
     shutil.move(origin, new_path)
 

@@ -941,3 +941,33 @@ def parse_sram_mainboard_11(path):
             }
         }
     }
+
+def parse_leak_test_igbt(path):
+    """
+    Função de processamento de logs de teste de fugas IGBT (um JSON por unidade).
+
+    Analisa ficheiro JSON com as chaves "data", "hora", "sn" e "resultado".
+    A hora é fornecida em UTC (coluna "UTC Time" do datalog do PLC) e é
+    convertida para hora local. Se o resultado for PASS → OK, caso contrário → NG.
+    """
+    with open(path, 'r', encoding='utf-8') as file:
+        data = json.load(file)
+
+    serial_number = (data.get('sn') or '').strip()
+    if not serial_number:
+        raise ValueError('serial number is empty')
+
+    status = 'OK' if str(data['resultado']).strip().upper() == 'PASS' else 'NG'
+
+    timestamp_utc = datetime.strptime(
+        f"{data['data']} {data['hora']}", '%Y-%m-%d %H:%M:%S'
+    ).replace(tzinfo=timezone.utc)
+
+    return {
+        'serial_numbers': {
+            serial_number: {
+                'status': status,
+                'timestamp': timestamp_utc.astimezone()
+            }
+        }
+    }

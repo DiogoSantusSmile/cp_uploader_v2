@@ -1,7 +1,6 @@
 from configparser import ConfigParser
 from datetime import datetime, timedelta
 from PyQt5.QtCore import QLockFile
-from multiprocessing import freeze_support
 
 import os
 import shutil
@@ -364,7 +363,12 @@ class Controller:
         # não move o ficheiro em casos de ocorrer erro interno no servidor
         # ou erro de rede de modo a que volte a tentar processar mais tarde
         if move_file:
-            new_log_path = move_logfile(result['path'], self.__settings.logs_location, data['log']['status'])
+            new_log_path = move_logfile(
+                result['path'],
+                self.__settings.logs_location,
+                data['log']['status'],
+                unique=TOOLS[self.__settings.tool].get('unique_processed_filename', False)
+            )
 
             data['log']['path'] = new_log_path
 
@@ -565,7 +569,6 @@ class Controller:
 
 
 if __name__ == '__main__':
-    freeze_support()
     try:
         logger.info('App process is starting...')
 

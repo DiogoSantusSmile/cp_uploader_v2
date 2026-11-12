@@ -36,6 +36,8 @@ excluded module named _frozen_importlib - imported by importlib (optional), impo
 missing module named _frozen_importlib_external - imported by importlib._bootstrap (delayed), importlib (optional), importlib.abc (optional), zipimport (top-level)
 missing module named 'typing.io' - imported by importlib.resources (top-level)
 missing module named pyimod02_importers - imported by C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\.venv\Lib\site-packages\PyInstaller\hooks\rthooks\pyi_rth_pkgutil.py (delayed)
+missing module named win32evtlog - imported by logging.handlers (delayed, optional)
+missing module named win32evtlogutil - imported by logging.handlers (delayed, optional)
 missing module named vms_lib - imported by platform (delayed, optional)
 missing module named java - imported by platform (delayed)
 missing module named _winreg - imported by platform (delayed, optional)
@@ -80,4 +82,3 @@ missing module named 'pygments.lexer' - imported by mako.ext.pygmentplugin (top-
 missing module named 'pygments.formatters' - imported by mako.ext.pygmentplugin (top-level)
 missing module named pygments - imported by mako.ext.pygmentplugin (top-level)
 missing module named fcntl - imported by alembic.util.messaging (optional)
-missing module named multiprocessing.freeze_support - imported by multiprocessing (top-level), C:\Users\dsantos\PyCharmProjects\cp_uploader_v2\main.py (top-level)

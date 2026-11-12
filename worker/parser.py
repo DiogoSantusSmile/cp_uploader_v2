@@ -19,7 +19,7 @@ from .helpers import (
     parse_btf06,
     parse_leak_test_1,
     parse_leak_test_2,
-    parse_sram_mainboard_11
+    parse_sram_mainboard_11, parse_leak_test_igbt
 )
 from logger_config import setup_logger
 
@@ -109,9 +109,13 @@ TOOLS = {
     },
     'SRAM_MAINBOARD_11': {
         'file_extensions': ['.csv'],
-        'parser': parse_sram_mainboard_11,
-        # A bancada gera também .txt/.xlsx/.png na mesma pasta; são deixados intactos.
-        'skip_unsupported_files': True,
+        'parser': parse_sram_mainboard_11
+    },
+    'LEAK_TEST_IGBT': {
+        'file_extensions': ['.json'],
+        'parser': parse_leak_test_igbt,
+        # O ficheiro chama-se <sn>.json; um reteste gera o mesmo nome.
+        'unique_processed_filename': True,
     },
 }
 
@@ -124,13 +128,6 @@ class Parser:
 
     def __init__(self, tool):
         self.tool = tool
-
-    @property
-    def skip_unsupported_files(self):
-        return TOOLS[self.__tool].get('skip_unsupported_files', False)
-
-    def is_supported(self, path):
-        return not self.__extensions or path.lower().endswith(tuple(self.__extensions))
 
     def parse(self, path):
         if self.__extensions and not path.lower().endswith(tuple(self.__extensions)):
